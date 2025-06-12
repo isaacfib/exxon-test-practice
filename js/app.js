@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTimer;
 
     const welcomeScreen = document.getElementById('welcome-screen');
-    const testView = document.getElementById('test-view'); 
+    const testView = document.getElementById('test-view');
     const navButtons = document.querySelectorAll('.nav-btn');
-    const questionArea = document.getElementById('question-area');
-    const contentArea = document.getElementById('content-area');
+    const contentArea = document.getElementById('content-area'); // Main container for all dynamic content
+    const questionArea = document.getElementById('question-area'); // This will no longer be used for rendering sections
     const timerDisplay = document.getElementById('timer-display');
     const sectionTitle = document.getElementById('current-section-title');
     const backToTopBtn = document.getElementById('back-to-top');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Numerical Reasoning': { time: 60 },
         'Abstract Reasoning': { time: 30 }
     };
-    
+
     const passageTexts = {
         1: `<h3>Passage 1: Business Trends</h3><p>Top small business trends for 2025 emphasize a tailored approach to client engagement. Businesses that deeply understand individual client preferences and personalize their marketing messages, product recommendations, and offerings are expected to thrive. This personalization is no longer optional but a key driver for customer loyalty, necessitating the use of email marketing tools and analytics platforms to gain audience insights. The rise of short-form interactive content, such as Instagram reels and YouTube shorts, is another significant trend. These eye-catching videos build brand awareness rapidly, allowing small businesses to showcase products, share behind-the-scenes content, or highlight customer testimonials in an authentic, relatable, and fun manner. Interactive elements like quizzes, polls, and surveys further enhance engagement, boosting conversions while providing valuable feedback. Digital transformation tools are becoming indispensable. Online sales are no longer exclusive to large corporations, making 2025 an opportune year for small businesses to establish an online presence. Adopting digital tools for scheduling and payments ensures smooth operations, and leveraging AI tools can significantly increase productivity. Optimizing SEO strategies for voice search, by incorporating conversational keywords and location-based content, is also crucial given the proliferation of smart speakers. Protecting businesses and clients from cyberattacks is a growing concern. Small businesses are increasingly vulnerable, making robust data and system security vital for reputation and client trust. Implementing multi-factor authentication, securing networks, and regularly updating software are essential practices. Training teams to recognize cybersecurity threats is equally important. Prioritizing the client experience remains paramount. Despite the reliance on digital tools, the personal touch continues to differentiate businesses. Whether through personalized greetings or follow-up emails, exceptional service cultivates loyalty. Meeting customers across online, in-person, or hybrid channels is key. The economy is expected to stabilize further in 2025, presenting growth opportunities, particularly in high-demand sectors like local services, wellness, and technology. Businesses must continuously research trends within and outside their industries to seize these opportunities.</p>`,
         2: `<h3>Passage 2: Technology Advancements</h3><p>Technology has profoundly transformed education, moving beyond traditional methods to embrace interactive whiteboards, digital projectors, tablets, and smart gadgets. This revolutionary era has fostered personalized learning opportunities for students, with online learning methods experiencing an unprecedented surge in educational markets globally. The COVID-19 pandemic significantly accelerated this shift, pushing over 50 percent of the worldwide learning industry to adopt online approaches. These changes have compelled the education sector to explore innovative learning technologies. Novel methods such as gamification, flipped classrooms, and eTextbooks have created healthy and interactive teaching environments, effectively bridging gaps caused by physical restrictions. Furthermore, technology has expanded learning opportunities, enabling access for students in remote areas. This digital revolution has converted conventional classrooms into specialized online classes, promoting a culture of lifelong learning. A significant contribution of technology is enhanced accessibility. Students from distant regions can now access quality education through online platforms, with tools like Zoom, Google Meet, and Microsoft Teams making virtual classrooms a reality, particularly during the pandemic. The internet also serves as an endless repository of knowledge, providing vast resources through websites, e-books, and videos. Platforms like Coursera and edX offer courses from top universities, allowing individuals to acquire new skills or explore diverse subjects. Despite its numerous benefits, technology in education faces challenges. A notable issue is the digital divide, where not all students possess access to necessary devices and internet connectivity. A UNICEF report highlighted that nearly 31% of students globally lacked access to remote learning during the pandemic. Moreover, potential misuse of technology and a lack of awareness regarding available tools pose hurdles, which can be addressed through improved infrastructure and awareness campaigns. Recent advancements promise even greater contributions. Artificial Intelligence (AI) is being deployed to create intelligent tutors offering instant feedback. Augmented Reality (AR) enriches textbook content with 3D visuals and interactive elements. Blockchain technology is being explored for securing and authenticating educational certificates, aiming to reduce fraud. In essence, technology has undeniably made education more accessible, interactive, and personalized, and with equitable access and responsible use, it holds the potential to further shape future learning landscapes.</p>`,
@@ -122,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (!targetRadio) return;
 
                     targetRadio.checked = true;
-
                     options.classList.add('disabled');
                     const correctAnsw = container.dataset.correct;
 
@@ -140,25 +139,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    
-    // *** THIS IS THE CORRECTED FUNCTION ***
+
     function displaySection(sectionName) {
         welcomeScreen.classList.add('hidden');
         testView.classList.remove('hidden');
-
+    
         navButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.section === sectionName);
         });
         
-        contentArea.innerHTML = '';
-        questionArea.innerHTML = '';
+        contentArea.innerHTML = ''; // Clear previous content
+        questionArea.innerHTML = ''; // Ensure this is also cleared
         
         sectionTitle.textContent = sectionName;
         startTimer(sectionConfig[sectionName].time);
         
         const sectionQuestions = allData.questions.filter(q => q.section === sectionName);
         
-        // Group questions by their source (passage or data_source)
         const questionGroups = {};
         sectionQuestions.forEach(q => {
             const sourceKey = q.passage_id || q.data_source_id || q.visual_id || 'general';
@@ -168,28 +165,44 @@ document.addEventListener('DOMContentLoaded', () => {
             questionGroups[sourceKey].push(q);
         });
 
-        // Render each group sequentially: Source followed by its questions
-        for (const sourceKey in questionGroups) {
+        const sortedKeys = Object.keys(questionGroups).sort((a, b) => {
+            const firstQ_a = questionGroups[a][0].id;
+            const firstQ_b = questionGroups[b][0].id;
+            return firstQ_a - firstQ_b;
+        });
+    
+        for (const sourceKey of sortedKeys) {
+            const groupContainer = document.createElement('div');
+            groupContainer.className = 'source-group';
+            
             if (sourceKey !== 'general') {
-                const isPassage = isNaN(parseInt(sourceKey, 10)) === false; // check if it is a number
-                if(isPassage) {
+                const isPassage = /^\d+$/.test(sourceKey);
+                
+                if (isPassage) {
                     const passageDiv = document.createElement('div');
                     passageDiv.className = 'passage-box';
                     passageDiv.innerHTML = passageTexts[sourceKey] || '';
-                    contentArea.appendChild(passageDiv);
+                    groupContainer.appendChild(passageDiv);
                 } else {
-                     contentArea.innerHTML += generateDataSourceHTML(sourceKey);
+                    const dataSourceDiv = document.createElement('div');
+                    dataSourceDiv.className = 'data-source-container';
+                    dataSourceDiv.innerHTML = generateDataSourceHTML(sourceKey);
+                    groupContainer.appendChild(dataSourceDiv);
                 }
             }
-
+    
+            const questionsContainer = document.createElement('div');
+            questionsContainer.className = 'questions-for-source';
+            
             questionGroups[sourceKey].forEach(q => {
                 const questionElement = createQuestionHTML(q);
-                // For a more integrated view, append directly to contentArea
-                // Or keep separate as is. For now, questionArea is fine.
-                questionArea.appendChild(questionElement);
+                questionsContainer.appendChild(questionElement);
             });
+            
+            groupContainer.appendChild(questionsContainer);
+            contentArea.appendChild(groupContainer);
         }
-
+    
         addInteractivity();
         window.scrollTo({ top: 0, behavior: 'auto' });
     }
