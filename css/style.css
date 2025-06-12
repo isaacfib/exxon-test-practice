@@ -483,3 +483,31 @@ tbody tr:nth-child(even) {
     .shape-box { width: 60px; height: 60px; }
     .shape-box.triangle { border-left-width: 30px; border-right-width: 30px; border-bottom-width: 52px; }
 }
+/* Styles for grouped content layout */
+.source-group {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+}
+
+.source-group .passage-box {
+    margin-bottom: 1rem;
+    box-shadow: none;
+    border: none;
+    background-color: var(--accent-color);
+}
+
+.source-group .data-source-container {
+    margin-bottom: 1.5rem;
+}
+
+.data-source-container .chart-container,
+.data-source-container table {
+    margin-top: 0;
+    margin-bottom: 0;
+    box-shadow: none;
+    border-color: #e0e0e0;
+}
