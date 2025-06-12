@@ -1,0 +1,1242 @@
+[
+    {
+        "id": 1,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "In 2025, businesses that prioritize a tailored approach to clients will likely experience reduced customer loyalty.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage states, '...this trend is no longer optional — it's a key to winning loyalty.' This directly contradicts the idea that a tailored approach reduces loyalty."
+    },
+    {
+        "id": 2,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "Short-form interactive content is primarily effective for large corporations due to its high production cost.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage explicitly mentions, 'Small businesses can create relatable, engaging videos...' implying it's accessible for them."
+    },
+    {
+        "id": 3,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "Optimizing SEO for voice search is becoming important due to the increasing use of smart speakers.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage states, 'With the rise of smart speakers... Optimize your SEO strategy for voice search...'"
+    },
+    {
+        "id": 4,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "Cybersecurity measures are only necessary for large businesses that handle sensitive financial data.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage states, 'Cyberattacks are a growing concern, and small businesses are no exception...'"
+    },
+    {
+        "id": 5,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "The economy is expected to decline in 2025, limiting growth opportunities for small businesses.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage states the opposite: 'The economy is expected to stabilize further in 2025. Small businesses should look for growth opportunities...'"
+    },
+    {
+        "id": 6,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "Digital tools for scheduling payments are becoming less relevant for small businesses in 2025.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage advises adopting these tools to 'keep your business running smoothly,' indicating their importance."
+    },
+    {
+        "id": 7,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "The primary goal of short-form interactive content is to replace traditional advertising entirely.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "C",
+        "explanation": "The passage describes its benefits but never claims it will entirely replace traditional advertising."
+    },
+    {
+        "id": 8,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "Training teams to recognize cybersecurity threats is a recommended practice for businesses.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage explicitly advises to 'Train your team to recognize cybersecurity threats.'"
+    },
+    {
+        "id": 9,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "Businesses should focus solely on online channels for client engagement in 2025.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage advises meeting customers 'online, in-person, or somewhere in between,' advocating a multi-channel approach."
+    },
+    {
+        "id": 10,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "AI tools are primarily useful for large-scale data analysis and have limited application for small business productivity.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage states that for small businesses, 'utilizing AI tools for increased productivity is a game-changer as well.'"
+    },
+    {
+        "id": 11,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "The expectation for personalized customer experiences is a new development that emerged in 2025.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "C",
+        "explanation": "The passage states it's a key trend for 2025 but doesn't specify when the expectation emerged."
+    },
+    {
+        "id": 12,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "Businesses are advised to limit their research to only their current industry for growth opportunities.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage recommends researching 'trends inside and outside of your current industry.'"
+    },
+    {
+        "id": 13,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "Multi-factor authentication is a less secure method compared to traditional password protection.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage lists it as an essential practice for 'robust data and system security,' implying it enhances security."
+    },
+    {
+        "id": 14,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "The primary benefit of quizzes, polls, and surveys is to gather data for product development only.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "C",
+        "explanation": "The passage mentions they 'boost conversions while getting valuable feedback,' but does not limit the feedback's use solely to product development."
+    },
+    {
+        "id": 15,
+        "section": "Verbal Reasoning",
+        "passage_id": 1,
+        "questionText": "The article suggests that achieving success in 2025 for small businesses will require embracing new strategies and customer expectations.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The conclusion explicitly states that opportunities are for businesses 'ready to embrace new strategies, tools, and customer expectations.'"
+    },
+    {
+        "id": 16,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "Traditional chalkboards have been entirely replaced by interactive whiteboards in all educational institutions globally.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "C",
+        "explanation": "The passage mentions moving beyond traditional methods but doesn't claim a complete, universal replacement in all institutions."
+    },
+    {
+        "id": 17,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "The COVID-19 pandemic played a role in accelerating the adoption of online learning methods.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage explicitly states the pandemic 'significantly accelerated this shift.'"
+    },
+    {
+        "id": 18,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "Gamification and eTextbooks are examples of new learning technologies that foster interactive teaching.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage lists 'gamification, flipped classrooms, and eTextbooks' as methods that created interactive environments."
+    },
+    {
+        "id": 19,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "One of the most significant contributions of technology in education is limiting access for students in remote areas.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage states technology has 'expanded learning opportunities, enabling access for students in remote areas,' which is the opposite."
+    },
+    {
+        "id": 20,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "All students globally have equal access to devices and the internet for online learning.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage explicitly discusses the 'digital divide' and cites a UNICEF report showing 31% of students lacked access."
+    },
+    {
+        "id": 21,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "AI is currently being used to provide instant feedback through smart tutors.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage states, 'Artificial Intelligence (AI) is being deployed to create intelligent tutors offering instant feedback.'"
+    },
+    {
+        "id": 22,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "Augmented Reality (AR) is primarily used to secure educational certificates.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage attributes certificate security to Blockchain technology, while AR is for enriching textbook content."
+    },
+    {
+        "id": 23,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "The digital revolution has transformed traditional classrooms into specialized online classes.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage says, 'This digital revolution has converted conventional classrooms into specialized online classes.'"
+    },
+    {
+        "id": 24,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "The internet provides a limited amount of educational resources for students.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage describes the internet as an 'endless repository of knowledge,' contradicting the statement."
+    },
+    {
+        "id": 25,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "Issues like budget limitations and lack of awareness are challenges in using technology in digital education.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The source text notes 'potential misuse of technology and a lack of awareness...pose hurdles,' and the provided test prompt's text explicitly included 'budget limitations'."
+    },
+    {
+        "id": 26,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "Online learning methods are expected to decline in importance in the coming years.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage suggests a 'brighter future' for education with technology, implying an increase, not decline, in the importance of online methods."
+    },
+    {
+        "id": 27,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "Technology has primarily benefited urban students, with little impact on rural areas.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage directly contradicts this, stating technology 'helped to reach the students in remote areas.'"
+    },
+    {
+        "id": 28,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "Coursera and edX are examples of platforms offering courses from top universities.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "This is stated directly: 'Platforms like Coursera and edX offer courses from top universities.'"
+    },
+    {
+        "id": 29,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "Blockchain technology is being explored to enhance 3D visuals in textbooks.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage states Blockchain is for securing certificates, and Augmented Reality (AR) is for 3D visuals."
+    },
+    {
+        "id": 30,
+        "section": "Verbal Reasoning",
+        "passage_id": 2,
+        "questionText": "Ensuring equitable access and responsible use of technology is crucial for its positive impact on education.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The final sentence summarizes this: 'By ensuring equitable access and responsible use, technology can truly become a powerful ally...'"
+    },
+    {
+        "id": 31,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "The environment provides essential resources like clean air and fresh water.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage states the environment 'provides essential resources like clean air, fresh water, fertile soil...'"
+    },
+    {
+        "id": 32,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "Climate change is primarily caused by natural phenomena and is unrelated to human activities.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage states climate change is 'primarily driven by the burning of fossil fuels, deforestation, and industrial activities,' all human activities."
+    },
+    {
+        "id": 33,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "Protecting and restoring forests is important because they act as carbon sinks.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage recommends 'protecting and restoring forests, as they act as vital carbon sinks.'"
+    },
+    {
+        "id": 34,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "Air pollution is the only type of pollution posing a major challenge to the environment.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage mentions pollution 'affecting air, soil, and water.'"
+    },
+    {
+        "id": 35,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "Reducing reliance on single-use plastics is a suggested solution for pollution.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage states, 'Solutions include reducing reliance on single-use plastics...'"
+    },
+    {
+        "id": 36,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "Water scarcity is a diminishing concern due to abundant global water resources.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage identifies 'Water scarcity is a growing concern.'"
+    },
+    {
+        "id": 37,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "Biodiversity loss is caused by factors such as deforestation and habitat destruction.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage lists 'deforestation, habitat destruction, and overexploitation' as causes of biodiversity loss."
+    },
+    {
+        "id": 38,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "Government policies are irrelevant in addressing environmental challenges; only individual actions matter.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage states that addressing challenges requires 'government policies, technological advancements, and personal actions.'"
+    },
+    {
+        "id": 39,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "Extreme weather events and rising sea levels are potential consequences of rising global temperatures.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage links rising temperatures to 'extreme weather events, rising sea levels...'"
+    },
+    {
+        "id": 40,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "Treating wastewater is essential to prevent contamination of water bodies.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage states, 'treating wastewater are necessary to prevent contamination of our water bodies.'"
+    },
+    {
+        "id": 41,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "Poverty can contribute to environmental degradation by driving over-exploitation of natural resources.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage provides this as a direct example of a vicious cycle."
+    },
+    {
+        "id": 42,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "The passage suggests that environmental challenges are isolated issues with no interconnectedness.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage explicitly discusses the 'vicious cycle' and 'interconnectedness' of environmental issues."
+    },
+    {
+        "id": 43,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "Promoting electric vehicles is a strategy to control vehicle pollution.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage lists 'promoting electric vehicles' as crucial for controlling vehicle pollution."
+    },
+    {
+        "id": 44,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "The passage implies that safeguarding the environment is a choice rather than a necessity.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage concludes, 'safeguarding the environment is not merely a choice but a necessity.'"
+    },
+    {
+        "id": 45,
+        "section": "Verbal Reasoning",
+        "passage_id": 3,
+        "questionText": "The article suggests that individual efforts have little impact on saving the environment.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage ends by emphasizing that 'Every little effort counts in this collective endeavor.'"
+    },
+    {
+        "id": 46,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "The primary purpose of OSHA's Hazard Communication Standard is to classify chemical hazards and transmit information to employers and employees.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The first sentence of the passage states this is the purpose of the standard."
+    },
+    {
+        "id": 47,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "The Hazard Communication Standard is unrelated to the United Nations Globally Harmonized System (GHS).",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage states, 'This standard aligns with the United Nations Globally Harmonized System... (GHS).'"
+    },
+    {
+        "id": 48,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "Safety Data Sheets (SDSs) are a component of comprehensive hazard communication programs.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage lists SDSs as a key part of hazard communication programs."
+    },
+    {
+        "id": 49,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "State legislative enactments on hazard communication always supersede OSHA's Hazard Communication Standard.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage clarifies that the OSHA standard 'preempts any conflicting state or local legislative' enactments."
+    },
+    {
+        "id": 50,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "Employers are not required to maintain a written hazard communication program for the workplace.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage states practical applications 'include developing and maintaining a written hazard communication program.'"
+    },
+    {
+        "id": 51,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "Chemical manufacturers are responsible for classifying the hazards of chemicals they produce.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage specifies, 'Chemical manufacturers or importers are specifically required to classify the hazards...'"
+    },
+    {
+        "id": 52,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "Employers who only handle chemicals in sealed containers are completely exempt from the Hazard Communication Standard.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage applies to 'any chemical known to be present in the workplace where employees could be exposed...'. Exemptions are not stated to be absolute for sealed containers; labeling and SDS requirements still typically apply."
+    },
+    {
+        "id": 53,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "OSHA's regulatory functions include setting safety standards and conducting inspections.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The passage lists OSHA's two primary functions as 'setting standards and conducting inspections.'"
+    },
+    {
+        "id": 54,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "Employers are only required to provide Personal Protective Equipment (PPE) if employees request it.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage says employers must ensure employees are 'provided with, trained on, and use personal protective equipment (PPE) when required.'"
+    },
+    {
+        "id": 55,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "All work-related injuries, regardless of severity, must be reported to OSHA.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage specifies that only 'certain work-related incidents, such as fatalities, amputations, loss of an eye, or in-patient hospitalization' must be reported."
+    },
+    {
+        "id": 56,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "The Form 300 Log is used to classify work-related injuries and illnesses and note their extent and severity.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The prompt's explanation confirms this is the purpose of the Form 300 Log."
+    },
+    {
+        "id": 57,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "Employee training on chemical hazards is not a mandatory part of the hazard communication program.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage lists 'thorough employee training' as a core component."
+    },
+    {
+        "id": 58,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "Distributors have no responsibility in transmitting hazard information to employers.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The passage states, 'Distributors also bear the responsibility of transmitting this information to employers.'"
+    },
+    {
+        "id": 59,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "Employers are required to keep separate injury records for each physical location expected to operate for one year or longer.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "The prompt's explanation confirms this is a requirement."
+    },
+    {
+        "id": 60,
+        "section": "Verbal Reasoning",
+        "passage_id": 4,
+        "questionText": "The Hazard Communication Standard applies only to chemicals used in laboratories.",
+        "options": { "A": "True", "B": "False", "C": "Cannot Say" },
+        "correctAnswer": "B",
+        "explanation": "The standard applies to 'all chemicals produced or imported' and 'any chemical known to be present in the workplace,' not just labs."
+    },
+    {
+        "id": 61,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph1",
+        "questionText": "What was the total crude oil production for Region A and Region B combined in 2023?",
+        "options": { "A": "80 Million Barrels", "B": "85 Million Barrels", "C": "90 Million Barrels", "D": "95 Million Barrels" },
+        "correctAnswer": "B",
+        "explanation": "In 2023, Region A produced 50 Million Barrels and Region B produced 35 Million Barrels. Total = 50 + 35 = 85 Million Barrels."
+    },
+    {
+        "id": 62,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph1",
+        "questionText": "What was the percentage increase in production for Region A from 2022 to 2024?",
+        "options": { "A": "10%", "B": "20%", "C": "22.22%", "D": "25%" },
+        "correctAnswer": "C",
+        "explanation": "Increase = 55 (2024) - 45 (2022) = 10. Percentage increase = (10 / 45) * 100 = 22.22%."
+    },
+    {
+        "id": 63,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph1",
+        "questionText": "If the average price of crude oil in 2024 was $70 per barrel, what was the total revenue generated by Region B in 2024?",
+        "options": { "A": "$2.8 billion", "B": "$3.5 billion", "C": "$4.2 billion", "D": "$4.9 billion" },
+        "correctAnswer": "A",
+        "explanation": "Region B production in 2024 = 40 Million Barrels. Revenue = 40,000,000 * $70 = $2,800,000,000 = $2.8 billion."
+    },
+    {
+        "id": 64,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table1",
+        "questionText": "What is the net profit (Revenue - Operating Costs) for Year 2?",
+        "options": { "A": "$33 Million USD", "B": "$43 Million USD", "C": "$45 Million USD", "D": "$48 Million USD" },
+        "correctAnswer": "B",
+        "explanation": "Revenue Year 2 = $75 Million USD. Operating Costs Year 2 = $32 Million USD. Net Profit = 75 - 32 = $43 Million USD."
+    },
+    {
+        "id": 65,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table1",
+        "questionText": "What is the cumulative initial investment and operating costs over the three years?",
+        "options": { "A": "$187 Million USD", "B": "$217 Million USD", "C": "$227 Million USD", "D": "$237 Million USD" },
+        "correctAnswer": "B",
+        "explanation": "Initial Investment = $120M. Total Operating Costs = 30 + 32 + 35 = $97M. Cumulative Costs = 120 + 97 = $217 Million USD."
+    },
+    {
+        "id": 66,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table1",
+        "questionText": "What is the total revenue generated over the three years as a percentage of the initial investment? (Round to nearest whole percent)",
+        "options": { "A": "150%", "B": "188%", "C": "204%", "D": "225%" },
+        "correctAnswer": "B",
+        "explanation": "Total Revenue = 60 + 75 + 90 = $225M. Initial Investment = $120M. Percentage = (225 / 120) * 100 = 187.5% ≈ 188%."
+    },
+    {
+        "id": 67,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph2",
+        "questionText": "What was the average quarterly natural gas consumption in 2024?",
+        "options": { "A": "15.5 BCF", "B": "16.25 BCF", "C": "17.5 BCF", "D": "18.25 BCF" },
+        "correctAnswer": "B",
+        "explanation": "Total Consumption = 15 + 12 + 18 + 20 = 65 BCF. Average = 65 / 4 = 16.25 Billion Cubic Feet."
+    },
+    {
+        "id": 68,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph2",
+        "questionText": "What was the percentage decrease in natural gas consumption from Q1 to Q2?",
+        "options": { "A": "20%", "B": "25%", "C": "30%", "D": "33.33%" },
+        "correctAnswer": "A",
+        "explanation": "Decrease = 15 - 12 = 3. Percentage Decrease = (3 / 15) * 100 = 20%."
+    },
+    {
+        "id": 69,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph2",
+        "questionText": "If the consumption in Q3 was 15% higher than projected, what was the original projection for Q3?",
+        "options": { "A": "15.0 BCF", "B": "15.65 BCF", "C": "16.0 BCF", "D": "17.0 BCF" },
+        "correctAnswer": "B",
+        "explanation": "Let original projection be X. X * 1.15 = 18. So, X = 18 / 1.15 ≈ 15.65 Billion Cubic Feet."
+    },
+    {
+        "id": 70,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table2",
+        "questionText": "What percentage of the total employees are female? (Round to nearest whole percent)",
+        "options": { "A": "25%", "B": "29%", "C": "30%", "D": "35%" },
+        "correctAnswer": "B",
+        "explanation": "Total Female = 150. Total Employees = 520. Percentage = (150 / 520) * 100 ≈ 28.85% ≈ 29%."
+    },
+    {
+        "id": 71,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table2",
+        "questionText": "What is the ratio of male employees in Engineering to female employees in Operations?",
+        "options": { "A": "3:1", "B": "2:1", "C": "1:3", "D": "1:2" },
+        "correctAnswer": "A",
+        "explanation": "Male in Engineering = 150. Female in Operations = 50. Ratio = 150:50, which simplifies to 3:1."
+    },
+    {
+        "id": 72,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table2",
+        "questionText": "If 10% of the Engineering department employees are transferred to Operations, how many employees will the Operations department have?",
+        "options": { "A": "262", "B": "272", "C": "282", "D": "292" },
+        "correctAnswer": "B",
+        "explanation": "10% of Engineering = 0.10 * 220 = 22. New Operations total = 250 (current) + 22 (transferred) = 272."
+    },
+    {
+        "id": 73,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph3",
+        "questionText": "How much money is allocated to Research & Development?",
+        "options": { "A": "$100 Million", "B": "$125 Million", "C": "$150 Million", "D": "$175 Million" },
+        "correctAnswer": "B",
+        "explanation": "Total Budget = $500M. R&D is 25%. Amount = 0.25 * 500 = $125 Million."
+    },
+    {
+        "id": 74,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph3",
+        "questionText": "If the Marketing budget was reduced by 20%, how much would be left for Marketing?",
+        "options": { "A": "$60 Million", "B": "$65 Million", "C": "$70 Million", "D": "$75 Million" },
+        "correctAnswer": "A",
+        "explanation": "Current Marketing Budget = 15% of $500M = $75M. A 20% reduction leaves 80%. New budget = 0.80 * 75 = $60 Million."
+    },
+    {
+        "id": 75,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph3",
+        "questionText": "What percentage of the budget is allocated to Operations and Administration combined?",
+        "options": { "A": "40%", "B": "50%", "C": "55%", "D": "60%" },
+        "correctAnswer": "B",
+        "explanation": "Operations = 40%. Administration = 10%. Combined = 40% + 10% = 50%."
+    },
+    {
+        "id": 76,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table3",
+        "questionText": "What percentage of all incidents were classified as Major? (Round to one decimal place)",
+        "options": { "A": "5.6%", "B": "7.4%", "C": "8.3%", "D": "9.3%" },
+        "correctAnswer": "B",
+        "explanation": "Total Major = 4. Total Incidents = 54. Percentage = (4 / 54) * 100 ≈ 7.4%."
+    },
+    {
+        "id": 77,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table3",
+        "questionText": "What is the ratio of Minor incidents to Moderate incidents?",
+        "options": { "A": "9:4", "B": "18:7", "C": "3:1", "D": "4:1" },
+        "correctAnswer": "B",
+        "explanation": "Minor = 36. Moderate = 14. Ratio = 36:14, which simplifies to 18:7 by dividing both by 2."
+    },
+    {
+        "id": 78,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table3",
+        "questionText": "If the number of Equipment Malfunction incidents decreased by 25% in the next quarter, how many Equipment Malfunction incidents would there be?",
+        "options": { "A": "9", "B": "9.75", "C": "10", "D": "10.5" },
+        "correctAnswer": "B",
+        "explanation": "Current = 13. A 25% decrease leaves 75%. New Incidents = 0.75 * 13 = 9.75."
+    },
+    {
+        "id": 79,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph4",
+        "questionText": "What is the total energy production from renewable sources (Solar, Wind, Hydro)?",
+        "options": { "A": "730 GWh", "B": "750 GWh", "C": "780 GWh", "D": "800 GWh" },
+        "correctAnswer": "A",
+        "explanation": "Solar (250) + Wind (300) + Hydro (180) = 730 GWh."
+    },
+    {
+        "id": 80,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph4",
+        "questionText": "What percentage of the total energy production comes from Fossil Fuels? (Round to nearest whole percent)",
+        "options": { "A": "35%", "B": "38%", "C": "40%", "D": "42%" },
+        "correctAnswer": "A",
+        "explanation": "Total Production = 250 + 300 + 180 + 400 = 1130 GWh. Fossil Fuels = 400 GWh. Percentage = (400 / 1130) * 100 ≈ 35.39% ≈ 35%."
+    },
+    {
+        "id": 81,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph4",
+        "questionText": "If Wind energy production increased by 15% in the following year, what would be the new Wind energy production?",
+        "options": { "A": "330 GWh", "B": "345 GWh", "C": "360 GWh", "D": "375 GWh" },
+        "correctAnswer": "B",
+        "explanation": "Current Wind = 300 GWh. Increase of 15% = 1.15 * 300 = 345 GWh."
+    },
+    {
+        "id": 82,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table4",
+        "questionText": "What is the total cost of raw materials for producing one unit of Product X?",
+        "options": { "A": "$55.50", "B": "$60.00", "C": "$63.00", "D": "$65.00" },
+        "correctAnswer": "C",
+        "explanation": "Steel: 2.50 * 10 = $25. Plastic: 1.20 * 15 = $18. Copper: 4.00 * 5 = $20. Total = 25 + 18 + 20 = $63.00."
+    },
+    {
+        "id": 83,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table4",
+        "questionText": "If the price of Copper increases by 10%, what would be the new total cost of raw materials for one unit of Product X?",
+        "options": { "A": "$63.50", "B": "$64.00", "C": "$64.50", "D": "$65.00" },
+        "correctAnswer": "D",
+        "explanation": "Current Copper Cost = 4.00 * 5 = $20. 10% increase makes it $22. New Total Cost = 25 (Steel) + 18 (Plastic) + 22 (New Copper) = $65.00."
+    },
+    {
+        "id": 84,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table4",
+        "questionText": "What percentage of the total raw material cost for Product X is attributed to Steel? (Round to one decimal place)",
+        "options": { "A": "39.7%", "B": "40.0%", "C": "41.3%", "D": "42.0%" },
+        "correctAnswer": "A",
+        "explanation": "Steel Cost = $25. Total Cost = $63. Percentage = (25 / 63) * 100 ≈ 39.68% ≈ 39.7%."
+    },
+    {
+        "id": 85,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph5",
+        "questionText": "What was the total number of employee training hours in the first half of 2023 (Q1 and Q2)?",
+        "options": { "A": "2550 hours", "B": "2600 hours", "C": "2700 hours", "D": "2750 hours" },
+        "correctAnswer": "C",
+        "explanation": "Q1 = 1200. Q2 = 1500. Total = 1200 + 1500 = 2700 hours."
+    },
+    {
+        "id": 86,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph5",
+        "questionText": "In which quarter did employee training hours see the largest percentage increase from the previous quarter?",
+        "options": { "A": "Q2", "B": "Q3", "C": "Q4", "D": "None" },
+        "correctAnswer": "A",
+        "explanation": "Q2 from Q1: ((1500 - 1200) / 1200) * 100 = 25%. Q3 was a decrease. Q4 from Q3: ((1600-1350)/1350) * 100 ≈ 18.5%. Q2 had the largest increase."
+    },
+    {
+        "id": 87,
+        "section": "Numerical Reasoning",
+        "data_source_id": "graph5",
+        "questionText": "If the average cost of training per hour is $50, what was the total cost of training in Q4?",
+        "options": { "A": "$67,500", "B": "$75,000", "C": "$80,000", "D": "$85,000" },
+        "correctAnswer": "C",
+        "explanation": "Q4 Training Hours = 1600. Total Cost = 1600 * $50 = $80,000."
+    },
+    {
+        "id": 88,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table5",
+        "questionText": "Which product category had the highest profit margin (Revenue - COGS) in Q4 2024?",
+        "options": { "A": "Lubricants", "B": "Fuels", "C": "Chemicals", "D": "Cannot Say" },
+        "correctAnswer": "A",
+        "explanation": "Lubricants Profit = 800 - 450 = 350. Fuels Profit = 1200 - 900 = 300. Chemicals Profit = 600 - 300 = 300. Lubricants had the highest profit margin."
+    },
+    {
+        "id": 89,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table5",
+        "questionText": "What was the total Cost of Goods Sold (COGS) for all product categories combined in Q4 2024?",
+        "options": { "A": "$1,550 Thousand", "B": "$1,600 Thousand", "C": "$1,650 Thousand", "D": "$1,700 Thousand" },
+        "correctAnswer": "C",
+        "explanation": "Total COGS = 450 (Lubricants) + 900 (Fuels) + 300 (Chemicals) = $1,650 Thousand USD."
+    },
+    {
+        "id": 90,
+        "section": "Numerical Reasoning",
+        "data_source_id": "table5",
+        "questionText": "What percentage of the total Sales Revenue is accounted for by Fuels? (Round to one decimal place)",
+        "options": { "A": "40.0%", "B": "46.2%", "C": "45.0%", "D": "47.1%" },
+        "correctAnswer": "B",
+        "explanation": "Fuels Sales Revenue = 1200. Total Sales Revenue = 800 + 1200 + 600 = 2600. Percentage = (1200 / 2600) * 100 ≈ 46.15% ≈ 46.2%."
+    },
+    {
+        "id": 91,
+        "section": "Numerical Reasoning",
+        "questionText": "If 2x - 5 = 11, what is the value of 4x + 3?",
+        "options": { "A": "35", "B": "32", "C": "28", "D": "25" },
+        "correctAnswer": "A",
+        "explanation": "Solve for x: 2x = 16 -> x = 8. Substitute into second expression: 4(8) + 3 = 32 + 3 = 35."
+    },
+    {
+        "id": 92,
+        "section": "Numerical Reasoning",
+        "questionText": "A company's revenue increased from $250,000 in Q1 to $325,000 in Q2. What is the percentage increase in revenue?",
+        "options": { "A": "25%", "B": "30%", "C": "35%", "D": "40%" },
+        "correctAnswer": "B",
+        "explanation": "Increase = 325,000 - 250,000 = 75,000. Percentage Increase = (75,000 / 250,000) * 100 = 30%."
+    },
+    {
+        "id": 93,
+        "section": "Numerical Reasoning",
+        "questionText": "The ratio of engineers to technicians in a team is 3:5. If there are 18 engineers, how many technicians are there?",
+        "options": { "A": "25", "B": "30", "C": "35", "D": "40" },
+        "correctAnswer": "B",
+        "explanation": "The ratio is 3:5. If 3 parts = 18 engineers, then 1 part = 18 / 3 = 6. Technicians are 5 parts, so 5 * 6 = 30."
+    },
+    {
+        "id": 94,
+        "section": "Numerical Reasoning",
+        "questionText": "A tank can be filled by pipe A in 10 hours and by pipe B in 15 hours. If both pipes are opened together, how long will it take to fill the tank?",
+        "options": { "A": "5 hours", "B": "6 hours", "C": "7.5 hours", "D": "8 hours" },
+        "correctAnswer": "B",
+        "explanation": "Pipe A's rate = 1/10 per hour. Pipe B's rate = 1/15 per hour. Combined rate = 1/10 + 1/15 = 3/30 + 2/30 = 5/30 = 1/6 per hour. Time to fill = 1 / (1/6) = 6 hours."
+    },
+    {
+        "id": 95,
+        "section": "Numerical Reasoning",
+        "questionText": "If a product is sold for $120 after a 25% discount, what was its original price?",
+        "options": { "A": "$140", "B": "$150", "C": "$160", "D": "$180" },
+        "correctAnswer": "C",
+        "explanation": "The selling price of $120 represents 75% of the original price. Original Price = $120 / 0.75 = $160."
+    },
+    {
+        "id": 96,
+        "section": "Numerical Reasoning",
+        "questionText": "A car travels at a speed of 60 km/h for 2.5 hours. How far does it travel?",
+        "options": { "A": "120 km", "B": "150 km", "C": "180 km", "D": "200 km" },
+        "correctAnswer": "B",
+        "explanation": "Distance = Speed * Time = 60 km/h * 2.5 h = 150 km."
+    },
+    {
+        "id": 97,
+        "section": "Numerical Reasoning",
+        "questionText": "If 3/4 of a company's employees are male, and there are 120 female employees, what is the total number of employees?",
+        "options": { "A": "360", "B": "480", "C": "540", "D": "600" },
+        "correctAnswer": "B",
+        "explanation": "If 3/4 are male, then 1/4 are female. If 1/4 of total = 120, then total = 120 * 4 = 480."
+    },
+    {
+        "id": 98,
+        "section": "Numerical Reasoning",
+        "questionText": "A square plot has a side length of 15 meters. What is its area?",
+        "options": { "A": "60 sq. m", "B": "150 sq. m", "C": "225 sq. m", "D": "300 sq. m" },
+        "correctAnswer": "C",
+        "explanation": "Area of a square = side * side = 15m * 15m = 225 square meters."
+    },
+    {
+        "id": 99,
+        "section": "Numerical Reasoning",
+        "questionText": "An investment of $5,000 earns simple interest at a rate of 4% per annum. How much interest will be earned in 3 years?",
+        "options": { "A": "$400", "B": "$500", "C": "$600", "D": "$700" },
+        "correctAnswer": "C",
+        "explanation": "Simple Interest = Principal * Rate * Time = 5000 * 0.04 * 3 = $600."
+    },
+    {
+        "id": 100,
+        "section": "Numerical Reasoning",
+        "questionText": "If the sum of two numbers is 45 and their difference is 9, what are the two numbers?",
+        "options": { "A": "25 and 20", "B": "27 and 18", "C": "30 and 15", "D": "32 and 13" },
+        "correctAnswer": "B",
+        "explanation": "Let x and y be the numbers. x+y=45, x-y=9. Adding the equations: 2x = 54 -> x=27. Substituting back: 27+y=45 -> y=18."
+    },
+    {
+        "id": 101,
+        "section": "Numerical Reasoning",
+        "questionText": "A company's profit in Q3 was $150,000, which is 20% less than its profit in Q2. What was the profit in Q2?",
+        "options": { "A": "$175,000", "B": "$180,000", "C": "$187,500", "D": "$190,000" },
+        "correctAnswer": "C",
+        "explanation": "$150,000 represents 80% of Q2 profit. Q2 Profit = 150,000 / 0.80 = $187,500."
+    },
+    {
+        "id": 102,
+        "section": "Numerical Reasoning",
+        "questionText": "The average age of 5 employees is 32 years. If a new employee aged 28 joins the team, what is the new average age?",
+        "options": { "A": "30.66 years", "B": "31.33 years", "C": "31.5 years", "D": "32 years" },
+        "correctAnswer": "B",
+        "explanation": "Total age of 5 employees = 5 * 32 = 160. New total age = 160 + 28 = 188. New average age = 188 / 6 ≈ 31.33 years."
+    },
+    {
+        "id": 103,
+        "section": "Numerical Reasoning",
+        "questionText": "A company's expenses are $45,000, and its profit is $30,000. If profit is 20% of revenue, what is the revenue?",
+        "options": { "A": "$120,000", "B": "$150,000", "C": "$180,000", "D": "$200,000" },
+        "correctAnswer": "B",
+        "explanation": "The expenses information is a distractor. If Profit = 20% of Revenue, then $30,000 = 0.20 * Revenue. Revenue = $30,000 / 0.20 = $150,000."
+    },
+    {
+        "id": 104,
+        "section": "Numerical Reasoning",
+        "questionText": "A mixture contains liquid A and liquid B in the ratio 4:3. If there are 28 liters of liquid A, what is the total volume of the mixture?",
+        "options": { "A": "35 liters", "B": "49 liters", "C": "56 liters", "D": "63 liters" },
+        "correctAnswer": "B",
+        "explanation": "If 4 parts = 28 liters, then 1 part = 7 liters. The total mixture has 4+3 = 7 parts. Total volume = 7 parts * 7 liters/part = 49 liters."
+    },
+    {
+        "id": 105,
+        "section": "Numerical Reasoning",
+        "questionText": "If x/3 + 2 = 7, what is the value of x?",
+        "options": { "A": "10", "B": "12", "C": "15", "D": "21" },
+        "correctAnswer": "C",
+        "explanation": "x/3 = 7 - 2 -> x/3 = 5 -> x = 5 * 3 = 15."
+    },
+    {
+        "id": 106,
+        "section": "Numerical Reasoning",
+        "questionText": "A worker completes 3/5 of a job in 12 days. How many more days will it take to complete the remaining job?",
+        "options": { "A": "6 days", "B": "8 days", "C": "10 days", "D": "12 days" },
+        "correctAnswer": "B",
+        "explanation": "If 3/5 of job = 12 days, then 1/5 of job = 4 days. The remaining job is 2/5. Time for remaining job = 2 * (time for 1/5) = 2 * 4 = 8 days."
+    },
+    {
+        "id": 107,
+        "section": "Numerical Reasoning",
+        "questionText": "The price of a barrel of oil increased by 10% last month and then decreased by 10% this month. If the original price was $80, what is the current price?",
+        "options": { "A": "$79.20", "B": "$80.00", "C": "$80.80", "D": "$81.00" },
+        "correctAnswer": "A",
+        "explanation": "After 10% increase: $80 * 1.10 = $88. After 10% decrease: $88 * 0.90 = $79.20."
+    },
+    {
+        "id": 108,
+        "section": "Numerical Reasoning",
+        "questionText": "A rectangular storage area has a length of 20 meters and a width of 12 meters. What is its perimeter?",
+        "options": { "A": "240 meters", "B": "64 meters", "C": "32 meters", "D": "48 meters" },
+        "correctAnswer": "B",
+        "explanation": "Perimeter = 2 * (Length + Width) = 2 * (20 + 12) = 2 * 32 = 64 meters."
+    },
+    {
+        "id": 109,
+        "section": "Numerical Reasoning",
+        "questionText": "If 5 men can complete a task in 10 days, how many days will it take 8 men to complete the same task, assuming they work at the same rate?",
+        "options": { "A": "6.25 days", "B": "7 days", "C": "8 days", "D": "9 days" },
+        "correctAnswer": "A",
+        "explanation": "Total man-days = 5 men * 10 days = 50 man-days. Time for 8 men = 50 man-days / 8 men = 6.25 days."
+    },
+    {
+        "id": 110,
+        "section": "Numerical Reasoning",
+        "questionText": "A company's stock price dropped from $50 to $42.50. What was the percentage decrease?",
+        "options": { "A": "12.5%", "B": "15%", "C": "17.5%", "D": "20%" },
+        "correctAnswer": "B",
+        "explanation": "Decrease = $50 - $42.50 = $7.50. Percentage Decrease = ($7.50 / $50) * 100 = 15%."
+    },
+    {
+        "id": 111,
+        "section": "Numerical Reasoning",
+        "questionText": "If the total cost of 3 identical safety helmets is $135, what is the cost of 5 such helmets?",
+        "options": { "A": "$200", "B": "$215", "C": "$225", "D": "$250" },
+        "correctAnswer": "C",
+        "explanation": "Cost per helmet = $135 / 3 = $45. Cost of 5 helmets = 5 * $45 = $225."
+    },
+    {
+        "id": 112,
+        "section": "Numerical Reasoning",
+        "questionText": "A train travels 360 km in 4 hours. What is its speed in meters per second?",
+        "options": { "A": "20 m/s", "B": "25 m/s", "C": "30 m/s", "D": "35 m/s" },
+        "correctAnswer": "B",
+        "explanation": "Speed = 360 km / 4 h = 90 km/h. To convert km/h to m/s, multiply by 5/18. 90 * (5/18) = 5 * 5 = 25 m/s."
+    },
+    {
+        "id": 113,
+        "section": "Numerical Reasoning",
+        "questionText": "In a batch of 200 components, 5% are defective. How many components are not defective?",
+        "options": { "A": "10", "B": "190", "C": "180", "D": "175" },
+        "correctAnswer": "B",
+        "explanation": "If 5% are defective, 95% are not. 0.95 * 200 = 190. Alternatively, defective = 0.05 * 200 = 10. Non-defective = 200 - 10 = 190."
+    },
+    {
+        "id": 114,
+        "section": "Numerical Reasoning",
+        "questionText": "If 7y - 12 = 2y + 8, what is the value of y?",
+        "options": { "A": "2", "B": "3", "C": "4", "D": "5" },
+        "correctAnswer": "C",
+        "explanation": "7y - 2y = 8 + 12 -> 5y = 20 -> y = 4."
+    },
+    {
+        "id": 115,
+        "section": "Numerical Reasoning",
+        "questionText": "A company's workforce is split between three departments: Production, Sales, and Administration in the ratio 7:4:3. If there are 28 employees in Production, what is the total number of employees?",
+        "options": { "A": "48", "B": "56", "C": "64", "D": "72" },
+        "correctAnswer": "B",
+        "explanation": "Production is 7 parts. If 7 parts = 28 employees, then 1 part = 4 employees. Total parts = 7 + 4 + 3 = 14. Total employees = 14 * 4 = 56."
+    },
+    {
+        "id": 116,
+        "section": "Numerical Reasoning",
+        "questionText": "A machine produces 150 units in 3 hours. How many units will it produce in 5 hours at the same rate?",
+        "options": { "A": "200", "B": "225", "C": "250", "D": "275" },
+        "correctAnswer": "C",
+        "explanation": "Rate = 150 units / 3 hours = 50 units/hour. Units in 5 hours = 50 units/hour * 5 hours = 250 units."
+    },
+    {
+        "id": 117,
+        "section": "Numerical Reasoning",
+        "questionText": "If the price of a raw material is $15 per kg, and it increases by 8%, what is the new price per kg?",
+        "options": { "A": "$16.00", "B": "$16.20", "C": "$16.50", "D": "$17.00" },
+        "correctAnswer": "B",
+        "explanation": "Increase amount = 8% of $15 = 0.08 * 15 = $1.20. New price = $15 + $1.20 = $16.20."
+    },
+    {
+        "id": 118,
+        "section": "Numerical Reasoning",
+        "questionText": "A circle has a radius of 7 cm. What is its circumference? (Use π ≈ 22/7)",
+        "options": { "A": "22 cm", "B": "44 cm", "C": "88 cm", "D": "154 cm" },
+        "correctAnswer": "B",
+        "explanation": "Circumference = 2 * π * r = 2 * (22/7) * 7 = 44 cm."
+    },
+    {
+        "id": 119,
+        "section": "Numerical Reasoning",
+        "questionText": "A project budget is $80,000. If 30% is spent on labor and 45% on materials, how much money is left for other expenses?",
+        "options": { "A": "$16,000", "B": "$20,000", "C": "$24,000", "D": "$28,000" },
+        "correctAnswer": "B",
+        "explanation": "Total percentage spent = 30% + 45% = 75%. Percentage left = 100% - 75% = 25%. Money left = 25% of $80,000 = 0.25 * 80000 = $20,000."
+    },
+    {
+        "id": 120,
+        "section": "Numerical Reasoning",
+        "questionText": "The sum of three consecutive even numbers is 78. What is the largest of these numbers?",
+        "options": { "A": "24", "B": "26", "C": "28", "D": "30" },
+        "correctAnswer": "C",
+        "explanation": "Let the numbers be x, x+2, x+4. Their sum is 3x + 6 = 78. So, 3x = 72, and x = 24. The numbers are 24, 26, and 28. The largest is 28."
+    },
+    {
+        "id": 121,
+        "section": "Abstract Reasoning",
+        "visual_id": "seq1",
+        "questionText": "Which box completes the sequence?",
+        "options": {},
+        "correctAnswer": "A",
+        "explanation": "The small black circle moves clockwise to the next corner in each step. After being in the top-left (TL) in the fifth frame, it moves to the top-right (TR)."
+    },
+    {
+        "id": 122, "section": "Abstract Reasoning", "visual_id": "seq1", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 121."
+    },
+    {
+        "id": 123, "section": "Abstract Reasoning", "visual_id": "seq1", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 121."
+    },
+    {
+        "id": 124, "section": "Abstract Reasoning", "visual_id": "seq2", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "The small white triangle rotates clockwise around the corners. After top-left in the fifth frame, it returns to the top-right."
+    },
+    {
+        "id": 125, "section": "Abstract Reasoning", "visual_id": "seq2", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 124."
+    },
+    {
+        "id": 126, "section": "Abstract Reasoning", "visual_id": "seq2", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 124."
+    },
+    {
+        "id": 127, "section": "Abstract Reasoning", "visual_id": "seq3", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "Both circles move clockwise around the corners, always remaining diagonally opposite. After black top-left and white bottom-right, the black moves to top-right and the white moves to bottom-left."
+    },
+    {
+        "id": 128, "section": "Abstract Reasoning", "visual_id": "seq3", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 127."
+    },
+    {
+        "id": 129, "section": "Abstract Reasoning", "visual_id": "seq3", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 127."
+    },
+    {
+        "id": 130, "section": "Abstract Reasoning", "visual_id": "seq4", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "Both squares move clockwise to the adjacent corners. After black top-left and white top-right, they move to black top-right and white bottom-right."
+    },
+    {
+        "id": 131, "section": "Abstract Reasoning", "visual_id": "seq4", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 130."
+    },
+    {
+        "id": 132, "section": "Abstract Reasoning", "visual_id": "seq4", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 130."
+    },
+    {
+        "id": 133, "section": "Abstract Reasoning", "visual_id": "seq5", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "The entire figure rotates 45 degrees clockwise in each step. After the 180-degree rotation in Box 5, the next step is a rotation to 180 + 45 = 225 degrees."
+    },
+    {
+        "id": 134, "section": "Abstract Reasoning", "visual_id": "seq5", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 133."
+    },
+    {
+        "id": 135, "section": "Abstract Reasoning", "visual_id": "seq5", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 133."
+    },
+    {
+        "id": 136, "section": "Abstract Reasoning", "visual_id": "seq6", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "The number of horizontal lines increases by one in each step. After 5 lines, the next box has 6 lines."
+    },
+    {
+        "id": 137, "section": "Abstract Reasoning", "visual_id": "seq6", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 136."
+    },
+    {
+        "id": 138, "section": "Abstract Reasoning", "visual_id": "seq6", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 136."
+    },
+    {
+        "id": 139, "section": "Abstract Reasoning", "visual_id": "seq7", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "The inner shape's number of sides increases by one (Circle->Square->Pentagon->Hexagon->Heptagon). The next is an Octagon (8 sides)."
+    },
+    {
+        "id": 140, "section": "Abstract Reasoning", "visual_id": "seq7", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 139."
+    },
+    {
+        "id": 141, "section": "Abstract Reasoning", "visual_id": "seq7", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 139."
+    },
+    {
+        "id": 142, "section": "Abstract Reasoning", "visual_id": "seq8", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "The square rotates clockwise for 4 steps, then changes color to white and resets to the top-left. The sequence then continues with the white square rotating clockwise. After the white square is at top-left (Box 5), it moves to top-right."
+    },
+    {
+        "id": 143, "section": "Abstract Reasoning", "visual_id": "seq8", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 142."
+    },
+    {
+        "id": 144, "section": "Abstract Reasoning", "visual_id": "seq8", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 142."
+    },
+    {
+        "id": 145, "section": "Abstract Reasoning", "visual_id": "seq9", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "The triangle rotates 90 degrees clockwise each step (Right -> Down -> Left -> Up -> Right). The next rotation is Down."
+    },
+    {
+        "id": 146, "section": "Abstract Reasoning", "visual_id": "seq9", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 145."
+    },
+    {
+        "id": 147, "section": "Abstract Reasoning", "visual_id": "seq9", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 145."
+    },
+    {
+        "id": 148, "section": "Abstract Reasoning", "visual_id": "seq10", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "The number of lines increases by one. The pattern adds lines of increasing complexity: diagonal, second diagonal (cross), horizontal, vertical, vertical mid-line. The next logical addition is a horizontal mid-line, creating a total of 6 lines."
+    },
+    {
+        "id": 149, "section": "Abstract Reasoning", "visual_id": "seq10", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 148."
+    },
+    {
+        "id": 150, "section": "Abstract Reasoning", "visual_id": "seq10", "questionText": "Which box completes the sequence?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 148."
+    },
+    {
+        "id": 151, "section": "Abstract Reasoning", "visual_id": "mat1", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "Rows: Outer shape is consistent (pentagon). Columns: Inner shape moves clockwise (TL->TR->BR). Result: Pentagon with a star in the bottom-right."
+    },
+    {
+        "id": 152, "section": "Abstract Reasoning", "visual_id": "mat1", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "This question uses the same visual and logic as 151."
+    },
+    {
+        "id": 153, "section": "Abstract Reasoning", "visual_id": "mat1", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "This question uses the same visual and logic as 151."
+    },
+    {
+        "id": 154, "section": "Abstract Reasoning", "visual_id": "mat2", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "Rows: Outer shape is consistent (triangle). Across the row, the black dot moves clockwise (TL->TR->BR) and the white dot moves counter-clockwise (BR->BL->TL). Result: Triangle with a black dot at bottom-right and white dot at top-left."
+    },
+    {
+        "id": 155, "section": "Abstract Reasoning", "visual_id": "mat2", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "This question uses the same visual and logic as 154."
+    },
+    {
+        "id": 156, "section": "Abstract Reasoning", "visual_id": "mat2", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "This question uses the same visual and logic as 154."
+    },
+    {
+        "id": 157, "section": "Abstract Reasoning", "visual_id": "mat3", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "Rows: The outer shape (triangle) and line orientation (diagonal) are consistent. Columns: The number of lines increases from left to right (1 -> 2 -> 3). Result: Triangle with 3 diagonal lines."
+    },
+    {
+        "id": 158, "section": "Abstract Reasoning", "visual_id": "mat3", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "This question uses the same visual and logic as 157."
+    },
+    {
+        "id": 159, "section": "Abstract Reasoning", "visual_id": "mat3", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "This question uses the same visual and logic as 157."
+    },
+    {
+        "id": 160, "section": "Abstract Reasoning", "visual_id": "mat4", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "A", "explanation": "Columns: The number of sides is consistent (7). Rows: The color alternates (Black -> White -> Black). Result: A black heptagon."
+    },
+    {
+        "id": 161, "section": "Abstract Reasoning", "visual_id": "mat4", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 160."
+    },
+    {
+        "id": 162, "section": "Abstract Reasoning", "visual_id": "mat4", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 160."
+    },
+    {
+        "id": 163, "section": "Abstract Reasoning", "visual_id": "mat5", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "D", "explanation": "Rows: The outer shape is consistent (triangle) and the number of dots decreases by one from left to right (6 -> 5 -> 4). Result: A triangle with 4 dots."
+    },
+    {
+        "id": 164, "section": "Abstract Reasoning", "visual_id": "mat5", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "D", "explanation": "This question uses the same visual and logic as 163."
+    },
+    {
+        "id": 165, "section": "Abstract Reasoning", "visual_id": "mat5", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "D", "explanation": "This question uses the same visual and logic as 163."
+    },
+    {
+        "id": 166, "section": "Abstract Reasoning", "visual_id": "mat6", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "Rows: Shape and color are consistent (black triangle). Columns: Size decreases from left to right (Large -> Medium -> Small). Result: A small, black triangle."
+    },
+    {
+        "id": 167, "section": "Abstract Reasoning", "visual_id": "mat6", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "This question uses the same visual and logic as 166."
+    },
+    {
+        "id": 168, "section": "Abstract Reasoning", "visual_id": "mat6", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "C", "explanation": "This question uses the same visual and logic as 166."
+    },
+    {
+        "id": 169, "section": "Abstract Reasoning", "visual_id": "mat7", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "A", "explanation": "This rule works by 'superposition' or 'subtraction'. The shape in column 1 is combined with column 2 to produce column 3. In rows 1 and 2, the two opposing diagonal lines cancel each other out, resulting in no line. Applying this to row 3, a triangle with two opposing diagonal lines would result in a triangle with no line."
+    },
+    {
+        "id": 170, "section": "Abstract Reasoning", "visual_id": "mat7", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 169."
+    },
+    {
+        "id": 171, "section": "Abstract Reasoning", "visual_id": "mat7", "questionText": "What shape completes the empty cell?", "options": {}, "correctAnswer": "A", "explanation": "This question uses the same visual and logic as 169."
+    },
+    {
+        "id": 172,
+        "section": "Abstract Reasoning",
+        "questionText": "Sequence: 14, 17, 28, 11. Which pair comes next? (1) 41, 71 (2) 14, 17 (3) 82, 11 (4) 41, 71, 82, 11.",
+        "options": { "A": "41, 71", "B": "14, 17", "C": "82, 11", "D": "41, 71, 82, 11" },
+        "correctAnswer": "D",
+        "explanation": "This pattern involves reversing the digits of numbers. 14 becomes 41, 17 becomes 71, 28 becomes 82, and 11 remains 11. The full sequence provided in the prompt implies all reversed numbers are presented together."
+    },
+    { "id": 173, "section": "Abstract Reasoning", "questionText": "Repeat of number reversal logic question.", "options": { "A": "A", "B": "B", "C": "C", "D": "D" }, "correctAnswer": "D", "explanation": "Pattern repeats." },
+    { "id": 174, "section": "Abstract Reasoning", "questionText": "Repeat of number reversal logic question.", "options": { "A": "A", "B": "B", "C": "C", "D": "D" }, "correctAnswer": "D", "explanation": "Pattern repeats." },
+    {
+        "id": 175,
+        "section": "Abstract Reasoning",
+        "questionText": "A sequence of shapes shows a large square. A small black square moves one step clockwise each step. After 4 steps, it resets to the top-left and changes to white. What is the 6th shape?",
+        "options": { "A": "White, Top-Left", "B": "White, Top-Right", "C": "White, Bottom-Right", "D": "Black, Top-Right" },
+        "correctAnswer": "B",
+        "explanation": "1: B-TL, 2: B-TR, 3: B-BR, 4: B-BL. Step 5 is the reset: W-TL. Therefore, step 6 continues the clockwise movement from the new start: W-TR."
+    },
+    { "id": 176, "section": "Abstract Reasoning", "questionText": "Repeat of color-change rotation question.", "options": { "A": "A", "B": "B", "C": "C", "D": "D" }, "correctAnswer": "B", "explanation": "Pattern repeats." },
+    { "id": 177, "section": "Abstract Reasoning", "questionText": "Repeat of color-change rotation question.", "options": { "A": "A", "B": "B", "C": "C", "D": "D" }, "correctAnswer": "B", "explanation": "Pattern repeats." },
+    {
+        "id": 178,
+        "section": "Abstract Reasoning",
+        "questionText": "Consider the provided matrix. What is the rule governing the third column?",
+        "visual_id": "mat8",
+        "options": { "A": "Subtraction of Col 1 from Col 2", "B": "Superposition of Col 1 and Col 2", "C": "Rotation of Col 1", "D": "Mirror of Col 2" },
+        "correctAnswer": "B",
+        "explanation": "This is a superposition or 'addition' matrix. The lines from the shape in Column 1 are added to the lines from the shape in Column 2 to create the combined shape in Column 3."
+    },
+    { "id": 179, "section": "Abstract Reasoning", "visual_id": "mat8", "questionText": "Repeat of matrix rule identification question.", "options": { "A": "A", "B": "B", "C": "C", "D": "D" }, "correctAnswer": "B", "explanation": "Pattern repeats." },
+    { "id": 180, "section": "Abstract Reasoning", "visual_id": "mat8", "questionText": "Repeat of matrix rule identification question.", "options": { "A": "A", "B": "B", "C": "C", "D": "D" }, "correctAnswer": "B", "explanation": "Pattern repeats." }
+]
