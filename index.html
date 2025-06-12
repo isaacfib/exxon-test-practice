@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExxonMobil Aptitude Test Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <a href="#" id="back-to-top" title="Back to top">↑</a>
+    
+    <header class="main-header">
+        <div class="container">
+            <h1>ExxonMobil Graduate Aptitude Test Practice</h1>
+            <p>Process Safety & Risk Engineer Role (Dragnet Solutions, June 2025)</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div id="welcome-screen">
+            <h2>Welcome to the Aptitude Test Simulator</h2>
+            <p>This application contains 180 practice questions to help you prepare. The test is structured into three main sections: Verbal Reasoning, Numerical Reasoning, and Abstract Reasoning.</p>
+            <p>Click on a section below to begin. Each section is timed to simulate real test conditions. Good luck!</p>
+        </div>
+
+        <div id="test-interface" class="hidden">
+            <nav class="main-nav">
+                <ul class="nav-links container">
+                    <li><a href="#" class="nav-btn" data-section="Verbal Reasoning">Verbal Reasoning</a></li>
+                    <li><a href="#" class="nav-btn" data-section="Numerical Reasoning">Numerical Reasoning</a></li>
+                    <li><a href="#" class="nav-btn" data-section="Abstract Reasoning">Abstract Reasoning</a></li>
+                </ul>
+            </nav>
+
+            <div id="test-dashboard">
+                <h3 id="current-section-title"></h3>
+                <div id="timer-display">00:00</div>
+            </div>
+
+            <div id="content-area">
+            </div>
+
+            <div id="question-area">
+            </div>
+        </div>
+
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <h3>Practice Test Simulator</h3>
+            <p>Built based on the provided specifications for comprehensive preparation.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
