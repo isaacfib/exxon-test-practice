@@ -511,3 +511,12 @@ tbody tr:nth-child(even) {
     box-shadow: none;
     border-color: #e0e0e0;
 }
+/* --- Fix for Dynamically Sized Bar Charts --- */
+.bar-chart {
+    /* Sets the context for the height calculation */
+    --max-val: 100; 
+}
+.bar {
+    /* Calculates height based on the CSS variable from its parent */
+    height: calc(var(--val, 0) / var(--max-val, 100) * 100%);
+}
