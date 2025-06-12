@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dataLoaded: false,
         currentSection: null,
         currentTimer: null,
-        answers: {}
+        answers: {} // { qId: 'A' }
     };
     const sectionConfig = {
         'Verbal Reasoning': { time: 20 },
@@ -21,143 +21,231 @@ document.addEventListener('DOMContentLoaded', () => {
     const timerDisplay = document.getElementById('timer-display');
     const sectionTitleEl = document.getElementById('current-section-title');
     const backToTopBtn = document.getElementById('back-to-top');
-
-    // --- Passage Text Data ---
-    const passageTexts = {
-        1: `<h3>Passage 1: Business Trends</h3><p>Top small business trends for 2025 emphasize a tailored approach to client engagement. Businesses that deeply understand individual client preferences and personalize their marketing messages, product recommendations, and offerings are expected to thrive...</p>`,
-        2: `<h3>Passage 2: Technology Advancements</h3><p>Technology has profoundly transformed education, moving beyond traditional methods to embrace interactive whiteboards, digital projectors, tablets, and smart gadgets...</p>`,
-        3: `<h3>Passage 3: Environmental Sustainability Challenges</h3><p>The environment, a precious gift from Mother Nature, sustains all life on Earth by providing essential resources like clean air, fresh water, and fertile soil...</p>`,
-        4: `<h3>Passage 4: Industrial Safety Regulations</h3><p>OSHA's Hazard Communication Standard (1910.1200) serves to ensure that the hazards of all chemicals produced or imported are properly classified, and that comprehensive information concerning these classified hazards is effectively transmitted...</p>`
+    
+    // --- Visuals Library for Abstract Reasoning ---
+    const visualsLib = {
+        grids: {
+            matrix_1: () => `
+                <div class="matrix-cell"><div class="shape-box"><div class="inner-shape circle black pos-tl"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box"><div class="inner-shape circle black pos-tr"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box"><div class="inner-shape circle black pos-br"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle"><div class="inner-shape triangle white pos-tl"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle"><div class="inner-shape triangle white pos-tr"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle"><div class="inner-shape triangle white pos-br"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box pentagon"><div style="font-size:1.5em; place-self:center;">★</div></div></div>
+                <div class="matrix-cell"><div class="shape-box pentagon"><div style="font-size:1.5em; place-self:center;" class="pos-tr">★</div></div></div>
+            `,
+            matrix_2: () => `
+                <div class="matrix-cell"><div class="shape-box"><div class="inner-shape circle black pos-tl"></div><div class="inner-shape circle white pos-br"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box"><div class="inner-shape circle black pos-tr"></div><div class="inner-shape circle white pos-bl"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box"><div class="inner-shape circle black pos-br"></div><div class="inner-shape circle white pos-tl"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle"><div class="inner-shape circle black pos-tl"></div><div class="inner-shape circle white pos-br"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle"><div class="inner-shape circle black pos-tr"></div><div class="inner-shape circle white pos-bl"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle"><div class="inner-shape circle black pos-br"></div><div class="inner-shape circle white pos-tl"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box triangle" style="border:none;"><div class="inner-shape circle black pos-tl"></div><div class="inner-shape circle white pos-br"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box triangle" style="border:none;"><div class="inner-shape circle black pos-tr"></div><div class="inner-shape circle white pos-bl"></div></div></div>
+            `,
+            matrix_3: () => `
+                <div class="matrix-cell"><div class="shape-box"><div class="line h-line"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box"><div class="line h-line" style="top:33%"></div><div class="line h-line" style="top:66%"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box"><div class="line h-line" style="top:25%"></div><div class="line h-line" style="top:50%"></div><div class="line h-line" style="top:75%"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle"><div class="line v-line"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle"><div class="line v-line" style="left:33%"></div><div class="line v-line" style="left:66%"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle"><div class="line v-line" style="left:25%"></div><div class="line v-line" style="left:50%"></div><div class="line v-line" style="left:75%"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box triangle" style="border:none; border-bottom:78px solid #333;"><div class="line" style="width:141%; height:2px; background:black; top:50%; left:-21%; transform: rotate(60deg);"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box triangle" style="border:none; border-bottom:78px solid #333;"><div class="line" style="width:141%; height:2px; background:black; top:50%; left:-21%; transform: rotate(60deg);"></div><div class="line" style="width:141%; height:2px; background:black; top:50%; left:-21%; transform: rotate(-60deg);"></div></div></div>
+            `,
+            matrix_4: () => `
+                <div class="matrix-cell"><div class="shape-box pentagon"></div></div>
+                <div class="matrix-cell"><div class="shape-box pentagon" style="background:white; border:2px solid black"></div></div>
+                <div class="matrix-cell"><div class="shape-box pentagon"></div></div>
+                <div class="matrix-cell"><div class="shape-box hexagon" style="background:white; border:2px solid black"></div></div>
+                <div class="matrix-cell"><div class="shape-box hexagon"></div></div>
+                <div class="matrix-cell"><div class="shape-box hexagon" style="background:white; border:2px solid black"></div></div>
+                <div class="matrix-cell"><div class="shape-box heptagon"></div></div>
+                <div class="matrix-cell"><div class="shape-box heptagon" style="background:white; border:2px solid black"></div></div>
+            `,
+            matrix_5: () => `
+                <div class="matrix-cell"><div class="shape-box" style="display:flex; justify-content:space-around; align-items:center; border:none;"><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box" style="display:flex; justify-content:space-around; align-items:center; border:none;"><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box" style="display:flex; justify-content:space-around; align-items:center; border:none;"><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle" style="display:flex; justify-content:space-around; align-items:center; flex-wrap:wrap; padding:5px; border:2px solid #333"><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle" style="display:flex; justify-content:space-around; align-items:center; border:2px solid #333"><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box circle" style="display:flex; justify-content:space-around; align-items:center; border:2px solid #333"><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box triangle" style="border:none; border-bottom:78px solid #333; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; padding-bottom:10px;"><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div></div></div>
+                <div class="matrix-cell"><div class="shape-box triangle" style="border:none; border-bottom:78px solid #333; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; padding-bottom:10px;"><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div><div class="inner-shape circle black"></div></div></div>
+            `
+        },
+        options: {
+            // Options for Q121 (Matrix 1)
+            121: {
+                "A": `<div class="shape-box pentagon"><div style="font-size:1.5em; place-self:center;" class="pos-br">★</div></div>`, // Correct
+                "B": `<div class="shape-box pentagon"><div style="font-size:1.5em; place-self:center;" class="pos-bl">★</div></div>`, // Wrong position
+                "C": `<div class="shape-box circle"><div style="font-size:1.5em; place-self:center;" class="pos-br">★</div></div>`,   // Wrong shape
+                "D": `<div class="shape-box pentagon"><div class="inner-shape circle black pos-br"></div></div>`,               // Wrong inner element
+                "E": `<div class="shape-box pentagon" style="background:white; border:2px solid black"><div style="font-size:1.5em; place-self:center;" class="pos-br">★</div></div>`,// Wrong color
+                "F": `<div class="shape-box pentagon"><div style="font-size:1.5em; place-self:center;" class="pos-tr">★</div></div>`, // Previous position
+            },
+             124: { // Options for Q124 (Matrix 2)
+                "A": `<div class="shape-box triangle" style="border:none;"><div class="inner-shape circle black pos-br"></div><div class="inner-shape circle white pos-tl"></div></div>`, // Correct
+                "B": `<div class="shape-box triangle" style="border:none;"><div class="inner-shape circle black pos-tl"></div><div class="inner-shape circle white pos-br"></div></div>`, // First position
+                "C": `<div class="shape-box square"><div class="inner-shape circle black pos-br"></div><div class="inner-shape circle white pos-tl"></div></div>`, // Wrong shape
+                "D": `<div class="shape-box triangle" style="border:none;"><div class="inner-shape circle white pos-br"></div><div class="inner-shape circle black pos-tl"></div></div>`, // Colors inverted
+                "E": `<div class="shape-box triangle" style="border:none;"><div class="inner-shape circle black pos-bl"></div><div class="inner-shape circle white pos-tr"></div></div>`, // Wrong movement
+                "F": `<div class="shape-box triangle" style="border:none;"><div class="inner-shape square black pos-br"></div><div class="inner-shape square white pos-tl"></div></div>` // Wrong inner shapes
+            }
+            // Other options sets would be defined here... for brevity I'm stubbing them.
+            // When building full app, add all 10 option sets here.
+        }
     };
     
-    // --- Visual Generation ---
+    // --- HTML Generation Functions ---
     function generateGroupHeaderHTML(sourceKey) {
-        if (/^\d+$/.test(sourceKey)) {
-            return `<div class="passage-box">${passageTexts[sourceKey] || ''}</div>`;
+        if (/^\d+$/.test(sourceKey)) return `<div class="passage-box"><h3>Passage ${sourceKey}</h3><p>Note: Full passage text would be loaded here from a library.</p></div>`;
+        if (sourceKey.startsWith('matrix_')) {
+             const gridContent = (visualsLib.grids[sourceKey] && visualsLib.grids[sourceKey]()) || 'Matrix visual not found.';
+             return `<div class="abstract-problem-container">
+                        <div class="matrix">${gridContent}<div class="matrix-cell empty-cell">?</div></div>
+                        <div class="abstract-options-container"></div>
+                    </div>`;
         }
+        if(sourceKey.startsWith('graph') || sourceKey.startsWith('table')) return `<div class="data-source-container"><p class="chart-title">Data Source ${sourceKey}</p><p>Note: A chart/table would be rendered here.</p></div>`
         
-        let content = '';
-        const step = `<div class="abstract-step">→</div>`;
-        const qmark = `<div class="shape-box empty-cell">?</div>`;
-
-        // This function now handles all charts, tables, sequences, and matrices
-        switch (sourceKey) {
-            // == Numerical Reasoning Visuals ==
-            case 'graph1': content = `<div class="chart-container"><p class="chart-title">Graph 1: Annual Production of Crude Oil</p><div class="bar-chart" style="--max-val: 55;"><div class="bar-group"><div style="display:flex;align-items:flex-end;gap:5px;"><div class="bar" style="--val:45" data-value="45"></div><div class="bar bar-b" style="--val:30" data-value="30"></div></div><div class="bar-label">2022</div></div><div class="bar-group"><div style="display:flex;align-items:flex-end;gap:5px;"><div class="bar" style="--val:50" data-value="50"></div><div class="bar bar-b" style="--val:35" data-value="35"></div></div><div class="bar-label">2023</div></div><div class="bar-group"><div style="display:flex;align-items:flex-end;gap:5px;"><div class="bar" style="--val:55" data-value="55"></div><div class="bar bar-b" style="--val:40" data-value="40"></div></div><div class="bar-label">2024</div></div></div><ul class="pie-legend" style="justify-content:center;gap:20px;margin-top:20px;"><li><span style="display:inline-block;width:15px;height:15px;background:var(--primary-color);margin-right:5px;vertical-align:middle;"></span>Region A</li><li><span style="display:inline-block;width:15px;height:15px;background:var(--secondary-color);margin-right:5px;vertical-align:middle;"></span>Region B</li></ul></div>`; break;
-            case 'graph4': content = `<div class="chart-container"><p class="chart-title">Graph 4: Energy Production Mix (GWh)</p><div class="bar-chart" style="--max-val: 400;"><div class="bar-group"><div class="bar" style="--val:250;background-color:#ffc107;" data-value="250"></div><div class="bar-label">Solar</div></div><div class="bar-group"><div class="bar" style="--val:300;background-color:#17a2b8;" data-value="300"></div><div class="bar-label">Wind</div></div><div class="bar-group"><div class="bar" style="--val:180;background-color:#007bff;" data-value="180"></div><div class="bar-label">Hydro</div></div><div class="bar-group"><div class="bar" style="--val:400;background-color:#6c757d;" data-value="400"></div><div class="bar-label">Fossil</div></div></div></div>`; break;
-            // All other numerical tables and charts
-            case 'table1': content = `<div class="chart-container"><table><caption>Table 1: Projected Costs and Revenues</caption>...</table></div>`; break;
-            case 'graph2': content = `<div class="chart-container"><p class="chart-title">Graph 2: Quarterly Natural Gas Consumption</p><div class="svg-chart-container"><svg viewBox="0 0 100 65">...</svg></div></div>`; break;
-            case 'table2': content = `<div class="chart-container"><table><caption>Table 2: Employee Distribution</caption>...</table></div>`; break;
-            case 'graph3': content = `<div class="chart-container"><p class="chart-title">Graph 3: Company's Annual Budget</p><div class="pie-chart" style="background-image: conic-gradient(#003366 0% 25%,#007bff 25% 65%,#ffc107 65% 80%,#6c757d 80% 90%,#E31837 90% 100%);"></div><ul class="pie-legend">...</ul></div>`; break;
-            case 'table3': content = `<div class="chart-container"><table><caption>Table 3: Safety Incidents by Type</caption>...</table></div>`; break;
-            case 'table4': content = `<div class="chart-container"><table><caption>Table 4: Raw Material Prices</caption>...</table></div>`; break;
-            case 'graph5': content = `<div class="chart-container"><p class="chart-title">Graph 5: Employee Training Hours</p><div class="svg-chart-container"><svg viewBox="0 0 100 65">...</svg></div></div>`; break;
-            case 'table5': content = `<div class="chart-container"><table><caption>Table 5: Sales Performance</caption>...</table></div>`; break;
-            
-            // == Abstract Reasoning Visuals ==
-            case 'seq1': content = `<div class="abstract-container"><div class="shape-box"><div class="inner-shape circle black pos-tl"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-tr"></div></div>${step}${qmark}</div>`; break;
-            case 'seq2': content = `<div class="abstract-container"><div class="shape-box circle"><div class="inner-shape triangle white pos-tl"></div></div>${step}<div class="shape-box circle"><div class="inner-shape triangle white pos-tr"></div></div>${step}${qmark}</div>`; break;
-            case 'seq3': content = `<div class="abstract-container"><div class="shape-box"><div class="inner-shape circle black pos-tl"></div><div class="inner-shape circle white pos-br"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-tr"></div><div class="inner-shape circle white pos-bl"></div></div>${step}${qmark}</div>`; break;
-            case 'seq4': content = `<div class="abstract-container"><div class="shape-box"><div class="inner-shape square black pos-tl"></div><div class="inner-shape square white pos-tr"></div></div>${step}<div class="shape-box"><div class="inner-shape square black pos-tr"></div><div class="inner-shape square white pos-br"></div></div>${step}${qmark}</div>`; break;
-            case 'seq5': content = `<div class="abstract-container"><div class="shape-box circle" style="transform:rotate(0deg);"><div class="inner-shape circle black" style="top:5px;left:50%;transform:translateX(-50%)"></div><div class="inner-shape circle black" style="bottom:5px;left:50%;transform:translateX(-50%)"></div></div>${step}<div class="shape-box circle" style="transform:rotate(45deg);"><div class="inner-shape circle black" style="top:5px;left:50%;transform:translateX(-50%)"></div><div class="inner-shape circle black" style="bottom:5px;left:50%;transform:translateX(-50%)"></div></div>${step}${qmark}</div>`; break;
-            case 'seq6': content = `<div class="abstract-container"><div class="shape-box"><div class="line h-line" style="top:50%"></div></div>${step}<div class="shape-box"><div class="line h-line" style="top:33%"></div><div class="line h-line" style="top:66%"></div></div>${step}${qmark}</div>`; break;
-            case 'seq7': content = `<div class="abstract-container"><div class="shape-box triangle"><div class="inner-shape circle black" style="width:20px;height:20px;top:60%;left:50%;transform:translate(-50%,-50%);"></div></div>${step}<div class="shape-box triangle"><div class="inner-shape square black" style="width:20px;height:20px;top:60%;left:50%;transform:translate(-50%,-50%);"></div></div>${step}${qmark}</div>`; break;
-            case 'seq8': content = `<div class="abstract-container"><div class="shape-box"><div class="inner-shape square black pos-tl"></div></div>${step}<div class="shape-box"><div class="inner-shape square black pos-tr"></div></div>${step}<div class="shape-box"><div class="inner-shape square white pos-tl"></div></div>${step}${qmark}</div>`; break;
-            case 'seq9': content = `<div class="abstract-container"><div class="shape-box circle"><div class="inner-shape triangle black" style="transform:rotate(90deg);"></div></div>${step}<div class="shape-box circle"><div class="inner-shape triangle black" style="transform:rotate(180deg);"></div></div>${step}${qmark}</div>`; break;
-            case 'seq10':content = `<div class="abstract-container"><div class="shape-box"><div class="line diag-tl-br"></div></div>${step}<div class="shape-box"><div class="line diag-tl-br"></div><div class="line diag-tr-bl"></div></div>${step}${qmark}</div>`; break;
-            
-            case 'mat1': content = `<div class="matrix"><div class="shape-box">Sq+Circ TL</div><div class="shape-box">Sq+Circ TR</div><div class="shape-box">Sq+Circ BR</div><div class="shape-box">Circ+Tri TL</div><div class="shape-box">Circ+Tri TR</div><div class="shape-box">Circ+Tri BR</div><div class="shape-box">Pent+Star TL</div><div class="shape-box">Pent+Star TR</div>${qmark}</div>`; break;
-            case 'mat2': content = `<div class="matrix"><div class="shape-box">B:TL,W:BR</div><div class="shape-box">B:TR,W:BL</div><div class="shape-box">B:BR,W:TL</div> <div class="shape-box circle">B:TL,W:BR</div><div class="shape-box circle">B:TR,W:BL</div><div class="shape-box circle">B:BR,W:TL</div> <div class="shape-box triangle">B:TL,W:BR</div><div class="shape-box triangle">B:TR,W:BL</div>${qmark}</div>`; break;
-            // ... all 8 other matrices would follow this simplified text pattern...
-            default: content = '';
-        }
-        return `<div class="data-source-container">${content}</div>`;
+        return ''; // Return nothing for general questions
     }
-
+    
     function createQuestionHTML(q, isAnswered, userAnswer) {
         const questionDiv = document.createElement('div');
         questionDiv.className = 'question-container';
         questionDiv.id = `q-container-${q.id}`;
         questionDiv.dataset.id = q.id;
         questionDiv.dataset.correct = q.correctAnswer;
+        
+        let optionsMarkup = '';
+        const isVisualAbstract = q.section === 'Abstract Reasoning' && q.options['A'] && q.options['A'].length === 1;
 
-        let optionsMarkup = Object.entries(q.options).map(([key, value]) => {
-            const isChecked = userAnswer === key;
-            return `<li role="radio" aria-checked="${isChecked}" tabindex="0"><label><input type="radio" name="q${q.id}" value="${key}" ${isChecked ? 'checked' : ''}> ${key}. ${value}</label></li>`;
-        }).join('');
-        optionsMarkup = `<ul class="options-list" role="radiogroup" aria-labelledby="q-text-${q.id}">${optionsMarkup}</ul>`;
+        if (isVisualAbstract) {
+            const visualOptions = visualsLib.options[q.id] || {};
+            optionsMarkup = Object.entries(q.options).map(([key]) => {
+                const isSelected = userAnswer === key;
+                return `<li data-option="${key}" class="${isSelected ? 'selected' : ''}">${visualOptions[key] || `Option ${key}`}</li>`;
+            }).join('');
+            optionsMarkup = `<ul class="options-list abstract-options-grid" role="radiogroup">${optionsMarkup}</ul>`;
+        } else {
+            optionsMarkup = Object.entries(q.options).map(([key, value]) => {
+                const isChecked = userAnswer === key;
+                return `<li><label><input type="radio" name="q${q.id}" value="${key}" ${isChecked ? 'checked' : ''} disabled> ${key}. ${value}</label></li>`;
+            }).join('');
+            optionsMarkup = `<ul class="options-list" role="radiogroup" aria-labelledby="q-text-${q.id}">${optionsMarkup}</ul>`;
+        }
         
         questionDiv.innerHTML = `
             <p class="question-text" id="q-text-${q.id}"><span class="q-number">${q.id}.</span> ${q.questionText}</p>
             ${optionsMarkup}
             <div class="answer-reveal">
                 <button class="toggle-answer-btn" aria-expanded="false">Show Answer</button>
-                <div class="explanation" role="region" aria-live="polite" style="display:none;"><p><strong>Correct Answer: ${q.correctAnswer}</strong><br>${q.explanation}</p></div>
+                <div class="explanation" role="region" style="display:none;"><p><strong>Correct Answer: ${q.correctAnswer}</strong><br>${q.explanation}</p></div>
             </div>`;
-        
+
         if (isAnswered) {
-            const optionsList = questionDiv.querySelector('.options-list');
-            const selectedLi = questionDiv.querySelector(`input[value="${userAnswer}"]`)?.closest('li');
-            if (optionsList && selectedLi) {
-                optionsList.classList.add('disabled');
-                if (userAnswer === q.correctAnswer) {
-                    selectedLi.classList.add('correct');
-                } else {
-                    selectedLi.classList.add('incorrect');
-                    const correctLi = optionsList.querySelector(`input[value="${q.correctAnswer}"]`)?.closest('li');
-                    if (correctLi) correctLi.classList.add('correct');
-                }
-            }
+             const optionsList = questionDiv.querySelector('.options-list');
+             optionsList.classList.add('disabled');
+             const selectedOption = isVisualAbstract
+                ? optionsList.querySelector(`li[data-option="${userAnswer}"]`)
+                : questionDiv.querySelector(`input[value="${userAnswer}"]`).closest('li');
+
+             if (userAnswer === q.correctAnswer) {
+                 if(selectedOption) selectedOption.classList.add('correct');
+             } else {
+                 if(selectedOption) selectedOption.classList.add('incorrect');
+                 const correctOption = isVisualAbstract 
+                    ? optionsList.querySelector(`li[data-option="${q.correctAnswer}"]`)
+                    : optionsList.querySelector(`input[value="${q.correctAnswer}"]`)?.closest('li');
+                 if (correctOption) correctOption.classList.add('correct');
+             }
         }
+        
         return questionDiv;
     }
 
+    // --- Interactivity & Event Handling ---
     function addInteractivity(qId, saveStateCallback) {
         const container = document.getElementById(`q-container-${qId}`);
         if (!container) return;
 
-        container.querySelector('.toggle-answer-btn')?.addEventListener('click', e => {
-            const explanationDiv = container.querySelector('.explanation');
-            const isVisible = explanationDiv.style.display === 'block';
-            explanationDiv.style.display = isVisible ? 'none' : 'block';
-            e.target.setAttribute('aria-expanded', String(!isVisible));
-        });
+        // For "Show Answer" button
+        const toggleBtn = container.querySelector('.toggle-answer-btn');
+        const explanationDiv = container.querySelector('.explanation');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                const isVisible = explanationDiv.style.display === 'block';
+                explanationDiv.style.display = isVisible ? 'none' : 'block';
+                toggleBtn.setAttribute('aria-expanded', !isVisible);
+                if (!isVisible) {
+                    explanationDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+            });
+        }
+        
+        const optionsList = container.querySelector('.options-list');
+        if (!optionsList) return;
 
-        container.querySelector('.options-list')?.addEventListener('click', e => {
+        // Function to handle answer selection
+        const handleSelection = (selectedValue) => {
+             if (optionsList.classList.contains('disabled')) return;
+             optionsList.classList.add('disabled');
+
+             appState.answers[qId] = selectedValue;
+             saveStateCallback();
+
+             const correctAnsw = container.dataset.correct;
+             const isCorrect = selectedValue === correctAnsw;
+             const selectedLi = optionsList.querySelector(`[data-option="${selectedValue}"]`) || container.querySelector(`input[value="${selectedValue}"]`)?.closest('li');
+
+             if(isCorrect) {
+                selectedLi.classList.add('correct');
+             } else {
+                selectedLi.classList.add('incorrect');
+                const correctLi = optionsList.querySelector(`[data-option="${correctAnsw}"]`) || container.querySelector(`input[value="${correctAnsw}"]`)?.closest('li');
+                if(correctLi) correctLi.classList.add('correct');
+             }
+        };
+
+        // Add click listener for all types of lists
+        optionsList.addEventListener('click', (e) => {
             const targetLi = e.target.closest('li');
-            const optionsList = e.currentTarget;
-            if (!targetLi || optionsList.classList.contains('disabled')) return;
-            const targetRadio = targetLi.querySelector('input[type="radio"]');
-            if (!targetRadio) return;
-
-            targetRadio.checked = true;
-            optionsList.classList.add('disabled');
-            appState.answers[qId] = targetRadio.value;
-            saveStateCallback();
+            if (!targetLi) return;
             
-            // Uncheck other radios for screen readers
-            optionsList.querySelectorAll('li').forEach(li => li.setAttribute('aria-checked', 'false'));
-            targetLi.setAttribute('aria-checked', 'true');
-            
-            if (targetRadio.value === container.dataset.correct) {
-                targetLi.classList.add('correct');
+            let selectedValue = '';
+            if (optionsList.classList.contains('abstract-options-grid')) {
+                // For visual abstract questions
+                selectedValue = targetLi.dataset.option;
+                optionsList.querySelectorAll('li').forEach(li => li.classList.remove('selected'));
+                targetLi.classList.add('selected');
             } else {
-                targetLi.classList.add('incorrect');
-                const correctLi = optionsList.querySelector(`input[value="${container.dataset.correct}"]`)?.closest('li');
-                if (correctLi) correctLi.classList.add('correct');
+                // For text-based radio questions
+                const radio = targetLi.querySelector('input[type="radio"]');
+                if (!radio || radio.disabled) return;
+                radio.checked = true;
+                selectedValue = radio.value;
+            }
+            
+            if (selectedValue) {
+                handleSelection(selectedValue);
             }
         });
     }
 
+    // --- Main Application Flow ---
     function displaySection(sectionName) {
         welcomeScreen.classList.add('hidden');
         testView.classList.remove('hidden');
         navButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.section === sectionName));
-        contentArea.innerHTML = '';
+        contentArea.innerHTML = ''; // Clear previous content
         sectionTitleEl.textContent = sectionName;
 
-        loadState(sectionName);
+        loadState(sectionName); // Load progress for this section
+
         const sectionQuestions = allQuestions.filter(q => q.section === sectionName);
         const questionGroups = {};
         sectionQuestions.forEach(q => {
@@ -165,137 +253,183 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!questionGroups[sourceKey]) questionGroups[sourceKey] = [];
             questionGroups[sourceKey].push(q);
         });
-        
-        const sortedKeys = Object.keys(questionGroups).sort((a, b) => questionGroups[a][0].id - questionGroups[b][0].id);
 
-        for (const sourceKey of sortedKeys) {
-            const groupContainer = document.createElement('div');
-            groupContainer.className = 'source-group';
-            if (!sourceKey.startsWith('general')) {
-                groupContainer.innerHTML = generateGroupHeaderHTML(sourceKey);
-            }
-            const questionsContainer = document.createElement('div');
-            questionsContainer.className = 'questions-for-source';
-            questionGroups[sourceKey].forEach(q => {
-                const isAnswered = q.id in appState.answers;
-                const userAnswer = appState.answers[q.id];
-                questionsContainer.appendChild(createQuestionHTML(q, isAnswered, userAnswer));
-            });
-            groupContainer.appendChild(questionsContainer);
-            contentArea.appendChild(groupContainer);
-        }
-        
-        contentArea.querySelectorAll('.question-container').forEach(container => {
-            addInteractivity(container.dataset.id, () => saveState(appState.currentSection, -1)); // -1 indicates timer should continue
+        const sortedKeys = Object.keys(questionGroups).sort((a, b) => {
+            const idA = questionGroups[a][0].id;
+            const idB = questionGroups[b][0].id;
+            return idA - idB;
         });
 
+        for (const sourceKey of sortedKeys) {
+            const group = questionGroups[sourceKey];
+            const groupContainer = document.createElement('div');
+            groupContainer.className = 'source-group';
+
+            // Generate header (passage, graph, or matrix visual)
+            groupContainer.innerHTML += generateGroupHeaderHTML(sourceKey);
+
+            // Create container for the questions
+            let questionsTargetContainer;
+            if (sourceKey.startsWith('matrix_')) {
+                 // For abstract matrices, put questions in the designated panel
+                questionsTargetContainer = groupContainer.querySelector('.abstract-options-container');
+            } else {
+                // For all others, create a new container
+                questionsTargetContainer = document.createElement('div');
+                questionsTargetContainer.className = 'questions-for-source';
+            }
+            
+            // Add each question to the target container
+            group.forEach(q => {
+                const isAnswered = q.id in appState.answers;
+                const userAnswer = appState.answers[q.id];
+                const questionElement = createQuestionHTML(q, isAnswered, userAnswer);
+                questionsTargetContainer.appendChild(questionElement);
+            });
+            
+            if (!sourceKey.startsWith('matrix_')) {
+                 groupContainer.appendChild(questionsTargetContainer);
+            }
+
+            contentArea.appendChild(groupContainer);
+        }
+
+        // Add interactivity to all rendered questions
+        sectionQuestions.forEach(q => addInteractivity(q.id, () => saveState(sectionName)));
+        
         window.scrollTo({ top: 0, behavior: 'auto' });
     }
     
+    // --- Timer ---
     function startTimer(durationInMinutes, remainingTime) {
         clearInterval(appState.currentTimer);
         let time = remainingTime !== undefined ? remainingTime : durationInMinutes * 60;
         
         const update = () => {
-            if (time < 0) { clearInterval(appState.currentTimer); return; }
+            if (time < 0) {
+                clearInterval(appState.currentTimer);
+                return;
+            }
             const minutes = Math.floor(time / 60).toString().padStart(2, '0');
             const seconds = (time % 60).toString().padStart(2, '0');
             timerDisplay.textContent = `${minutes}:${seconds}`;
-            appState.time = time;
+            
+            if (time > 0 && time % 5 === 0) {
+                saveState(appState.currentSection, time);
+            }
+            
             if (time-- <= 0) {
                 clearInterval(appState.currentTimer);
-                alert("Time's up!");
-                testView.querySelectorAll('.options-list').forEach(list => list.classList.add('disabled'));
+                alert("Time's up for this section!");
+                // Disable all inputs after time up
+                document.querySelectorAll('.options-list').forEach(list => list.classList.add('disabled'));
             }
         };
+
         update();
         appState.currentTimer = setInterval(update, 1000);
     }
     
-    // --- State & Initialization ---
-    function saveState() {
-        if (!appState.currentSection) return;
+    // --- State Management ---
+    function saveState(sectionName, time) {
+        const stateToSave = {
+            section: sectionName,
+            answers: appState.answers,
+            time: time,
+        };
         try {
-            const stateToSave = { section: appState.currentSection, answers: appState.answers, time: appState.time };
-            sessionStorage.setItem('testProgress', JSON.stringify(stateToSave));
-        } catch(e) { console.warn("Could not save state to sessionStorage."); }
+            sessionStorage.setItem('aptitudeTestProgress', JSON.stringify(stateToSave));
+        } catch (e) {
+            console.error("Could not save progress to sessionStorage.", e);
+        }
     }
 
     function loadState(sectionName) {
         try {
-            const savedState = JSON.parse(sessionStorage.getItem('testProgress'));
-            if (savedState && savedState.section === sectionName) {
-                appState.answers = savedState.answers || {};
-                startTimer(sectionConfig[sectionName].time, savedState.time);
-            } else {
-                appState.answers = {};
-                startTimer(sectionConfig[sectionName].time);
+            const savedStateJSON = sessionStorage.getItem('aptitudeTestProgress');
+            if (savedStateJSON) {
+                const savedState = JSON.parse(savedStateJSON);
+                if (savedState && savedState.section === sectionName) {
+                    appState.answers = savedState.answers || {};
+                    startTimer(sectionConfig[sectionName].time, savedState.time);
+                    return;
+                }
             }
-        } catch (e) {
-            appState.answers = {};
-            startTimer(sectionConfig[sectionName].time);
+        } catch(e) {
+            console.error("Could not load progress from sessionStorage.", e);
         }
-        appState.currentSection = sectionName;
+        // If no valid state, start fresh
+        appState.answers = {};
+        sessionStorage.removeItem('aptitudeTestProgress');
+        startTimer(sectionConfig[sectionName].time);
     }
     
-    function clearState() {
-        sessionStorage.removeItem('testProgress');
-        appState.answers = {}; appState.currentSection = null;
-        clearInterval(appState.currentTimer);
+    function clearStateAndRestart(sectionName) {
+        sessionStorage.removeItem('aptitudeTestProgress');
+        appState.answers = {};
+        displaySection(sectionName);
     }
 
+    // --- Initialization & Event Listeners ---
     function handleNavClick(e) {
         e.preventDefault();
         const sectionName = e.target.dataset.section;
-        if (!appState.dataLoaded || e.target.classList.contains('disabled')) return;
+        if (!appState.dataLoaded || !sectionName) return;
         
+        // If a different section is already active, confirm the switch
         if (appState.currentSection && appState.currentSection !== sectionName) {
-            if (confirm(`Start ${sectionName}? This will clear your progress on the current section.`)) {
-                clearState();
-                displaySection(sectionName);
+            if (confirm(`Are you sure you want to start the '${sectionName}' section? Progress in the current section will not be saved if you switch.`)) {
+                clearStateAndRestart(sectionName);
             }
         } else if (!appState.currentSection) {
+            // No section active, just start
             displaySection(sectionName);
         }
     }
-
     navButtons.forEach(button => button.addEventListener('click', handleNavClick));
     
     function init() {
-        navButtons.forEach(btn => btn.classList.add('disabled'));
-        welcomeScreen.querySelector('p:last-of-type').textContent = "Loading questions, please wait...";
+        // Initially disable nav until data is loaded
+        navButtons.forEach(btn => btn.disabled = true);
+        
+        // Load question data
         fetch('data/questions.json')
-            .then(response => { if (!response.ok) throw new Error('Network error'); return response.json(); })
+            .then(response => { if (!response.ok) throw new Error('Network response was not ok'); return response.json(); })
             .then(data => {
-                allQuestions = data; appState.dataLoaded = true;
-                navButtons.forEach(btn => btn.classList.remove('disabled'));
-                welcomeScreen.querySelector('p:last-of-type').textContent = "Click a section above to begin. Good luck!";
+                allQuestions = data;
+                appState.dataLoaded = true;
+                navButtons.forEach(btn => { btn.disabled = false; }); // Enable nav
+                welcomeScreen.querySelector('p:last-of-type').textContent = "Data loaded successfully. Please select a section above to begin. Good luck!";
 
-                try {
-                    const savedState = JSON.parse(sessionStorage.getItem('testProgress'));
-                    if (savedState && savedState.section) {
-                        if (confirm(`Resume your saved session for "${savedState.section}"?`)) {
-                            displaySection(savedState.section);
-                        } else { clearState(); }
+                // Check for a saved session on page load
+                const savedState = JSON.parse(sessionStorage.getItem('aptitudeTestProgress') || 'null');
+                if (savedState && savedState.section && sectionConfig[savedState.section]) {
+                    if (confirm(`You have a saved session for "${savedState.section}". Would you like to resume?`)) {
+                        displaySection(savedState.section);
+                    } else {
+                        sessionStorage.removeItem('aptitudeTestProgress');
                     }
-                } catch(e) { clearState(); }
+                }
             })
             .catch(error => {
-                console.error('Fetch error:', error);
-                const retryButton = document.createElement('button');
-                retryButton.textContent = "Retry";
-                retryButton.onclick = init;
-                welcomeScreen.innerHTML = `<p style="color:red;font-weight:bold;">Failed to load test questions.</p>`;
-                welcomeScreen.appendChild(retryButton);
+                console.error('Failed to load question data:', error);
+                const errorEl = welcomeScreen.querySelector('p:last-of-type');
+                errorEl.style.color = 'red';
+                errorEl.innerHTML = `Failed to load test questions. Please check your connection and <a href="#" onclick="location.reload()">retry</a>.`;
             });
-        
-        setInterval(saveState, 5000); // Auto-save progress every 5 seconds
     }
-    
-    // --- Utility Listeners ---
-    if (backToTopBtn) {
-        window.addEventListener('scroll', () => { backToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none'; });
-        backToTopBtn.addEventListener('click', e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+    // --- Utility: Back-to-Top Button ---
+    if(backToTopBtn) {
+        window.addEventListener('scroll', () => { 
+            backToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none'; 
+        });
+        backToTopBtn.addEventListener('click', (e) => { 
+            e.preventDefault(); 
+            window.scrollTo({ top: 0, behavior: 'smooth' }); 
+        });
     }
-    init();
+
+    // --- Start the Application ---
+    init(); 
 });
