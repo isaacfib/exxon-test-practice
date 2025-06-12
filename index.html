@@ -21,33 +21,30 @@
     </header>
 
     <main class="container">
+        <nav class="main-nav">
+            <ul class="nav-links container">
+                <li><a href="#" class="nav-btn" data-section="Verbal Reasoning">Verbal Reasoning</a></li>
+                <li><a href="#" class="nav-btn" data-section="Numerical Reasoning">Numerical Reasoning</a></li>
+                <li><a href="#" class="nav-btn" data-section="Abstract Reasoning">Abstract Reasoning</a></li>
+            </ul>
+        </nav>
+        
         <div id="welcome-screen">
             <h2>Welcome to the Aptitude Test Simulator</h2>
             <p>This application contains 180 practice questions to help you prepare. The test is structured into three main sections: Verbal Reasoning, Numerical Reasoning, and Abstract Reasoning.</p>
-            <p>Click on a section below to begin. Each section is timed to simulate real test conditions. Good luck!</p>
+            <p>Click on a section above to begin. Each section is timed to simulate real test conditions. Good luck!</p>
         </div>
 
-        <div id="test-interface" class="hidden">
-            <nav class="main-nav">
-                <ul class="nav-links container">
-                    <li><a href="#" class="nav-btn" data-section="Verbal Reasoning">Verbal Reasoning</a></li>
-                    <li><a href="#" class="nav-btn" data-section="Numerical Reasoning">Numerical Reasoning</a></li>
-                    <li><a href="#" class="nav-btn" data-section="Abstract Reasoning">Abstract Reasoning</a></li>
-                </ul>
-            </nav>
-
+        <div id="test-view" class="hidden">
             <div id="test-dashboard">
                 <h3 id="current-section-title"></h3>
                 <div id="timer-display">00:00</div>
             </div>
-
             <div id="content-area">
             </div>
-
             <div id="question-area">
             </div>
         </div>
-
     </main>
     
     <footer class="main-footer">
