@@ -1,8 +1,7 @@
-/* --- Global Variables & Resets --- */
 :root {
-    --primary-color: #003366;    /* ExxonMobil-like Blue */
-    --secondary-color: #E31837; /* ExxonMobil-like Red */
-    --interactive-color: #007bff; /* Professional Blue for interaction */
+    --primary-color: #003366;
+    --secondary-color: #E31837;
+    --interactive-color: #007bff;
     --accent-color: #F0F4F8;
     --text-color: #333;
     --light-text-color: #f8f9fa;
@@ -31,7 +30,6 @@ body {
     background-color: #fdfdfd;
 }
 
-/* --- Core Layout & Generic Components --- */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -42,7 +40,6 @@ body {
     display: none !important;
 }
 
-/* --- Header & Footer --- */
 .main-header {
     background-color: var(--primary-color);
     color: var(--light-text-color);
@@ -71,7 +68,6 @@ body {
     margin-top: 4rem;
 }
 
-/* --- Welcome & Test View --- */
 #welcome-screen {
     text-align: center;
     padding: 4rem 1rem;
@@ -86,7 +82,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* --- Navigation --- */
 .main-nav {
     position: sticky;
     top: 0;
@@ -125,7 +120,6 @@ body {
     font-weight: 700;
 }
 
-/* --- Test Dashboard (Timer & Title) --- */
 #test-dashboard {
     display: flex;
     justify-content: space-between;
@@ -154,7 +148,6 @@ body {
     box-shadow: var(--shadow-light);
 }
 
-/* --- Question & Answer Styling --- */
 .source-group {
     border: 1px solid #e9ecef;
     border-radius: 8px;
@@ -220,7 +213,6 @@ body {
    accent-color: var(--primary-color);
 }
 
-/* Status Classes for Answers */
 .options-list li.correct {
     background-color: #d4edda;
     border-color: var(--correct-color);
@@ -236,7 +228,6 @@ body {
     opacity: 0.7;
 }
 
-/* Explanation & Answer Toggle */
 .answer-reveal {
     margin-top: 1rem;
 }
@@ -265,7 +256,6 @@ body {
 .explanation p { margin: 0; }
 .explanation strong { color: var(--primary-color); }
 
-/* --- Data Visualization (Tables, Charts) --- */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -323,14 +313,13 @@ tbody tr:nth-child(even) {
     border-bottom: 2px solid #333;
     padding: 0 10px;
     position: relative;
-    --max-val: 100; /* Default max value, can be overridden by inline style */
+    --max-val: 100;
 }
 .bar {
     background-color: var(--primary-color);
     width: 30px;
     transition: height 0.5s ease-out;
     position: relative;
-    /* [FIXED] Calculates height based on CSS variables */
     height: calc(var(--val, 0) / var(--max-val, 100) * 100%);
 }
 .bar::after {
@@ -383,32 +372,25 @@ tbody tr:nth-child(even) {
      margin: auto;
 }
 
-
-/* --- Abstract Reasoning Matrix & Advanced Styles --- */
-/* This section implements the new specifications for matrix-based questions */
-
-/* Main container for the problem (matrix + question panel) */
 .abstract-problem-container {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
 }
 
-/* The 3x3 grid for the matrix problem */
 .matrix {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
     width: 100%;
     max-width: 400px;
-    margin: 0; /* Adjusted from 1.5rem auto */
+    margin: 0;
     padding: 8px;
     background-color: #fff;
     border: 1px solid var(--border-color);
     border-radius: 8px;
 }
 
-/* Individual cell in the matrix */
 .matrix-cell {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -429,7 +411,6 @@ tbody tr:nth-child(even) {
     z-index: 10;
 }
 
-/* The special missing/empty cell to be filled */
 .matrix .empty-cell {
     background: linear-gradient(45deg, #f8f9fa 25%, transparent 25%),
                 linear-gradient(-45deg, #f8f9fa 25%, transparent 25%);
@@ -444,7 +425,6 @@ tbody tr:nth-child(even) {
     border-color: var(--secondary-color);
 }
 
-/* Answer options for Abstract Reasoning */
 .abstract-options-container {
     flex-grow: 1;
 }
@@ -475,9 +455,8 @@ tbody tr:nth-child(even) {
     transform: scale(1.05);
 }
 
-/* Visual styling for abstract shapes */
 .shape-box {
-    width: 90%; /* Scale within cell */
+    width: 90%;
     height: 90%;
     border: 2px solid #333;
     position: relative;
@@ -486,9 +465,7 @@ tbody tr:nth-child(even) {
     grid-template-rows: 1fr 1fr;
     background-color: white;
 }
-/* Ensure shape-box border doesn't conflict in the matrix */
-.matrix .shape-box { border: none; } 
-/* Specific shape styles remain the same */
+.matrix .shape-box { border: none; }
 .shape-box.circle { border-radius: 50%; }
 .shape-box.triangle { width: 0; height: 0; border-left: 45px solid transparent; border-right: 45px solid transparent; border-bottom: 78px solid #333; border-top: 0; background: none; border-color: transparent transparent #333 transparent;}
 .shape-box.pentagon { clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); background-color: #333;}
@@ -496,7 +473,6 @@ tbody tr:nth-child(even) {
 .shape-box.heptagon { clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%); background-color: #333;}
 .shape-box.octagon { clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); background-color: #333;}
 
-/* Inner elements for matrices */
 .inner-shape { position: absolute; }
 .inner-shape.circle { width: 20%; height: 20%; border-radius: 50%; }
 .inner-shape.square { width: 20%; height: 20%; }
@@ -511,7 +487,6 @@ tbody tr:nth-child(even) {
 .h-line { width: 100%; height: 2px; top: 50%; left: 0; transform: translateY(-50%); }
 .v-line { height: 100%; width: 2px; left: 50%; top: 0; transform: translateX(-50%); }
 
-/* --- Miscellaneous --- */
 #back-to-top {
     position: fixed; bottom: 20px; right: 20px;
     background-color: var(--secondary-color); color: white;
@@ -521,15 +496,13 @@ tbody tr:nth-child(even) {
     transition: opacity 0.3s, visibility 0.3s;
 }
 
-/* --- Responsive Design --- */
 @media(max-width: 992px) {
-    /* Stack matrix and questions on tablets */
     .abstract-problem-container {
         flex-direction: column;
         align-items: center;
     }
     .matrix {
-        max-width: 350px; /* Tablet matrix size */
+        max-width: 350px;
     }
 }
 
@@ -544,17 +517,16 @@ tbody tr:nth-child(even) {
     .bar { width: 20px; }
     
     .matrix {
-        max-width: 280px; /* Mobile matrix size */
+        max-width: 280px;
         gap: 5px;
         padding: 5px;
     }
 
     .abstract-options-grid {
-        grid-template-columns: repeat(3, 1fr); /* Enforce 2x3 or 3x2 on mobile */
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
     }
 
-    /* Old abstract styles being retired */
     .shape-box { width: 60px; height: 60px; } 
     .shape-box.triangle { border-left-width: 30px; border-right-width: 30px; border-bottom-width: 52px; }
 }
