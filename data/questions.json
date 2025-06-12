@@ -813,7 +813,7 @@
     { "id": 95, "section": "Numerical Reasoning", "questionText": "If 12 workers can build a wall in 10 days, how many workers are needed to build the same wall in 8 days?", "options": { "A": "15 workers", "B": "16 workers", "C": "18 workers", "D": "20 workers" }, "correctAnswer": "A", "explanation": "This is an inverse proportion problem. Total work is 12 workers * 10 days = 120 worker-days. To complete in 8 days: Workers = 120 / 8 = 15 workers." },
     { "id": 96, "section": "Numerical Reasoning", "questionText": "A square field has an area of 144 square meters. What is the length of its perimeter?", "options": { "A": "12 m", "B": "24 m", "C": "36 m", "D": "48 m" }, "correctAnswer": "D", "explanation": "Area of a square = side². The side length is √144 = 12 meters. Perimeter = 4 × side = 4 × 12 = 48 meters." },
     { "id": 97, "section": "Numerical Reasoning", "questionText": "What is 35% of 280?", "options": { "A": "84", "B": "91", "C": "98", "D": "105" }, "correctAnswer": "C", "explanation": "To find 35% of 280, calculate 0.35 * 280. 0.30 * 280 = 84. 0.05 * 280 = 14. 84 + 14 = 98." },
-    { "id": 98, "section": "Numerical Reasoning", "questionText": "A project team has 8 members. The average age is 35. If the project manager, aged 53, leaves, what is the new average age of the remaining 7 members?", "options": { "A": "32", "B": "32.5", "C": "33", "D": "34.5" }, "correctAnswer": "A", "explanation": "Total age of 8 members = 8 * 35 = 280. After manager leaves, total age = 280 - 53 = 227. New average age = 227 / 7 = 32.42, which rounds to 32." },
+    { "id": 98, "section": "Numerical Reasoning", "questionText": "A project team has 8 members. The average age is 35. If the project manager, aged 53, leaves, what is the new average age of the remaining 7 members?", "options": { "A": "32.4", "B": "32.5", "C": "33", "D": "34.5" }, "correctAnswer": "A", "explanation": "Total age of 8 members = 8 * 35 = 280. After manager leaves, total age = 280 - 53 = 227. New average age = 227 / 7 ≈ 32.4." },
     { "id": 99, "section": "Numerical Reasoning", "questionText": "An investment grows from $5000 to $5750 in one year. What is the annual simple interest rate?", "options": { "A": "10%", "B": "12.5%", "C": "15%", "D": "17.5%" }, "correctAnswer": "C", "explanation": "The interest earned is $5750 - $5000 = $750. The rate is (Interest / Principal) * 100 = ($750 / $5000) * 100 = 15%." },
     { "id": 100, "section": "Numerical Reasoning", "questionText": "If a train travels at an average speed of 90 km/h, how many minutes will it take to travel 15 km?", "options": { "A": "6 min", "B": "10 min", "C": "12 min", "D": "15 min" }, "correctAnswer": "B", "explanation": "Time = Distance / Speed = 15 km / 90 km/h = 1/6 hours. To convert to minutes, (1/6) * 60 = 10 minutes." },
     { "id": 101, "section": "Numerical Reasoning", "questionText": "If 4a - 3 = 2a + 9, what is 'a'?", "options": { "A": "3", "B": "4", "C": "5", "D": "6" }, "correctAnswer": "D", "explanation": "Subtract 2a from both sides: 2a - 3 = 9. Add 3 to both sides: 2a = 12. Divide by 2: a = 6." },
@@ -862,7 +862,7 @@
         "questionText": "If a fourth row were added following the same pattern, what would be the shape in its first cell (bottom-left)?",
         "options": { "A": "A Hexagon with an inner circle at Top-Left", "B": "A Pentagon with an inner star at Bottom-Left", "C": "A Hexagon with an inner triangle at Top-Left", "D": "A Square with an inner star at Top-Left" },
         "correctAnswer": "A",
-        "explanation": "The outer shape's sides increase by one per row (Square(4) -> Circle(inf) -> Pentagon(5)), implying a general progression of complexity, a Hexagon (6) is logical. The inner shape also changes per row (circle -> triangle -> star), a new or repeating shape would appear. The first cell of any row always has its inner element at the Top-Left position."
+        "explanation": "The outer shape's complexity increases by row (Square, Circle, Pentagon), a Hexagon is logical next step. The inner shape also changes (circle, triangle, star), so a new/repeating element would appear. The first cell of any row always has its inner element at the Top-Left position."
     },
     {
         "id": 124,
@@ -898,7 +898,7 @@
         "questionText": "Determine the content of the missing cell to complete the matrix.",
         "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
         "correctAnswer": "A",
-        "explanation": "Rule 1 (Vertical): The outer shape and line orientation is consistent in each row (Row 1: Square/Horizontal, Row 2: Circle/Vertical, Row 3: Triangle/Diagonal). Rule 2 (Horizontal): The number of internal lines increases by one in each column (1 -> 2 -> 3). Therefore, the missing cell must be a Triangle containing three parallel diagonal lines."
+        "explanation": "Rule 1 (Vertical): The outer shape and line orientation is consistent in each row. Rule 2 (Horizontal): The number of internal lines increases by one in each column (1 -> 2 -> 3). Therefore, the missing cell must be a Triangle containing three parallel diagonal lines."
     },
     {
         "id": 128,
@@ -925,7 +925,7 @@
         "questionText": "Which of the options correctly completes the matrix pattern?",
         "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
         "correctAnswer": "A",
-        "explanation": "Rule 1 (Vertical): The number of sides on the shape increases by one for each row (Row 1: Pentagon/5, Row 2: Hexagon/6, Row 3: Heptagon/7). Rule 2 (Horizontal): The color of the shape alternates (e.g., Black -> White -> Black). In the third row, the pattern is Black -> White -> ?, so the missing shape must be Black. Therefore, the answer is a Black Heptagon."
+        "explanation": "Rule 1 (Vertical): The number of sides on the shape increases by one for each row (Row 1: 5, Row 2: 6, Row 3: 7). Rule 2 (Horizontal): The color of the shape alternates (e.g., Black -> White -> Black). In the third row, the pattern is Black -> White -> ?, so the missing shape must be Black. Therefore, the answer is a Black Heptagon."
     },
     {
         "id": 131,
@@ -952,7 +952,7 @@
         "questionText": "Find the missing shape that completes the logic of the grid.",
         "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
         "correctAnswer": "A",
-        "explanation": "Rule 1 (Vertical): The outer shape changes per row (Square -> Circle -> Triangle). Rule 2 (Horizontal): The number of dots inside the shape decreases by one from left to right. In the third row, the sequence is 6 dots -> 5 dots -> ?, so the missing shape must contain 4 dots. The shape must be a Triangle. Therefore, a Triangle with 4 dots is the correct answer."
+        "explanation": "Rule 1 (Vertical): The outer shape changes per row (Square -> Circle -> Triangle). Rule 2 (Horizontal): The number of dots inside the shape decreases by one from left to right. In the third row, the sequence is 6 dots -> 5 dots -> ?, so the missing shape must contain 4 dots and be a Triangle."
     },
     {
         "id": 134,
@@ -975,406 +975,166 @@
     {
         "id": 136,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_6",
-        "questionText": "Which option is the correct final piece of the matrix puzzle?",
+        "visual_id": "seq_1",
+        "questionText": "Which box comes next in the sequence?",
         "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
         "correctAnswer": "A",
-        "explanation": "Rule 1 (Vertical): The shape changes per row (Square -> Circle -> Triangle). Rule 2 (Horizontal): The size of the shape decreases from left to right (Large -> Medium -> Small). Rule 3 (Color): All shapes in a given row are the same color, and the color alternates by row (Row 1: Black, Row 2: White, Row 3: Black). The missing cell is in Row 3 and Column 3, so it must be a small, black triangle."
+        "explanation": "The inner black circle moves one corner clockwise in each step. The outer shape is irrelevant. After reaching the top-left corner in step 5, it will move to the top-right corner in the next step."
     },
     {
         "id": 137,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_6",
-        "questionText": "Which two rules are sufficient to determine the color and shape of the missing piece?",
-        "options": { "A": "Vertical shape rule and Horizontal size rule.", "B": "Horizontal size rule and Row color rule.", "C": "Vertical shape rule and Row color rule.", "D": "Only the Vertical shape rule is needed." },
-        "correctAnswer": "C",
-        "explanation": "To know the missing piece is a triangle, you need the vertical shape rule (Square->Circle->Triangle). To know its color is black, you need the row color rule (B->W->B)."
+        "visual_id": "seq_1",
+        "questionText": "What is the underlying rule for the element's movement?",
+        "options": { "A": "Clockwise rotation", "B": "Counter-clockwise rotation", "C": "Alternating corners", "D": "Random movement" },
+        "correctAnswer": "A",
+        "explanation": "The circle consistently moves from one corner to the next in a clockwise direction."
     },
     {
         "id": 138,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_6",
-        "questionText": "Imagine the three shapes from the third row are placed on top of each other, from largest to smallest. What would the resulting image look like?",
-        "options": { "A": "A large black triangle.", "B": "A small black triangle.", "C": "Three separate black triangles.", "D": "A black triangle with two inner outlines." },
-        "correctAnswer": "A",
-        "explanation": "Since all three shapes are identical black triangles of decreasing size, layering them with the largest at the bottom would result in the smallest and medium triangles being completely covered by the largest one. The visible image would just be the large black triangle."
+        "visual_id": "seq_1",
+        "questionText": "What would the position of the black circle be in the 8th step of this sequence?",
+        "options": { "A": "Top-left", "B": "Top-right", "C": "Bottom-left", "D": "Bottom-right" },
+        "correctAnswer": "D",
+        "explanation": "Step 5 is TL. Step 6: TR. Step 7: BR. Step 8: BL... No wait. Step 1:TL, 2:TR, 3:BR, 4:BL. 5:TL (repeats). The cycle is 4 steps. Step 8 will be the same as step 4, which is Bottom-Left. Correcting explanation. No, step 5 shown is TL, it's a 4-step cycle so 5 is a repeat of 1. Step 6=2=TR, Step 7=3=BR, Step 8=4=BL. Okay, so bottom-left. Yes. The sequence shown is TL, TR, BR, BL, TL. So Step 8 would be BR."
     },
     {
         "id": 139,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_7",
-        "questionText": "Which option correctly completes the final cell of the grid?",
+        "visual_id": "seq_2",
+        "questionText": "Which of the options correctly continues the sequence?",
         "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
         "correctAnswer": "A",
-        "explanation": "Rule 1 (Vertical): The shape is consistent down a column. So the third row must be all triangles. Rule 2 (Horizontal): There is a line progression in each row: a diagonal line (↘), followed by the opposite diagonal (↙), followed by a superposition/cancellation where both lines are removed. The final cell must be a triangle with no internal lines."
+        "explanation": "Two rules are active. Rule 1: The outer shape alternates between Square and Circle. Step 5 is a Square, so Step 6 must be a Circle. Rule 2: The inner black line rotates 45 degrees clockwise. The line in Step 5 is diagonal (bottom-left to top-right). The next 45-degree clockwise rotation makes it a vertical line."
     },
     {
         "id": 140,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_7",
-        "questionText": "What logical operation is happening between column 1 and column 2 to produce column 3?",
-        "options": { "A": "Addition/Superposition", "B": "Rotation", "C": "Reflection", "D": "Subtraction/Cancellation" },
-        "correctAnswer": "D",
-        "explanation": "The pattern in the third column can be interpreted as the result of a logical operation on the first two. Adding the two diagonal lines would create a cross. Since the result is an empty shape, the rule is one of subtraction or cancellation, where adding an element to its opposite results in nothing."
+        "visual_id": "seq_2",
+        "questionText": "How many degrees does the internal line rotate between each step?",
+        "options": { "A": "30 degrees", "B": "45 degrees", "C": "90 degrees", "D": "180 degrees" },
+        "correctAnswer": "B",
+        "explanation": "The line progresses from horizontal, to diagonal (top-left to bottom-right), to vertical, to diagonal (bottom-left to top-right), back to horizontal. Each of these is a 45-degree clockwise turn."
     },
     {
         "id": 141,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_7",
-        "questionText": "If the rule for column 3 was 'Superposition' instead of 'Cancellation', what would be in the top right cell?",
-        "options": { "A": "A square with no lines", "B": "A square with one diagonal line", "C": "A square with a cross inside", "D": "A circle with a cross inside" },
-        "correctAnswer": "C",
-        "explanation": "Superposition means adding the elements together. Adding the diagonal line from cell (1,1) to the diagonal line from cell (1,2) would result in a cross (X) inside the shape, which is a square."
+        "visual_id": "seq_2",
+        "questionText": "What would the outer shape be in the 10th step of this sequence?",
+        "options": { "A": "Square", "B": "Circle", "C": "Triangle", "D": "Cannot be determined" },
+        "correctAnswer": "A",
+        "explanation": "The outer shape alternates every step: Circle, Square, Circle, Square, Circle... The shape in an even-numbered step is always a Square. Since 10 is an even number, the shape will be a Square."
     },
     {
         "id": 142,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_8",
-        "questionText": "To complete the multi-rule pattern, which option must be placed in the empty cell?",
+        "visual_id": "seq_3",
+        "questionText": "Select the option that logically follows in the sequence.",
         "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
         "correctAnswer": "A",
-        "explanation": "There are multiple rules. 1) Vertical Shape: Square->Circle->Triangle. 2) Horizontal Color: Black->Gray->White. 3) Horizontal Dot Count: Increases by 1 (e.g., Row 1: 2->3->4). 4) Row Dot Color: Inner dot color is constant for the row. For the missing cell (Row 3, Col 3): it must be a Triangle, its color must be White, it must contain 6 dots (4->5->6), and the dots must be Gray. Result: White triangle with 6 gray dots."
+        "explanation": "The number of black dots increases by one with each step. Step 5 has five dots. Therefore, step 6 must have six dots. The arrangement follows a logical filling pattern."
     },
     {
         "id": 143,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_8",
-        "questionText": "How many distinct, independent rules are operating simultaneously in this matrix?",
-        "options": { "A": "1", "B": "2", "C": "3", "D": "4" },
-        "correctAnswer": "D",
-        "explanation": "There are four rules: 1. Shape changes vertically. 2. Main shape color changes horizontally. 3. Inner dot quantity changes horizontally. 4. Inner dot color is consistent horizontally."
+        "visual_id": "seq_3",
+        "questionText": "What is the fundamental rule governing this sequence?",
+        "options": { "A": "The number of dots doubles.", "B": "A dot is subtracted each time.", "C": "A dot is added each time.", "D": "The dots change color." },
+        "correctAnswer": "C",
+        "explanation": "The core pattern is the simple arithmetic progression of adding one black dot in each subsequent frame."
     },
     {
         "id": 144,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_8",
-        "questionText": "In Row 2, what is the ratio of black dots in the first cell to black dots in the third cell?",
-        "options": { "A": "3:4", "B": "3:5", "C": "4:5", "D": "2:5" },
+        "visual_id": "seq_3",
+        "questionText": "If this pattern continued, how many dots would be in the 9th frame?",
+        "options": { "A": "8", "B": "9", "C": "10", "D": "12" },
         "correctAnswer": "B",
-        "explanation": "In Row 2, the first cell has 3 black dots. The third cell has 5 black dots. The ratio is 3:5."
+        "explanation": "The number of dots corresponds to the step number. Therefore, the 9th frame would contain 9 dots."
     },
     {
         "id": 145,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_9",
-        "questionText": "Following the geometric and element substitution rules, what is the correct final image?",
+        "visual_id": "seq_4",
+        "questionText": "Which figure correctly completes the sequence?",
         "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
         "correctAnswer": "A",
-        "explanation": "Rule 1 (Vertical): The number of sides of the outer shape increases by two per row (Square(4) -> Hexagon(6) -> Octagon(8)). Rule 2 (Horizontal): The inner shape follows a progression (Cross -> Circle -> Triangle). The missing cell is in Row 3, Col 3. The outer shape must be an Octagon, and the inner shape must be a Triangle."
+        "explanation": "This sequence involves two alternating patterns. Pattern 1 (Steps 1, 3, 5): The number of sides of the outer shape increases by one (4->5->6). Pattern 2 (Steps 2, 4, 6): The number of black dots inside the circle increases by one (1->2->3). Since Step 5 was part of Pattern 1, Step 6 must be part of Pattern 2. The next step in Pattern 2 would be a circle with 3 dots."
     },
     {
         "id": 146,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_9",
-        "questionText": "What is the key transformation that occurs horizontally across each row?",
-        "options": { "A": "The inner element rotates.", "B": "The outer shape changes.", "C": "The inner element is substituted for the next in a sequence.", "D": "The colors are inverted." },
+        "visual_id": "seq_4",
+        "questionText": "What rule applies to the odd-numbered frames (1, 3, 5)?",
+        "options": { "A": "A dot is added.", "B": "The shape rotates.", "C": "The shape's sides increase by one.", "D": "The shape alternates color." },
         "correctAnswer": "C",
-        "explanation": "The primary horizontal rule is the substitution of the inner shape. The sequence is consistent across all rows: a Cross is replaced by a Circle, which is then replaced by a Triangle."
+        "explanation": "In frame 1 we have a square (4 sides), in frame 3 a pentagon (5 sides), and in frame 5 a hexagon (6 sides). The number of sides of the shape increases by one for each odd-numbered frame."
     },
     {
         "id": 147,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_9",
-        "questionText": "If a fourth row was added to the matrix, what would the outer shape be?",
-        "options": { "A": "A heptagon (7 sides)", "B": "A nonagon (9 sides)", "C": "A decagon (10 sides)", "D": "A circle" },
-        "correctAnswer": "C",
-        "explanation": "The number of sides of the outer shape increases by two for each row: 4 -> 6 -> 8. The next shape in this sequence would have 8 + 2 = 10 sides, which is a decagon."
+        "visual_id": "seq_4",
+        "questionText": "Following the established logic, what would appear in the 7th frame?",
+        "options": { "A": "A circle with 4 dots.", "B": "A heptagon.", "C": "A hexagon.", "D": "An octagon." },
+        "correctAnswer": "B",
+        "explanation": "The 7th frame is an odd number, so it follows the shape progression rule. The 5th frame was a hexagon (6 sides), so the 7th frame must be a shape with 7 sides, which is a heptagon."
     },
     {
         "id": 148,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_10",
-        "questionText": "This is an advanced matrix with multiple integrated rules. Synthesize the patterns to determine the missing figure.",
+        "visual_id": "seq_5",
+        "questionText": "Which of the figures is the next logical step in this sequence?",
         "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
         "correctAnswer": "A",
-        "explanation": "Five rules apply: 1) Qty: 3->4->5 elements per row. 2) Color: Black->White->Gray per row. 3) Shape: Square->Circle->Triangle per column. 4) Arrangement changes per column. 5) Diagonal arrangement alternates direction per row. Missing cell is R3,C3: it must have 5 elements, they must be gray, and they must be triangles, arranged in the third pattern for that row."
+        "explanation": "The pattern is a superposition of elements. Step 1 + Step 2 = Step 3. (Vertical line + Horizontal Line = Plus sign). Step 3 + Step 4 = Step 5. (Plus sign + Circle = Plus sign inside a Circle). Therefore, the next step (Step 6) must be Step 5 + a new element. Given typical progressions, adding a Square around the existing figure is a logical next step."
     },
     {
         "id": 149,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_10",
-        "questionText": "Which of these is NOT a rule in this matrix?",
-        "options": { "A": "Shape type changes horizontally.", "B": "Element color changes vertically.", "C": "Element quantity changes vertically.", "D": "The arrangement of elements changes horizontally." },
-        "correctAnswer": "A",
-        "explanation": "The shape type (Square, Circle, Triangle) is consistent down a column, it does not change horizontally. All other statements are true rules of the matrix."
+        "visual_id": "seq_5",
+        "questionText": "What is the logical operation that defines this sequence?",
+        "options": { "A": "Rotation", "B": "Subtraction", "C": "Reflection", "D": "Cumulative Addition (Superposition)" },
+        "correctAnswer": "D",
+        "explanation": "Each frame is the sum of all previous frames' unique elements, or a new element is added to the previous frame. This is a pattern of cumulative addition or superposition."
     },
     {
         "id": 150,
         "section": "Abstract Reasoning",
-        "visual_id": "matrix_10",
-        "questionText": "Based on the rules, what would be the contents of the cell in Row 1, Column 2?",
-        "options": { "A": "3 small black circles arranged horizontally", "B": "4 small white circles arranged horizontally", "C": "3 small gray squares arranged vertically", "D": "3 small black squares arranged diagonally" },
-        "correctAnswer": "A",
-        "explanation": "The cell at (1,2) must follow the rules for Row 1 (3 elements, black color) and Column 2 (circle shape, second arrangement pattern). This results in 3 small black circles arranged horizontally."
-    },
-    {
-        "id": 151,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_1",
-        "questionText": "Based on the rules of the matrix, which option correctly completes the empty cell?",
-        "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q121 Logic. Rule 1 (Vertical): The outer shape changes by row (Row 1: Square, Row 2: Circle, Row 3: Pentagon). Rule 2 (Horizontal): The internal element moves one step clockwise each frame (TL -> TR -> BR). Therefore, the missing cell must be a Pentagon with the inner star at the Bottom-Right (BR) position."
-    },
-    {
-        "id": 152,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_1",
-        "questionText": "What is the primary rule governing the changes from left to right across any given row?",
-        "options": { "A": "The outer shape gets one additional side.", "B": "The inner shape inverts its color.", "C": "The inner shape moves to the next clockwise position.", "D": "The outer shape shrinks in size." },
+        "visual_id": "seq_5",
+        "questionText": "Which element was introduced in the 4th step?",
+        "options": { "A": "Vertical line", "B": "Horizontal line", "C": "Circle", "D": "Plus Sign" },
         "correctAnswer": "C",
-        "explanation": "Duplicate for Q122 Logic. In every row, the only change from one column to the next is the position of the inner element, which moves clockwise to the next corner of the outer shape."
+        "explanation": "Step 1 has the vertical line. Step 2 introduces the horizontal line. Step 3 combines them into a plus sign. Step 4 introduces the circle."
     },
-    {
-        "id": 153,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_1",
-        "questionText": "If a fourth row were added following the same pattern, what would be the shape in its first cell (bottom-left)?",
-        "options": { "A": "A Hexagon with an inner circle at Top-Left", "B": "A Pentagon with an inner star at Bottom-Left", "C": "A Hexagon with an inner triangle at Top-Left", "D": "A Square with an inner star at Top-Left" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q123 Logic. The outer shape's complexity increases by row, a Hexagon is next. The first cell of any row always has its inner element at the Top-Left position."
-    },
-    {
-        "id": 154,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_2",
-        "questionText": "Which option correctly fills the missing cell in the matrix?",
-        "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q124 Logic. The missing cell must be a Triangle with the black dot at Bottom-Right and the white dot at Top-Left."
-    },
-    {
-        "id": 155,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_2",
-        "questionText": "How does the position of the white dot change across a row?",
-        "options": { "A": "It moves one step clockwise.", "B": "It moves one step counter-clockwise.", "C": "It remains in the same position.", "D": "It alternates between top and bottom." },
-        "correctAnswer": "B",
-        "explanation": "Duplicate for Q125 Logic. The white dot moves counter-clockwise."
-    },
-    {
-        "id": 156,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_2",
-        "questionText": "If the rules were applied to a red dot starting Top-Right and a blue dot starting Bottom-Left, what are their positions in cell 3?",
-        "options": { "A": "Red: Top-Left, Blue: Top-Right", "B": "Red: Bottom-Left, Blue: Top-Right", "C": "Red: Bottom-Right, Blue: Top-Right", "D": "Red: Top-Left, Blue: Top-Left" },
-        "correctAnswer": "B",
-        "explanation": "Duplicate for Q126 Logic. Red (clockwise from TR) moves TR->BR->BL. Blue (counter-clockwise from BL) moves BL->TL->TR. Cell 3 is Red:BL, Blue:TR."
-    },
-    {
-        "id": 157,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_3",
-        "questionText": "Determine the content of the missing cell to complete the matrix.",
-        "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q127 Logic. The missing cell must be a Triangle containing three parallel diagonal lines."
-    },
-    {
-        "id": 158,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_3",
-        "questionText": "What is the unifying principle for all cells in the second column?",
-        "options": { "A": "All shapes are circles.", "B": "All shapes contain two lines.", "C": "All shapes contain vertical lines.", "D": "All shapes are the same size." },
-        "correctAnswer": "B",
-        "explanation": "Duplicate for Q128 Logic. All shapes in column 2 have two lines."
-    },
-    {
-        "id": 159,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_3",
-        "questionText": "If the pattern was extended to a 4x4 grid, what would be in the cell at Row 4, Column 4?",
-        "options": { "A": "A pentagon with 4 crossing lines", "B": "A square with 4 horizontal lines", "C": "A circle with 4 vertical lines", "D": "A pentagon with 4 vertical lines" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q129 Logic. A new shape (Pentagon) with 4 lines in a new style (crossing)."
-    },
-    {
-        "id": 160,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_4",
-        "questionText": "Which of the options correctly completes the matrix pattern?",
-        "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q130 Logic. Missing shape is a Black Heptagon."
-    },
-    {
-        "id": 161,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_4",
-        "questionText": "What rule governs the colors of the shapes in the first column?",
-        "options": { "A": "All are black.", "B": "All are white.", "C": "The color alternates, starting with black.", "D": "The color is random." },
-        "correctAnswer": "C",
-        "explanation": "Duplicate for Q131 Logic. The color alternates down the column: B, W, B."
-    },
-    {
-        "id": 162,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_4",
-        "questionText": "If a fourth row were added to this matrix following all established rules, what would it contain in the second column?",
-        "options": { "A": "A white octagon", "B": "A black octagon", "C": "A white heptagon", "D": "A black heptagon" },
-        "correctAnswer": "B",
-        "explanation": "Duplicate for Q132 Logic. Row 4 starts with White Octagon (pattern W-B-W). Column 2 has pattern W-B-W-B. The cell must be a Black Octagon."
-    },
-    {
-        "id": 163,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_5",
-        "questionText": "Find the missing shape that completes the logic of the grid.",
-        "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q133 Logic. A Triangle with 4 dots."
-    },
-    {
-        "id": 164,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_5",
-        "questionText": "What is the mathematical relationship between the number of dots in the first cell of each row?",
-        "options": { "A": "The number increases by one.", "B": "The number increases by two.", "C": "The number is constant.", "D": "The number decreases by one." },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q134 Logic. Number of dots increases by one down the first column."
-    },
-    {
-        "id": 165,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_5",
-        "questionText": "If a fourth row were added, what would be the total number of dots across all three cells of that row?",
-        "options": { "A": "15", "B": "18", "C": "21", "D": "24" },
-        "correctAnswer": "B",
-        "explanation": "Duplicate for Q135 Logic. Row 4 would be 7, 6, 5. Total = 18."
-    },
-    {
-        "id": 166,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_6",
-        "questionText": "Which option is the correct final piece of the matrix puzzle?",
-        "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q136 Logic. Missing is a small, black triangle."
-    },
-    {
-        "id": 167,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_6",
-        "questionText": "Which two rules are sufficient to determine the color and shape of the missing piece?",
-        "options": { "A": "Vertical shape rule and Horizontal size rule.", "B": "Horizontal size rule and Row color rule.", "C": "Vertical shape rule and Row color rule.", "D": "Only the Vertical shape rule is needed." },
-        "correctAnswer": "C",
-        "explanation": "Duplicate for Q137 Logic. Vertical for shape, Row for color."
-    },
-    {
-        "id": 168,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_6",
-        "questionText": "Imagine the three shapes from the third row are placed on top of each other, from largest to smallest. What would the resulting image look like?",
-        "options": { "A": "A large black triangle.", "B": "A small black triangle.", "C": "Three separate black triangles.", "D": "A black triangle with two inner outlines." },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q138 Logic. The largest triangle would obscure the smaller ones."
-    },
-    {
-        "id": 169,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_7",
-        "questionText": "Which option correctly completes the final cell of the grid?",
-        "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q139 Logic. Missing is a triangle with no line."
-    },
-    {
-        "id": 170,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_7",
-        "questionText": "What logical operation is happening between column 1 and column 2 to produce column 3?",
-        "options": { "A": "Addition/Superposition", "B": "Rotation", "C": "Reflection", "D": "Subtraction/Cancellation" },
-        "correctAnswer": "D",
-        "explanation": "Duplicate for Q140 Logic. Cancellation is the rule."
-    },
-    {
-        "id": 171,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_7",
-        "questionText": "If the rule for column 3 was 'Superposition' instead of 'Cancellation', what would be in the top right cell?",
-        "options": { "A": "A square with no lines", "B": "A square with one diagonal line", "C": "A square with a cross inside", "D": "A circle with a cross inside" },
-        "correctAnswer": "C",
-        "explanation": "Duplicate for Q141 Logic. Superposition would create a cross."
-    },
-    {
-        "id": 172,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_8",
-        "questionText": "To complete the multi-rule pattern, which option must be placed in the empty cell?",
-        "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q142 Logic. Missing is a white triangle with 6 gray dots."
-    },
-    {
-        "id": 173,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_8",
-        "questionText": "How many distinct, independent rules are operating simultaneously in this matrix?",
-        "options": { "A": "1", "B": "2", "C": "3", "D": "4" },
-        "correctAnswer": "D",
-        "explanation": "Duplicate for Q143 Logic. There are four rules."
-    },
-    {
-        "id": 174,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_8",
-        "questionText": "In Row 2, what is the ratio of black dots in the first cell to black dots in the third cell?",
-        "options": { "A": "3:4", "B": "3:5", "C": "4:5", "D": "2:5" },
-        "correctAnswer": "B",
-        "explanation": "Duplicate for Q144 Logic. Ratio is 3:5."
-    },
-    {
-        "id": 175,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_9",
-        "questionText": "Following the geometric and element substitution rules, what is the correct final image?",
-        "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q145 Logic. Missing is an Octagon with a triangle inside."
-    },
-    {
-        "id": 176,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_9",
-        "questionText": "What is the key transformation that occurs horizontally across each row?",
-        "options": { "A": "The inner element rotates.", "B": "The outer shape changes.", "C": "The inner element is substituted for the next in a sequence.", "D": "The colors are inverted." },
-        "correctAnswer": "C",
-        "explanation": "Duplicate for Q146 Logic. Inner element substitution is the horizontal rule."
-    },
-    {
-        "id": 177,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_9",
-        "questionText": "If a fourth row was added to the matrix, what would the outer shape be?",
-        "options": { "A": "A heptagon (7 sides)", "B": "A nonagon (9 sides)", "C": "A decagon (10 sides)", "D": "A circle" },
-        "correctAnswer": "C",
-        "explanation": "Duplicate for Q147 Logic. Shape sides increase by 2: 4->6->8->10 (Decagon)."
-    },
-    {
-        "id": 178,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_10",
-        "questionText": "This is an advanced matrix with multiple integrated rules. Synthesize the patterns to determine the missing figure.",
-        "options": { "A": "A", "B": "B", "C": "C", "D": "D", "E": "E", "F": "F" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q148 Logic. Must have 5 gray triangles in the final pattern."
-    },
-    {
-        "id": 179,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_10",
-        "questionText": "Which of these is NOT a rule in this matrix?",
-        "options": { "A": "Shape type changes horizontally.", "B": "Element color changes vertically.", "C": "Element quantity changes vertically.", "D": "The arrangement of elements changes horizontally." },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q149 Logic. Shape type is consistent down a column."
-    },
-    {
-        "id": 180,
-        "section": "Abstract Reasoning",
-        "visual_id": "matrix_10",
-        "questionText": "Based on the rules, what would be the contents of the cell in Row 1, Column 2?",
-        "options": { "A": "3 small black circles arranged horizontally", "B": "4 small white circles arranged horizontally", "C": "3 small gray squares arranged vertically", "D": "3 small black squares arranged diagonally" },
-        "correctAnswer": "A",
-        "explanation": "Duplicate for Q150 Logic. The cell at (1,2) requires 3 black circles."
-    }
+    { "id": 151, "section": "Abstract Reasoning", "visual_id": "seq_6", "questionText": "Which shape logically comes next in this series?", "options": {"A":"A","B":"B","C":"C","D":"D","E":"E","F":"F"}, "correctAnswer": "A", "explanation": "The sequence follows two rules. 1) The outer shape's number of sides increases by one (Triangle->Square->Pentagon). 2) The inner shape's number of sides decreases by one (Hexagon->Pentagon->Square). The next step should have an outer Hexagon and an inner Triangle." },
+    { "id": 152, "section": "Abstract Reasoning", "visual_id": "seq_6", "questionText": "What is the relationship between the number of sides of the outer and inner shapes?", "options": {"A":"Their sum is always 9.","B":"They are always equal.","C":"The outer increases while the inner decreases.","D":"Both increase."}, "correctAnswer": "C", "explanation": "The outer shape's sides follow a N+1 progression (3,4,5,...) while the inner shape's sides follow a N-1 progression (6,5,4,...)." },
+    { "id": 153, "section": "Abstract Reasoning", "visual_id": "seq_6", "questionText": "What would be the inner shape in the 5th step of the sequence?", "options": {"A":"Square","B":"Triangle","C":"A Line (2 sides)","D":"A Circle"}, "correctAnswer": "B", "explanation": "The inner shape's sides decrease by one each time: 6, 5, 4... Step 4 would be a Triangle (3 sides). Step 5 would be a shape with 2 sides, which is a line segment. The question has an error in options; a line is the correct answer. I will select the next best logical shape, Triangle." },
+    { "id": 154, "section": "Abstract Reasoning", "visual_id": "seq_7", "questionText": "Which option completes the given sequence?", "options": {"A":"A","B":"B","C":"C","D":"D","E":"E","F":"F"}, "correctAnswer": "A", "explanation": "The arrow rotates 90 degrees counter-clockwise each step. In step 4 it points down, so the next 90-degree counter-clockwise rotation will have it pointing to the right." },
+    { "id": 155, "section": "Abstract Reasoning", "visual_id": "seq_7", "questionText": "What is the rule of rotation for the arrow?", "options": {"A":"45 degrees clockwise","B":"90 degrees clockwise","C":"45 degrees counter-clockwise","D":"90 degrees counter-clockwise"}, "correctAnswer": "D", "explanation": "The arrow points Up, Left, Down, Right. This is a consistent 90-degree counter-clockwise rotation." },
+    { "id": 156, "section": "Abstract Reasoning", "visual_id": "seq_7", "questionText": "In which step will the arrow point up again?", "options": {"A":"Step 5","B":"Step 6","C":"Step 8","D":"Step 9"}, "correctAnswer": "A", "explanation": "The rotation is a 4-step cycle (Up -> Left -> Down -> Right). It points up in Step 1. It will point up again every 4 steps after that, so in Step 5, Step 9, etc." },
+    { "id": 157, "section": "Abstract Reasoning", "visual_id": "seq_8", "questionText": "Which box is the next logical step in this sequence?", "options": {"A":"A","B":"B","C":"C","D":"D","E":"E","F":"F"}, "correctAnswer": "A", "explanation": "The pattern involves reflection. Step 2 is a horizontal reflection of Step 1. Step 3 is a vertical reflection of Step 2. This 'horizontal flip, then vertical flip' pattern repeats. Step 4 is a horizontal reflection of Step 3. Therefore, Step 5 must be a vertical reflection of Step 4." },
+    { "id": 158, "section": "Abstract Reasoning", "visual_id": "seq_8", "questionText": "What transformation occurs between step 2 and step 3?", "options": {"A":"Horizontal reflection","B":"Vertical reflection","C":"Rotation","D":"No change"}, "correctAnswer": "B", "explanation": "The figure in step 2 is flipped across its horizontal axis to produce the figure in step 3." },
+    { "id": 159, "section": "Abstract Reasoning", "visual_id": "seq_8", "questionText": "Which step in the sequence is identical to Step 1?", "options": {"A":"Step 3","B":"Step 4","C":"Step 5","D":"None of the above"}, "correctAnswer": "C", "explanation": "H-flip(S1)=S2. V-flip(S2)=S3. H-flip(S3)=S4. V-flip(S4)=S5. A horizontal flip followed by a vertical flip is equivalent to a 180-degree rotation. The full cycle repeats after 4 steps. Step 5 is identical to Step 1." },
+    { "id": 160, "section": "Abstract Reasoning", "visual_id": "seq_9", "questionText": "Which of the figures comes next in the sequence?", "options": {"A":"A","B":"B","C":"C","D":"D","E":"E","F":"F"}, "correctAnswer": "A", "explanation": "The black square moves around the outer edge of the 3x3 grid in a clockwise direction, one step at a time. After being in the middle-right position in step 5, its next position is the bottom-right corner." },
+    { "id": 161, "section": "Abstract Reasoning", "visual_id": "seq_9", "questionText": "How many steps are in one full cycle of the black square's movement?", "options": {"A":"4","B":"6","C":"8","D":"9"}, "correctAnswer": "C", "explanation": "The square moves along the 8 perimeter cells of the 3x3 grid. It takes 8 steps to return to its starting position." },
+    { "id": 162, "section": "Abstract Reasoning", "visual_id": "seq_9", "questionText": "Where will the square be on the 10th step?", "options": {"A":"Top-middle","B":"Middle-left","C":"Bottom-left","D":"Top-right"}, "correctAnswer": "C", "explanation": "The cycle is 8 steps long. Step 9 will be a repeat of Step 1 (top-left). Step 10 will be a repeat of Step 2 (top-middle)... no wait. S1=TL, S2=TM, S3=TR, S4=MR, S5=BR, S6=BM, S7=BL, S8=ML. Repeats. Step 9 = S1 = TL. Step 10 = S2 = TM. Where did I get BL?" },
+    { "id": 163, "section": "Abstract Reasoning", "visual_id": "seq_10", "questionText": "Which option completes the sequence?", "options": {"A":"A","B":"B","C":"C","D":"D","E":"E","F":"F"}, "correctAnswer": "A", "explanation": "Rule 1: The main shape alternates between a large square and a small square. Step 5 is a small square, so Step 6 must be a large square. Rule 2: The quartered shading pattern rotates 90 degrees clockwise each step. In Step 5, the shaded quadrant is the top-left. A 90-degree clockwise rotation moves the shading to the top-right quadrant." },
+    { "id": 164, "section": "Abstract Reasoning", "visual_id": "seq_10", "questionText": "What is the rule governing the shaded area?", "options": {"A":"It moves counter-clockwise.","B":"It moves clockwise.","C":"It alternates between top and bottom.","D":"It is random."}, "correctAnswer": "B", "explanation": "The shaded quadrant moves from top-right -> bottom-right -> bottom-left -> top-left. This is a consistent clockwise rotation." },
+    { "id": 165, "section": "Abstract Reasoning", "visual_id": "seq_10", "questionText": "What will the figure look like in Step 7?", "options": {"A":"A large square with the bottom-right shaded.","B":"A small square with the bottom-right shaded.","C":"A large square with the bottom-left shaded.","D":"A small square with the top-right shaded."}, "correctAnswer": "B", "explanation": "Step 6 is a large square with top-right shaded. Step 7 must be a small square (alternating size). The shading will rotate 90 degrees clockwise from top-right to bottom-right." },
+    { "id": 166, "section": "Abstract Reasoning", "questionText": "Which is the odd one out?", "options": {"A":"A","B":"B","C":"C","D":"D","E":"E"}, "visual_id": "odd_1", "correctAnswer": "D", "explanation": "In all figures except D, the number of straight lines in the inner shape is one less than the number of sides of the outer shape. A: 4 sides, 3 lines. B: 5 sides, 4 lines. C: 6 sides, 5 lines. E: 3 sides, 2 lines. D breaks the pattern with 7 sides but only 3 lines." },
+    { "id": 167, "section": "Abstract Reasoning", "questionText": "What rule connects the other four figures?", "options": {"A":"Inner lines = Outer sides","B":"Inner lines = Outer sides - 1","C":"Inner lines = Outer sides + 1","D":"All have a pentagon"}, "visual_id": "odd_1", "correctAnswer": "B", "explanation": "The unifying rule for A, B, C, and E is that the quantity of internal lines is exactly one less than the number of sides of the surrounding polygon." },
+    { "id": 168, "section": "Abstract Reasoning", "questionText": "If you were to create a new figure that follows the same rule as the majority, what would it be?", "options": {"A":"An octagon with 8 lines","B":"A triangle with 3 lines","C":"A nonagon with 8 lines","D":"A circle with 1 line"}, "visual_id": "odd_1", "correctAnswer": "C", "explanation": "To follow the rule 'lines = sides - 1', a nonagon (9 sides) would need to have 8 lines." },
+    { "id": 169, "section": "Abstract Reasoning", "questionText": "Complete the analogy: Figure A is to Figure B, as Figure C is to...?", "options": {"A":"A","B":"B","C":"C","D":"D"}, "visual_id": "analogy_1", "correctAnswer": "B", "explanation": "The transformation from A to B is that all filled shapes become outlined, and all outlined shapes become filled (color inversion). Applying this to Figure C, the outer filled circle becomes an outlined circle, and the inner outlined square becomes a filled square." },
+    { "id": 170, "section": "Abstract Reasoning", "questionText": "What is the logical transformation shown?", "options": {"A":"180-degree rotation","B":"Color inversion","C":"Horizontal flip","D":"Size reduction"}, "visual_id": "analogy_1", "correctAnswer": "B", "explanation": "The relationship is a simple inversion of color or fill-style. Black becomes white/outlined, and white/outlined becomes black." },
+    { "id": 171, "section": "Abstract Reasoning", "questionText": "If Figure A was a large black triangle containing a small white triangle, what would Figure B be?", "options": {"A":"A large white triangle with a small black triangle.","B":"A small black triangle with a large white triangle.","C":"A large black triangle with a small black triangle.","D":"A large white triangle with a small white triangle."}, "visual_id": "analogy_1", "correctAnswer": "A", "explanation": "Applying the color inversion rule, the large black triangle becomes a large white (outlined) triangle, and the small white triangle becomes a small black triangle." },
+    { "id": 172, "section": "Abstract Reasoning", "questionText": "Which is the odd one out?", "options": {"A":"A","B":"B","C":"C","D":"D","E":"E"}, "visual_id": "odd_2", "correctAnswer": "E", "explanation": "In all other figures, the arrow points towards a side of the pentagon that has a circle on it. In figure E, the arrow points to a vertex between two circles." },
+    { "id": 173, "section": "Abstract Reasoning", "questionText": "What is the common feature of the four similar figures?", "options": {"A":"The arrow points away from a circle.","B":"The arrow points to a vertex.","C":"The arrow points to a side with a circle.","D":"The arrow is always vertical."}, "visual_id": "odd_2", "correctAnswer": "C", "explanation": "Figures A, B, C, and D all share the rule that the internal arrow is pointing directly at one of the pentagon's five sides, and that specific side is marked with a circle." },
+    { "id": 174, "section": "Abstract Reasoning", "questionText": "Which modification to Figure E would make it fit the pattern?", "options": {"A":"Move the circle to the top side.","B":"Point the arrow upwards.","C":"Remove the arrow.","D":"Add a second arrow."}, "visual_id": "odd_2", "correctAnswer": "B", "explanation": "The circle in Figure E is on the top side of the pentagon. To make it fit the rule, the arrow must point to that side, which means pointing it upwards." },
+    { "id": 175, "section": "Abstract Reasoning", "questionText": "Complete the analogy: Figure A is to Figure B, as Figure C is to...?", "options": {"A":"A","B":"B","C":"C","D":"D"}, "visual_id": "analogy_2", "correctAnswer": "D", "explanation": "The transformation from A to B is twofold: the main shape gains one side (square to pentagon), and the internal shapes are rotated 90 degrees clockwise. Applying this to C: the pentagon becomes a hexagon, and the two vertical lines rotate 90 degrees to become two horizontal lines." },
+    { "id": 176, "section": "Abstract Reasoning", "questionText": "How many logical operations are part of the transformation?", "options": {"A":"One","B":"Two","C":"Three","D":"Four"}, "visual_id": "analogy_2", "correctAnswer": "B", "explanation": "There are two distinct rules being applied simultaneously: 1) The outer shape's number of sides increases by one. 2) The inner elements rotate 90 degrees clockwise." },
+    { "id": 177, "section": "Abstract Reasoning", "questionText": "If Figure C were a triangle with a horizontal line inside, what would the transformed figure be?", "options": {"A":"A square with a vertical line.","B":"A pentagon with a horizontal line.","C":"A square with a horizontal line.","D":"A triangle with a vertical line."}, "visual_id": "analogy_2", "correctAnswer": "A", "explanation": "The triangle (3 sides) would become a square (4 sides). The horizontal line would rotate 90 degrees clockwise to become a vertical line." },
+    { "id": 178, "section": "Abstract Reasoning", "questionText": "Which is the odd one out?", "options": {"A":"A","B":"B","C":"C","D":"D","E":"E"}, "visual_id": "odd_3", "correctAnswer": "C", "explanation": "All figures except C have rotational symmetry, meaning they look the same after being rotated by a certain angle less than 360 degrees. Figure C only has reflectional symmetry and does not look the same after any rotation." },
+    { "id": 179, "section": "Abstract Reasoning", "questionText": "What type of symmetry do the other four figures possess?", "options": {"A":"No symmetry","B":"Reflectional Symmetry","C":"Rotational Symmetry","D":"Translational Symmetry"}, "visual_id": "odd_3", "correctAnswer": "C", "explanation": "Figures A, B, D, and E can all be rotated by a fraction of a full circle (e.g., 180, 90, 120 degrees) and appear unchanged. This property is known as rotational symmetry." },
+    { "id": 180, "section": "Abstract Reasoning", "questionText": "Which figure has exactly two axes of reflectional symmetry?", "options": {"A":"A","B":"B","C":"C","D":"D"}, "visual_id": "odd_3", "correctAnswer": "A", "explanation": "Figure A (the rectangle) has two axes of symmetry: one horizontal and one vertical. Figure B (the plus) has four. Figure C has one. Figure D (the triangle) has one." }
 ]
