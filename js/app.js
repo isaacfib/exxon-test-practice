@@ -433,3 +433,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Start the Application ---
     init(); 
 });
+
