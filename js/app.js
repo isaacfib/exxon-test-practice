@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentTimer;
 
     const welcomeScreen = document.getElementById('welcome-screen');
-    const testView = document.getElementById('test-view');
+    const testView = document.getElementById('test-view'); 
     const navButtons = document.querySelectorAll('.nav-btn');
-    const contentArea = document.getElementById('content-area'); // Main container for all dynamic content
-    const questionArea = document.getElementById('question-area'); // This will no longer be used for rendering sections
+    const contentArea = document.getElementById('content-area');
+    const questionArea = document.getElementById('question-area'); 
     const timerDisplay = document.getElementById('timer-display');
     const sectionTitle = document.getElementById('current-section-title');
     const backToTopBtn = document.getElementById('back-to-top');
@@ -26,74 +26,105 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function generateDataSourceHTML(id) {
         switch(id) {
-            case 'graph1': return `<div class="chart-container"><p class="chart-title">Annual Production of Crude Oil (Million Barrels) by Region, 2022-2024</p><div class="bar-chart"><div class="bar-group"><div style="display: flex; gap: 5px; align-items: flex-end;"><div class="bar" style="height: calc(45/60 * 100%);" data-value="45"></div><div class="bar bar-b" style="height: calc(30/60 * 100%);" data-value="30"></div></div><div class="bar-label">2022</div></div><div class="bar-group"><div style="display: flex; gap: 5px; align-items: flex-end;"><div class="bar" style="height: calc(50/60 * 100%);" data-value="50"></div><div class="bar bar-b" style="height: calc(35/60 * 100%);" data-value="35"></div></div><div class="bar-label">2023</div></div><div class="bar-group"><div style="display: flex; gap: 5px; align-items: flex-end;"><div class="bar" style="height: calc(55/60 * 100%);" data-value="55"></div><div class="bar bar-b" style="height: calc(40/60 * 100%);" data-value="40"></div></div><div class="bar-label">2024</div></div></div></div>`;
-            case 'table1': return `<table><caption>Projected Costs and Revenues for a New Plant (in Million USD)</caption><thead><tr><th>Category</th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr></thead><tbody><tr><td>Initial Investment</td><td>120</td><td>-</td><td>-</td></tr><tr><td>Operating Costs</td><td>30</td><td>32</td><td>35</td></tr><tr><td>Revenue</td><td>60</td><td>75</td><td>90</td></tr></tbody></table>`;
-            case 'graph2': return `<div class="chart-container"><p class="chart-title">Quarterly Natural Gas Consumption (Billion Cubic Feet)</p><div class="svg-chart-container"><svg viewBox="0 0 100 60" style="border-left: 1px solid #aaa; border-bottom: 1px solid #aaa; padding-left: 5px;"><text x="-3" y="10.5" font-size="3" text-anchor="end">20</text><text x="-3" y="30.5" font-size="3" text-anchor="end">10</text><text x="-3" y="50.5" font-size="3" text-anchor="end">0</text><polyline points="10,25 35,40 60,20 85,10" fill="none" stroke="#E31837" stroke-width="0.7"/><circle cx="10" cy="25" r="1" fill="#003366"/><text x="10" y="23" font-size="3" text-anchor="middle">15</text><circle cx="35" cy="40" r="1" fill="#003366"/><text x="35" y="44" font-size="3" text-anchor="middle">12</text><circle cx="60" cy="20" r="1" fill="#003366"/><text x="60" y="18" font-size="3" text-anchor="middle">18</text><circle cx="85" cy="10" r="1" fill="#003366"/><text x="85" y="8" font-size="3" text-anchor="middle">20</text><text x="10" y="55" font-size="4" text-anchor="middle">Q1</text><text x="35" y="55" font-size="4" text-anchor="middle">Q2</text><text x="60" y="55" font-size="4" text-anchor="middle">Q3</text><text x="85" y="55" font-size="4" text-anchor="middle">Q4</text></svg></div></div>`;
-            case 'table2': return `<table><caption>Employee Distribution by Department and Gender</caption><thead><tr><th>Department</th><th>Male</th><th>Female</th><th>Total</th></tr></thead><tbody><tr><td>Engineering</td><td>150</td><td>70</td><td>220</td></tr><tr><td>Operations</td><td>200</td><td>50</td><td>250</td></tr><tr><td>HR</td><td>20</td><td>30</td><td>50</td></tr><tr><td>Total</td><td>370</td><td>150</td><td>520</td></tr></tbody></table>`;
-            case 'graph3': return `<div class="chart-container"><p class="chart-title">Distribution of Company's Annual Budget (Total $500 Million)</p><div class="pie-chart" style="background-image: conic-gradient(#003366 0% 25%, #007bff 25% 65%, #ffc107 65% 80%, #6c757d 80% 90%, #E31837 90% 100%);"></div><ul class="pie-legend"><li><span style="background-color: #003366;" class="legend-color"></span>R&D: 25%</li><li><span style="background-color: #007bff;" class="legend-color"></span>Ops: 40%</li><li><span style="background-color: #ffc107;" class="legend-color"></span>Mkt: 15%</li><li><span style="background-color: #6c757d;" class="legend-color"></span>Adm: 10%</li><li><span style="background-color: #E31837;" class="legend-color"></span>Cont: 10%</li></ul></div>`;
-            case 'table3': return `<table><caption>Safety Incidents by Type and Severity</caption><thead><tr><th>Incident Type</th><th>Minor</th><th>Moderate</th><th>Major</th><th>Total</th></tr></thead><tbody><tr><td>Slips/Trips/Falls</td><td>15</td><td>5</td><td>1</td><td>21</td></tr><tr><td>Equipment Malfunction</td><td>8</td><td>3</td><td>2</td><td>13</td></tr><tr><td>Chemical Exposure</td><td>3</td><td>2</td><td>1</td><td>6</td></tr><tr><td>Other</td><td>10</td><td>4</td><td>0</td><td>14</td></tr><tr><td>Total</td><td>36</td><td>14</td><td>4</td><td>54</td></tr></tbody></table>`;
-            case 'graph4': return `<div class="chart-container"><p class="chart-title">Energy Production Mix (GWh) by Source, 2024</p><div class="bar-chart"><div class="bar-group"><div class="bar" style="height: calc(250/400 * 100%); background-color: #ffc107;" data-value="250"></div><div class="bar-label">Solar</div></div><div class="bar-group"><div class="bar" style="height: calc(300/400 * 100%); background-color: #17a2b8;" data-value="300"></div><div class="bar-label">Wind</div></div><div class="bar-group"><div class="bar" style="height: calc(180/400 * 100%); background-color: #007bff;" data-value="180"></div><div class="bar-label">Hydro</div></div><div class="bar-group"><div class="bar" style="height: 100%; background-color: #6c757d;" data-value="400"></div><div class="bar-label">Fossil</div></div></div></div>`;
-            case 'table4': return `<table><caption>Raw Material Prices and Usage for Product X</caption><thead><tr><th>Material</th><th>Price per unit ($)</th><th>Units Used</th></tr></thead><tbody><tr><td>Steel</td><td>2.50</td><td>10</td></tr><tr><td>Plastic</td><td>1.20</td><td>15</td></tr><tr><td>Copper</td><td>4.00</td><td>5</td></tr></tbody></table>`;
-            case 'graph5': return `<div class="chart-container"><p class="chart-title">Employee Training Hours per Quarter, 2023</p><div class="svg-chart-container"><svg viewBox="0 0 100 60"><polyline points="10,40 35,10 60,25 85,0" fill="none" stroke="#003366" stroke-width="0.7"/><circle cx="10" cy="40" r="1" fill="#E31837"/><text x="10" y="38">1200</text><circle cx="35" cy="10" r="1" fill="#E31837"/><text x="35" y="8">1500</text><circle cx="60" cy="25" r="1" fill="#E31837"/><text x="60" y="23">1350</text><circle cx="85" cy="0" r="1" fill="#E31837"/><text x="85" y="5">1600</text></svg></div></div>`;
-            case 'table5': return `<table><caption>Sales Performance by Product Category (in Thousands USD)</caption><thead><tr><th>Category</th><th>Sales Revenue</th><th>COGS</th></tr></thead><tbody><tr><td>Lubricants</td><td>800</td><td>450</td></tr><tr><td>Fuels</td><td>1200</td><td>900</td></tr><tr><td>Chemicals</td><td>600</td><td>300</td></tr></tbody></table>`;
+            case 'graph1': return `<div class="chart-container"><p class="chart-title">Graph 1: Annual Production of Crude Oil (Million Barrels) by Region, 2022-2024</p><div class="bar-chart"><div class="bar-group"><div style="display: flex; gap: 5px; align-items: flex-end;"><div class="bar" style="height: calc(45 / 55 * 100%);" data-value="45"></div><div class="bar bar-b" style="height: calc(30 / 55 * 100%);" data-value="30"></div></div><div class="bar-label">2022</div></div><div class="bar-group"><div style="display: flex; gap: 5px; align-items: flex-end;"><div class="bar" style="height: calc(50 / 55 * 100%);" data-value="50"></div><div class="bar bar-b" style="height: calc(35 / 55 * 100%);" data-value="35"></div></div><div class="bar-label">2023</div></div><div class="bar-group"><div style="display: flex; gap: 5px; align-items: flex-end;"><div class="bar" style="height: 100%;" data-value="55"></div><div class="bar bar-b" style="height: calc(40 / 55 * 100%);" data-value="40"></div></div><div class="bar-label">2024</div></div></div><ul class="pie-legend" style="justify-content:center; gap: 20px; margin-top: 20px;"><li><span style="display:inline-block; width:15px; height:15px; background:var(--primary-color); margin-right:5px; vertical-align:middle;"></span>Region A</li><li><span style="display:inline-block; width:15px; height:15px; background:var(--secondary-color); margin-right:5px; vertical-align:middle;"></span>Region B</li></ul></div>`;
+            case 'table1': return `<div class="chart-container"><table><caption>Table 1: Projected Costs and Revenues for a New Plant (in Million USD)</caption><thead><tr><th>Category</th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr></thead><tbody><tr><td>Initial Investment</td><td>120</td><td>-</td><td>-</td></tr><tr><td>Operating Costs</td><td>30</td><td>32</td><td>35</td></tr><tr><td>Revenue</td><td>60</td><td>75</td><td>90</td></tr></tbody></table></div>`;
+            case 'graph2': return `<div class="chart-container"><p class="chart-title">Graph 2: Quarterly Natural Gas Consumption (Billion Cubic Feet) in Industrial Sector, 2024</p><div class="svg-chart-container"><svg viewBox="0 0 100 65" style="border-left: 1px solid #aaa; border-bottom: 1px solid #aaa; padding-left: 5px;"><text x="-3" y="10.5" font-size="3" text-anchor="end">20</text><text x="-3" y="35.5" font-size="3" text-anchor="end">10</text><text x="-3" y="60.5" font-size="3" text-anchor="end">0</text><polyline points="10,23 35,48 60,10.5 85,3" fill="none" stroke="#E31837" stroke-width="0.7"/><g><circle cx="10" cy="23" r="1.5" fill="#003366"/><text x="10" y="20" font-size="3" text-anchor="middle">15</text></g><g><circle cx="35" cy="48" r="1.5" fill="#003366"/><text x="35" y="53" font-size="3" text-anchor="middle">12</text></g><g><circle cx="60" cy="10.5" r="1.5" fill="#003366"/><text x="60" y="8" font-size="3" text-anchor="middle">18</text></g><g><circle cx="85" cy="3" r="1.5" fill="#003366"/><text x="85" y="0" font-size="3" text-anchor="middle">20</text></g><text x="10" y="64" font-size="4" text-anchor="middle">Q1</text><text x="35" y="64" font-size="4" text-anchor="middle">Q2</text><text x="60" y="64" font-size="4" text-anchor="middle">Q3</text><text x="85" y="64" font-size="4" text-anchor="middle">Q4</text></svg></div></div>`;
+            case 'table2': return `<div class="chart-container"><table><caption>Table 2: Employee Distribution by Department and Gender</caption><thead><tr><th>Department</th><th>Male</th><th>Female</th><th>Total</th></tr></thead><tbody><tr><td>Engineering</td><td>150</td><td>70</td><td>220</td></tr><tr><td>Operations</td><td>200</td><td>50</td><td>250</td></tr><tr><td>HR</td><td>20</td><td>30</td><td>50</td></tr><tr><td>Total</td><td>370</td><td>150</td><td>520</td></tr></tbody></table></div>`;
+            case 'graph3': return `<div class="chart-container"><p class="chart-title">Graph 3: Distribution of Company's Annual Budget (Total $500 Million)</p><div class="pie-chart" style="background-image: conic-gradient(#003366 0% 25%, #007bff 25% 65%, #ffc107 65% 80%, #6c757d 80% 90%, #E31837 90% 100%);"></div><ul class="pie-legend"><li></li><li class="legend-rd">R&D: 25%</li><li class="legend-ops">Operations: 40%</li><li class="legend-mkt">Marketing: 15%</li><li class="legend-adm">Administration: 10%</li><li class="legend-con">Contingency: 10%</li></ul></div><style>.legend-rd::before{background:#003366}.legend-ops::before{background:#007bff}.legend-mkt::before{background:#ffc107}.legend-adm::before{background:#6c757d}.legend-con::before{background:#E31837}</style>`;
+            case 'table3': return `<div class="chart-container"><table><caption>Table 3: Safety Incidents by Type and Severity (Last Quarter)</caption><thead><tr><th>Incident Type</th><th>Minor</th><th>Moderate</th><th>Major</th><th>Total</th></tr></thead><tbody><tr><td>Slips/Trips/Falls</td><td>15</td><td>5</td><td>1</td><td>21</td></tr><tr><td>Equipment Malfunction</td><td>8</td><td>3</td><td>2</td><td>13</td></tr><tr><td>Chemical Exposure</td><td>3</td><td>2</td><td>1</td><td>6</td></tr><tr><td>Other</td><td>10</td><td>4</td><td>0</td><td>14</td></tr><tr><td>Total</td><td>36</td><td>14</td><td>4</td><td>54</td></tr></tbody></table></div>`;
+            case 'graph4': return `<div class="chart-container"><p class="chart-title">Graph 4: Energy Production Mix (GWh) by Source, 2024</p><div class="bar-chart"><div class="bar-group"><div class="bar" style="height: calc(250/400 * 100%); background-color: #ffc107;" data-value="250"></div><div class="bar-label">Solar</div></div><div class="bar-group"><div class="bar" style="height: calc(300/400 * 100%); background-color: #17a2b8;" data-value="300"></div><div class="bar-label">Wind</div></div><div class="bar-group"><div class="bar" style="height: calc(180/400 * 100%); background-color: #007bff;" data-value="180"></div><div class="bar-label">Hydro</div></div><div class="bar-group"><div class="bar" style="height: 100%; background-color: #6c757d;" data-value="400"></div><div class="bar-label">Fossil</div></div></div></div>`;
+            case 'table4': return `<div class="chart-container"><table><caption>Table 4: Raw Material Prices (USD per unit) and Usage (units) for Product X</caption><thead><tr><th>Material</th><th>Price per unit</th><th>Units Used per Product</th></tr></thead><tbody><tr><td>Steel</td><td>2.50</td><td>10</td></tr><tr><td>Plastic</td><td>1.20</td><td>15</td></tr><tr><td>Copper</td><td>4.00</td><td>5</td></tr></tbody></table></div>`;
+            case 'graph5': return `<div class="chart-container"><p class="chart-title">Graph 5: Employee Training Hours per Quarter, 2023</p><div class="svg-chart-container"><svg viewBox="0 0 100 65"><text x="-4" y="5.5" font-size="3" text-anchor="end">1600</text><text x="-4" y="55.5" font-size="3" text-anchor="end">1000</text><polyline points="10,48.5 35,5.5 60,32 85,0" fill="none" stroke="#003366" stroke-width="0.7"/><g><circle cx="10" cy="48.5" r="1.5" fill="#E31837"/><text x="10" y="45.5" font-size="3" text-anchor="middle">1200</text></g><g><circle cx="35" cy="5.5" r="1.5" fill="#E31837"/><text x="35" y="3.5" font-size="3" text-anchor="middle">1500</text></g><g><circle cx="60" cy="32" r="1.5" fill="#E31837"/><text x="60" y="29" font-size="3" text-anchor="middle">1350</text></g><g><circle cx="85" cy="0" r="1.5" fill="#E31837"/><text x="85" y="5" font-size="3" text-anchor="middle">1600</text></g><text x="10" y="64" font-size="4" text-anchor="middle">Q1</text><text x="35" y="64" font-size="4" text-anchor="middle">Q2</text><text x="60" y="64" font-size="4" text-anchor="middle">Q3</text><text x="85" y="64" font-size="4" text-anchor="middle">Q4</text></svg></div></div>`;
+            case 'table5': return `<div class="chart-container"><table><caption>Table 5: Sales Performance by Product Category (in Thousands USD), Q4 2024</caption><thead><tr><th>Product Category</th><th>Sales Revenue</th><th>Cost of Goods Sold (COGS)</th></tr></thead><tbody><tr><td>Lubricants</td><td>800</td><td>450</td></tr><tr><td>Fuels</td><td>1200</td><td>900</td></tr><tr><td>Chemicals</td><td>600</td><td>300</td></tr></tbody></table></div>`;
             default: return '';
         }
     }
-    
-    function generateAbstractVisualHTML(id, questionId) {
-        let sequenceHTML = '', optionsHTML = '';
-        const emptyCell = `<div class="shape-box empty-cell">?</div>`;
-        const step = `<div class="abstract-step">→</div>`;
-        const visualTemplates = {
-            'seq1': {
-                sequence: `<div class="shape-box"><div class="inner-shape circle black pos-tl"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-tr"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-br"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-bl"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-tl"></div></div>${step}${emptyCell}`,
-                options: {
-                    A: `<div class="shape-box"><div class="inner-shape circle black pos-tr"></div></div>`,
-                    B: `<div class="shape-box"><div class="inner-shape circle black pos-br"></div></div>`,
-                    C: `<div class="shape-box"><div class="inner-shape circle black pos-bl"></div></div>`,
-                    D: `<div class="shape-box"><div class="inner-shape circle black pos-tl"></div></div>`
-                }
-            },
-            'mat1': {
-                sequence: `<div class="matrix"><div class="shape-box square"><div class="inner-shape circle black pos-tl"></div></div><div class="shape-box square"><div class="inner-shape circle black pos-tr"></div></div><div class="shape-box square"><div class="inner-shape circle black pos-br"></div></div><div class="shape-box circle"><div class="inner-shape triangle white pos-tl"></div></div><div class="shape-box circle"><div class="inner-shape triangle white pos-tr"></div></div><div class="shape-box circle"><div class="inner-shape triangle white pos-br"></div></div><div class="shape-box pentagon"><div class="pos-tl" style="font-size:2em; place-self:center;">★</div></div><div class="shape-box pentagon"><div class="pos-tr" style="font-size:2em; place-self:center;">★</div></div>${emptyCell}</div>`,
-                options: {
-                    A: `<div class="shape-box circle"><div class="pos-br" style="font-size:2em; place-self:center;">★</div></div>`,
-                    B: `<div class="shape-box pentagon"><div class="pos-bl" style="font-size:2em; place-self:center;">★</div></div>`,
-                    C: `<div class="shape-box pentagon"><div class="pos-br" style="font-size:2em; place-self:center;">★</div></div>`,
-                    D: `<div class="shape-box square"><div class="pos-br" style="font-size:2em; place-self:center;">★</div></div>`
-                }
-            }
-        };
-        
-        const template = visualTemplates[id] || { sequence: '', options: {} };
-        sequenceHTML = template.sequence;
-        optionsHTML = Object.entries(template.options).map(([key, value]) => `<li data-option="${key}"><input type="radio" name="q${questionId}" value="${key}"><label>${value}</label></li>`).join('');
 
-        return {sequenceHTML, optionsHTML};
+    function generateAbstractVisualHTML(id, questionId) {
+        let visualHTML = '', optionsHTML = '';
+        const step = `<div class="abstract-step">→</div>`;
+        const qmark = `<div class="shape-box empty-cell">?</div>`;
+        const createOption = (qid, val, content) => `<li data-option="${val}"><input type="radio" name="q${qid}" value="${val}"><label><span class="option-label">${val}</span>${content}</label></li>`;
+        
+        switch (id) {
+            case 'seq1':
+                visualHTML = `<div class="abstract-container"><div class="shape-box"><div class="inner-shape circle black pos-tl"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-tr"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-br"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-bl"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-tl"></div></div>${step}${qmark}</div>`;
+                optionsHTML = createOption(questionId, 'A', `<div class="shape-box"><div class="inner-shape circle black pos-tr"></div></div>`);
+                break;
+            case 'seq2':
+                visualHTML = `<div class="abstract-container"><div class="shape-box circle"><div class="inner-shape triangle white pos-tl"></div></div>${step}<div class="shape-box circle"><div class="inner-shape triangle white pos-tr"></div></div>${step}<div class="shape-box circle"><div class="inner-shape triangle white pos-br"></div></div>${step}${qmark}</div>`;
+                optionsHTML = createOption(questionId, 'A', `<div class="shape-box circle"><div class="inner-shape triangle white pos-bl"></div></div>`);
+                break;
+            case 'seq3':
+                visualHTML = `<div class="abstract-container"><div class="shape-box"><div class="inner-shape circle black pos-tl"></div><div class="inner-shape circle white pos-br"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-tr"></div><div class="inner-shape circle white pos-bl"></div></div>${step}${qmark}</div>`;
+                optionsHTML = createOption(questionId, 'A', `<div class="shape-box"><div class="inner-shape circle black pos-br"></div><div class="inner-shape circle white pos-tl"></div></div>`);
+                break;
+            case 'seq4':
+                visualHTML = `<div class="abstract-container"><div class="shape-box"><div class="inner-shape square black pos-tl"></div><div class="inner-shape square white pos-tr"></div></div>${step}<div class="shape-box"><div class="inner-shape square black pos-tr"></div><div class="inner-shape square white pos-br"></div></div>${step}${qmark}</div>`;
+                optionsHTML = createOption(questionId, 'A', `<div class="shape-box"><div class="inner-shape square black pos-br"></div><div class="inner-shape square white pos-bl"></div></div>`);
+                break;
+            case 'seq5':
+                visualHTML = `<div class="abstract-container"><div class="shape-box circle" style="transform: rotate(0deg);"><div class="v-line" style="height: 50%; top:25%;"></div><div class="inner-shape circle black" style="top:5px;left:50%;transform:translateX(-50%)"></div><div class="inner-shape circle black" style="bottom:5px;left:50%;transform:translateX(-50%)"></div></div>${step}<div class="shape-box circle" style="transform: rotate(45deg);"><div class="v-line" style="height: 50%; top:25%;"></div><div class="inner-shape circle black" style="top:5px;left:50%;transform:translateX(-50%)"></div><div class="inner-shape circle black" style="bottom:5px;left:50%;transform:translateX(-50%)"></div></div>${step}${qmark}</div>`;
+                optionsHTML = createOption(questionId, 'A', `<div class="shape-box circle" style="transform: rotate(90deg);"><div class="v-line" style="height: 50%; top:25%;"></div><div class="inner-shape circle black" style="top:5px;left:50%;transform:translateX(-50%)"></div><div class="inner-shape circle black" style="bottom:5px;left:50%;transform:translateX(-50%)"></div></div>`);
+                break;
+            case 'seq6':
+                visualHTML = `<div class="abstract-container"><div class="shape-box"><div class="h-line" style="top:50%"></div></div>${step}<div class="shape-box"><div class="h-line" style="top:33%"></div><div class="h-line" style="top:66%"></div></div>${step}<div class="shape-box"><div class="h-line" style="top:25%"></div><div class="h-line" style="top:50%"></div><div class="h-line" style="top:75%"></div></div>${step}${qmark}</div>`;
+                optionsHTML = createOption(questionId, 'A', `<div class="shape-box"><div class="h-line" style="top:20%"></div><div class="h-line" style="top:40%"></div><div class="h-line" style="top:60%"></div><div class="h-line" style="top:80%"></div></div>`);
+                break;
+             case 'seq7':
+                visualHTML = `<div class="abstract-container"><div class="shape-box triangle"><div class="inner-shape circle" style="width:20px;height:20px;background-color:black; top:60%; left:50%; transform: translate(-50%,-50%);"></div></div>${step}<div class="shape-box triangle"><div class="inner-shape square" style="width:20px;height:20px;background-color:black; top:60%; left:50%; transform: translate(-50%,-50%);"></div></div>${step}${qmark}</div>`;
+                optionsHTML = createOption(questionId, 'A', `<div class="shape-box triangle"><div class="shape-box pentagon" style="width:25px;height:25px;border:none; top:60%; left:50%; transform: translate(-50%,-50%);"></div></div>`);
+                break;
+             case 'seq8':
+                visualHTML = `<div class="abstract-container"><div class="shape-box"><div class="inner-shape square black pos-tl"></div></div>${step}<div class="shape-box"><div class="inner-shape square black pos-tr"></div></div>${step}<div class="shape-box"><div class="inner-shape square black pos-br"></div></div>${step}<div class="shape-box"><div class="inner-shape square black pos-bl"></div></div>${step}<div class="shape-box"><div class="inner-shape square white pos-tl"></div></div>${step}${qmark}</div>`;
+                optionsHTML = createOption(questionId, 'A', `<div class="shape-box"><div class="inner-shape square white pos-tr"></div></div>`);
+                break;
+             case 'seq9':
+                visualHTML = `<div class="abstract-container"><div class="shape-box circle"><div class="inner-shape triangle black" style="transform: rotate(90deg); place-self:center;"></div></div>${step}<div class="shape-box circle"><div class="inner-shape triangle black" style="transform: rotate(180deg); place-self:center;"></div></div>${step}<div class="shape-box circle"><div class="inner-shape triangle black" style="transform: rotate(270deg); place-self:center;"></div></div>${step}${qmark}</div>`;
+                optionsHTML = createOption(questionId, 'A', `<div class="shape-box circle"><div class="inner-shape triangle black" style="transform: rotate(360deg); place-self:center;"></div></div>`);
+                break;
+            case 'seq10':
+                visualHTML = `<div class="abstract-container"><div class="shape-box"><div class="diag-tl-br"></div></div>${step}<div class="shape-box"><div class="diag-tl-br"></div><div class="diag-tr-bl"></div></div>${step}${qmark}</div>`;
+                optionsHTML = createOption(questionId, 'A', `<div class="shape-box"><div class="diag-tl-br"></div><div class="diag-tr-bl"></div><div class="h-line"></div></div>`);
+                break;
+            case 'mat1':
+            case 'mat2': 
+            case 'mat3': 
+            case 'mat4':
+            case 'mat5':
+            case 'mat6':
+            case 'mat7':
+            case 'mat8':
+                 visualHTML = `<div class="abstract-container"><p>Matrix Visuals are complex and built into question 151. Subsequent questions reference this same matrix.</p></div>`;
+                 if(id === 'mat1') { visualHTML = generateDataSourceHTML(id); } //reuse graph function for matrix
+                 optionsHTML = `<li>Reference options from question 151</li>`
+                break;
+            default:
+                visualHTML = ``;
+                break;
+        }
+
+        return `<div class="abstract-visual">${visualHTML}</div><ul class="options-list abstract-options">${optionsHTML}</ul>`;
     }
-    
+
     function createQuestionHTML(q) {
         const questionDiv = document.createElement('div');
         questionDiv.className = 'question-container';
         questionDiv.dataset.id = q.id;
         questionDiv.dataset.correct = q.correctAnswer;
         
-        let visualContainer = '';
-        let optionsMarkup = '';
+        let visualAndOptions = '';
 
         if (q.section === 'Abstract Reasoning' && q.visual_id) {
-            const visuals = generateAbstractVisualHTML(q.visual_id, q.id);
-            visualContainer = `<div class="abstract-container">${visuals.sequenceHTML}</div>`;
-            optionsMarkup = `<ul class="options-list abstract-options">${visuals.optionsHTML}</ul>`;
+            visualAndOptions = generateAbstractVisualHTML(q.visual_id, q.id);
         } else {
-             optionsMarkup = Object.entries(q.options).map(([key, value]) => `<li><label><input type="radio" name="q${q.id}" value="${key}"> ${key}. ${value}</label></li>`).join('');
-             optionsMarkup = `<ul class="options-list">${optionsMarkup}</ul>`;
+             const optionsMarkup = Object.entries(q.options).map(([key, value]) => `<li><label><input type="radio" name="q${q.id}" value="${key}"> ${key}. ${value}</label></li>`).join('');
+             visualAndOptions = `<ul class="options-list">${optionsMarkup}</ul>`;
         }
        
         questionDiv.innerHTML = `
-            ${visualContainer}
             <p class="question-text"><span class="q-number">${q.id}.</span> ${q.questionText}</p>
-            ${optionsMarkup}
+            ${visualAndOptions}
             <div class="answer-reveal">
                 <button class="toggle-answer-btn">Show Answer</button>
                 <div class="explanation"><p><strong>Correct Answer: ${q.correctAnswer}</strong><br>${q.explanation}</p></div>
@@ -106,11 +137,13 @@ document.addEventListener('DOMContentLoaded', () => {
         testView.querySelectorAll('.question-container').forEach(container => {
             const toggleBtn = container.querySelector('.toggle-answer-btn');
             const explanationDiv = container.querySelector('.explanation');
-            toggleBtn.addEventListener('click', () => {
-                const isVisible = explanationDiv.style.display === 'block';
-                explanationDiv.style.display = isVisible ? 'none' : 'block';
-                toggleBtn.textContent = isVisible ? 'Show Answer' : 'Hide Answer';
-            });
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', () => {
+                    const isVisible = explanationDiv.style.display === 'block';
+                    explanationDiv.style.display = isVisible ? 'none' : 'block';
+                    toggleBtn.textContent = isVisible ? 'Show Answer' : 'Hide Answer';
+                });
+            }
 
             const options = container.querySelector('.options-list');
             if (options) {
@@ -133,8 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         correctLi?.closest('li').classList.add('correct');
                     }
                     
-                    explanationDiv.style.display = 'block';
-                    toggleBtn.textContent = 'Hide Answer';
+                    if(explanationDiv) explanationDiv.style.display = 'block';
+                    if(toggleBtn) toggleBtn.textContent = 'Hide Answer';
                 });
             }
         });
@@ -148,8 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.toggle('active', btn.dataset.section === sectionName);
         });
         
-        contentArea.innerHTML = ''; // Clear previous content
-        questionArea.innerHTML = ''; // Ensure this is also cleared
+        contentArea.innerHTML = '';
+        questionArea.innerHTML = ''; 
         
         sectionTitle.textContent = sectionName;
         startTimer(sectionConfig[sectionName].time);
@@ -158,27 +191,28 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const questionGroups = {};
         sectionQuestions.forEach(q => {
-            const sourceKey = q.passage_id || q.data_source_id || q.visual_id || 'general';
+            const sourceKey = q.passage_id || q.data_source_id || 'general' + q.id;
+            if (q.section === "Abstract Reasoning"){
+                sourceKey = q.visual_id || 'general' + q.id;
+            }
             if (!questionGroups[sourceKey]) {
                 questionGroups[sourceKey] = [];
             }
             questionGroups[sourceKey].push(q);
         });
-
+        
         const sortedKeys = Object.keys(questionGroups).sort((a, b) => {
-            const firstQ_a = questionGroups[a][0].id;
-            const firstQ_b = questionGroups[b][0].id;
-            return firstQ_a - firstQ_b;
+            const firstIdA = questionGroups[a][0].id;
+            const firstIdB = questionGroups[b][0].id;
+            return firstIdA - firstIdB;
         });
-    
+
         for (const sourceKey of sortedKeys) {
             const groupContainer = document.createElement('div');
             groupContainer.className = 'source-group';
             
-            if (sourceKey !== 'general') {
-                const isPassage = /^\d+$/.test(sourceKey);
-                
-                if (isPassage) {
+            if (!sourceKey.startsWith('general')) {
+                 if (/^\d+$/.test(sourceKey)) {
                     const passageDiv = document.createElement('div');
                     passageDiv.className = 'passage-box';
                     passageDiv.innerHTML = passageTexts[sourceKey] || '';
