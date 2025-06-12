@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let allData = { questions: [], passages: {}, visuals: {} };
+    let allData = { questions: [] };
     let currentTimer;
 
     const welcomeScreen = document.getElementById('welcome-screen');
-    const testInterface = document.getElementById('test-interface');
+    const testView = document.getElementById('test-view'); 
     const navButtons = document.querySelectorAll('.nav-btn');
     const questionArea = document.getElementById('question-area');
     const contentArea = document.getElementById('content-area');
@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     
     const passageTexts = {
-        1: `<h3>Passage 1: Business Trends</h3><p>Top small business trends for 2025 emphasize a tailored approach to client engagement. Businesses that deeply understand individual client preferences and personalize their marketing messages, product recommendations, and offerings are expected to thrive. This personalization is no longer optional but a key driver for customer loyalty, necessitating the use of email marketing tools and analytics platforms to gain audience insights... [Passage content continues as in the original text]</p>`,
-        2: `<h3>Passage 2: Technology Advancements</h3><p>Technology has profoundly transformed education, moving beyond traditional methods to embrace interactive whiteboards, digital projectors, tablets, and smart gadgets. This revolutionary era has fostered personalized learning opportunities for students... [Passage content continues]</p>`,
-        3: `<h3>Passage 3: Environmental Sustainability</h3><p>The environment, a precious gift from Mother Nature, sustains all life on Earth by providing essential resources like clean air, fresh water, and fertile soil... [Passage content continues]</p>`,
-        4: `<h3>Passage 4: Industrial Safety Regulations</h3><p>OSHA's Hazard Communication Standard (1910.1200) serves to ensure that the hazards of all chemicals produced or imported are properly classified, and that comprehensive information concerning these classified hazards is effectively transmitted... [Passage content continues]</p>`
+        1: `<h3>Passage 1: Business Trends</h3><p>Top small business trends for 2025 emphasize a tailored approach to client engagement. Businesses that deeply understand individual client preferences and personalize their marketing messages, product recommendations, and offerings are expected to thrive. This personalization is no longer optional but a key driver for customer loyalty, necessitating the use of email marketing tools and analytics platforms to gain audience insights. The rise of short-form interactive content, such as Instagram reels and YouTube shorts, is another significant trend. These eye-catching videos build brand awareness rapidly, allowing small businesses to showcase products, share behind-the-scenes content, or highlight customer testimonials in an authentic, relatable, and fun manner. Interactive elements like quizzes, polls, and surveys further enhance engagement, boosting conversions while providing valuable feedback. Digital transformation tools are becoming indispensable. Online sales are no longer exclusive to large corporations, making 2025 an opportune year for small businesses to establish an online presence. Adopting digital tools for scheduling and payments ensures smooth operations, and leveraging AI tools can significantly increase productivity. Optimizing SEO strategies for voice search, by incorporating conversational keywords and location-based content, is also crucial given the proliferation of smart speakers. Protecting businesses and clients from cyberattacks is a growing concern. Small businesses are increasingly vulnerable, making robust data and system security vital for reputation and client trust. Implementing multi-factor authentication, securing networks, and regularly updating software are essential practices. Training teams to recognize cybersecurity threats is equally important. Prioritizing the client experience remains paramount. Despite the reliance on digital tools, the personal touch continues to differentiate businesses. Whether through personalized greetings or follow-up emails, exceptional service cultivates loyalty. Meeting customers across online, in-person, or hybrid channels is key. The economy is expected to stabilize further in 2025, presenting growth opportunities, particularly in high-demand sectors like local services, wellness, and technology. Businesses must continuously research trends within and outside their industries to seize these opportunities.</p>`,
+        2: `<h3>Passage 2: Technology Advancements</h3><p>Technology has profoundly transformed education, moving beyond traditional methods to embrace interactive whiteboards, digital projectors, tablets, and smart gadgets. This revolutionary era has fostered personalized learning opportunities for students, with online learning methods experiencing an unprecedented surge in educational markets globally. The COVID-19 pandemic significantly accelerated this shift, pushing over 50 percent of the worldwide learning industry to adopt online approaches. These changes have compelled the education sector to explore innovative learning technologies. Novel methods such as gamification, flipped classrooms, and eTextbooks have created healthy and interactive teaching environments, effectively bridging gaps caused by physical restrictions. Furthermore, technology has expanded learning opportunities, enabling access for students in remote areas. This digital revolution has converted conventional classrooms into specialized online classes, promoting a culture of lifelong learning. A significant contribution of technology is enhanced accessibility. Students from distant regions can now access quality education through online platforms, with tools like Zoom, Google Meet, and Microsoft Teams making virtual classrooms a reality, particularly during the pandemic. The internet also serves as an endless repository of knowledge, providing vast resources through websites, e-books, and videos. Platforms like Coursera and edX offer courses from top universities, allowing individuals to acquire new skills or explore diverse subjects. Despite its numerous benefits, technology in education faces challenges. A notable issue is the digital divide, where not all students possess access to necessary devices and internet connectivity. A UNICEF report highlighted that nearly 31% of students globally lacked access to remote learning during the pandemic. Moreover, potential misuse of technology and a lack of awareness regarding available tools pose hurdles, which can be addressed through improved infrastructure and awareness campaigns. Recent advancements promise even greater contributions. Artificial Intelligence (AI) is being deployed to create intelligent tutors offering instant feedback. Augmented Reality (AR) enriches textbook content with 3D visuals and interactive elements. Blockchain technology is being explored for securing and authenticating educational certificates, aiming to reduce fraud. In essence, technology has undeniably made education more accessible, interactive, and personalized, and with equitable access and responsible use, it holds the potential to further shape future learning landscapes.</p>`,
+        3: `<h3>Passage 3: Environmental Sustainability Challenges</h3><p>The environment, a precious gift from Mother Nature, sustains all life on Earth by providing essential resources like clean air, fresh water, and fertile soil, and supporting diverse ecosystems. However, human activities have severely threatened this delicate balance, leading to significant environmental degradation and climate change. One of the most critical issues is climate change, primarily driven by the burning of fossil fuels, deforestation, and industrial activities. These actions release greenhouse gases, causing global temperatures to rise, which in turn leads to extreme weather events, rising sea levels, and disruptions to ecosystems. To combat this, a shift towards cleaner, renewable energy sources is essential, along with protecting and restoring forests, as they act as vital carbon sinks. Pollution, affecting air, soil, and water, poses another major challenge. Solutions include reducing reliance on single-use plastics and adopting eco-friendly alternatives. Controlling industrial emissions and vehicle pollution through strict regulations and promoting electric vehicles are also crucial. Additionally, responsible waste disposal and treating wastewater are necessary to prevent contamination of our water bodies. Water scarcity is a growing concern, necessitating wise water usage and efforts to reduce water pollution from industrial and agricultural runoff. Biodiversity loss, caused by deforestation, habitat destruction, and overexploitation, requires conservation efforts, protected areas, and sustainable practices in agriculture and fisheries. Environmental degradation often creates a vicious cycle, where challenges like poverty, deforestation, and soil damage are both causes and effects. For instance, poverty can drive over-exploitation of natural resources, leading to deforestation and soil erosion, which in turn exacerbates poverty and climate change. This interconnectedness means that addressing one issue often has ripple effects on others. In conclusion, safeguarding the environment is not merely a choice but a necessity, demanding global cooperation and individual commitment. Addressing climate change, pollution, biodiversity loss, and water scarcity through government policies, technological advancements, and personal actions is vital to ensure a healthier and sustainable planet for current and future generations. Every little effort counts in this collective endeavor.</p>`,
+        4: `<h3>Passage 4: Industrial Safety Regulations</h3><p>OSHA's Hazard Communication Standard (1910.1200) serves to ensure that the hazards of all chemicals produced or imported are properly classified, and that comprehensive information concerning these classified hazards is effectively transmitted to both employers and employees. This standard aligns with the United Nations Globally Harmonized System of Classification and Labeling of Chemicals (GHS), primarily Revision 7. The transmission of this vital information is accomplished through comprehensive hazard communication programs, which encompass container labeling, other forms of warning, safety data sheets (SDSs), and thorough employee training. This occupational safety and health standard provides a comprehensive framework for classifying potential chemical hazards and communicating information about these hazards and appropriate protective measures to employees. It also preempts any conflicting state or local legislative or regulatory enactments on this subject. Practical applications of this standard include developing and maintaining a written hazard communication program for the workplace, which must include lists of hazardous chemicals present. It also mandates the labeling of chemical containers within the workplace and those shipped to other locations, as well as the preparation and distribution of safety data sheets to employees and downstream employers. Furthermore, the standard requires the development and implementation of robust employee training programs on chemical hazards and necessary protective measures. Chemical manufacturers or importers are specifically required to classify the hazards of the chemicals they produce or import. All employers must provide information to their employees regarding hazardous chemicals they may be exposed to, utilizing a hazard communication program, clear labels and other warnings, readily accessible safety data sheets, and effective information and training. Distributors also bear the responsibility of transmitting this information to employers. Employers who do not produce or import chemicals primarily focus on establishing a workplace program and communicating hazard information to their workers. This section applies to any chemical known to be present in the workplace where employees could be exposed under normal use conditions or in a foreseeable emergency. Beyond hazard communication, OSHA assigns itself two primary regulatory functions: setting standards and conducting inspections to ensure employers provide safe and healthful workplaces. Employers must comply with all applicable OSHA standards, which may require adopting specific practices, means, methods, or processes to protect workers. This includes implementing engineering controls to limit exposures, administrative controls, and ensuring employees are provided with, trained on, and use personal protective equipment (PPE) when required. Employers are also mandated to report certain work-related incidents, such as fatalities, amputations, loss of an eye, or in-patient hospitalization, and to maintain records of work-related injuries and illnesses using forms like the Form 300 Log.</p>`
     };
-
+    
     function generateDataSourceHTML(id) {
         switch(id) {
             case 'graph1': return `<div class="chart-container"><p class="chart-title">Annual Production of Crude Oil (Million Barrels) by Region, 2022-2024</p><div class="bar-chart"><div class="bar-group"><div style="display: flex; gap: 5px; align-items: flex-end;"><div class="bar" style="height: calc(45/60 * 100%);" data-value="45"></div><div class="bar bar-b" style="height: calc(30/60 * 100%);" data-value="30"></div></div><div class="bar-label">2022</div></div><div class="bar-group"><div style="display: flex; gap: 5px; align-items: flex-end;"><div class="bar" style="height: calc(50/60 * 100%);" data-value="50"></div><div class="bar bar-b" style="height: calc(35/60 * 100%);" data-value="35"></div></div><div class="bar-label">2023</div></div><div class="bar-group"><div style="display: flex; gap: 5px; align-items: flex-end;"><div class="bar" style="height: calc(55/60 * 100%);" data-value="55"></div><div class="bar bar-b" style="height: calc(40/60 * 100%);" data-value="40"></div></div><div class="bar-label">2024</div></div></div></div>`;
@@ -40,26 +40,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    function generateAbstractVisualHTML(id) {
-        let sequenceHTML = '', optionsHTML = '';
-        const emptyCell = `<div class="shape-box empty-cell">?</div>`;
+    function generateAbstractVisualHTML(q) {
+        let questionHTML = `<p class="question-text"><span class="q-number">${q.id}.</span> ${q.questionText}</p>`;
         const step = `<div class="abstract-step">→</div>`;
-        switch(id) {
-            case 'seq1':
-                sequenceHTML = `<div class="shape-box"><div class="inner-shape circle black pos-tl"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-tr"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-br"></div></div>${step}${emptyCell}`;
-                optionsHTML = `<li data-option="A"><span class="option-label">A</span><div class="shape-box"><div class="inner-shape circle black pos-bl"></div></div></li><li data-option="B"><span class="option-label">B</span><div class="shape-box"><div class="inner-shape circle white pos-tr"></div></div></li>`; // simplified
-                break;
-            case 'seq7':
-                 sequenceHTML = `<div class="shape-box triangle"><div class="inner-shape circle black" style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);"></div></div>${step}<div class="shape-box triangle"><div class="inner-shape square black" style="position: absolute; top: 60%; left: 50%; transform: translate(-50%, -50%);"></div></div>${step}${emptyCell}`;
-                optionsHTML = `<li data-option="A"><span class="option-label">A</span><div class="shape-box triangle"><div class="shape-box pentagon" style="width:20px; height:20px; position:absolute; top: 60%; left: 50%; transform:translate(-50%,-50%); border:none;"></div></div></li><li data-option="B">...</li>`;
-                break;
-            case 'mat1':
-                sequenceHTML = `<div class="matrix"><div class="shape-box"><div class="inner-shape circle black pos-tl"></div></div><div class="shape-box"><div class="inner-shape circle black pos-tr"></div></div><div class="shape-box"><div class="inner-shape circle black pos-br"></div></div><div class="shape-box circle"><div class="inner-shape triangle white pos-tl"></div></div><div class="shape-box circle"><div class="inner-shape triangle white pos-tr"></div></div><div class="shape-box circle"><div class="inner-shape triangle white pos-br"></div></div><div class="shape-box pentagon"><div class="inner-shape star black pos-tl">★</div></div><div class="shape-box pentagon"><div class="inner-shape star black pos-tr">★</div></div>${emptyCell}</div>`;
-                optionsHTML = `<li data-option="C"><span class="option-label">C</span><div class="shape-box pentagon"><div class="inner-shape star black pos-br">★</div></div></li><li data-option="D">...</li>`;
-                break;
-             // Add all other abstract visual cases here...
+        const emptyCell = `<div class="shape-box empty-cell">?</div>`;
+
+        let visualDisplay = '';
+        let optionsDisplay = '';
+
+        if(q.visual_id === 'seq1') {
+            visualDisplay = `<div class="abstract-container"><div class="shape-box"><div class="inner-shape circle black pos-tl"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-tr"></div></div>${step}<div class="shape-box"><div class="inner-shape circle black pos-br"></div></div>${step}${emptyCell}</div>`;
+            optionsDisplay = `<ul class="options-list abstract-options">
+                <li data-option="A"><input type="radio" name="q${q.id}" value="A"><div class="shape-box"><div class="inner-shape circle black pos-bl"></div></div></li>
+                <li data-option="B"><input type="radio" name="q${q.id}" value="B"><div class="shape-box"><div class="inner-shape circle black pos-br"></div></div></li>
+            </ul>`;
+        } else if (q.visual_id === 'mat1') {
+             visualDisplay = `<div class="abstract-container"><div class="matrix">
+                <div class="shape-box square"><div class="inner-shape circle black pos-tl"></div></div><div class="shape-box square"><div class="inner-shape circle black pos-tr"></div></div><div class="shape-box square"><div class="inner-shape circle black pos-br"></div></div>
+                <div class="shape-box circle"><div class="inner-shape triangle white pos-tl"></div></div><div class="shape-box circle"><div class="inner-shape triangle white pos-tr"></div></div><div class="shape-box circle"><div class="inner-shape triangle white pos-br"></div></div>
+                <div class="shape-box pentagon"><div class="pos-tl" style="font-size:2em; place-self:center;">★</div></div><div class="shape-box pentagon"><div class="pos-tr" style="font-size:2em; place-self:center;">★</div></div>${emptyCell}
+            </div></div>`;
+            optionsDisplay = `<ul class="options-list abstract-options">
+                <li data-option="A"><input type="radio" name="q${q.id}" value="A"><div class="shape-box circle"><div class="pos-br" style="font-size:2em;place-self:center;">★</div></div></li>
+                <li data-option="B"><input type="radio" name="q${q.id}" value="B"><div class="shape-box pentagon"><div class="pos-bl" style="font-size:2em;place-self:center;">★</div></div></li>
+                <li data-option="C"><input type="radio" name="q${q.id}" value="C"><div class="shape-box pentagon"><div class="pos-br" style="font-size:2em;place-self:center;">★</div></div></li>
+                <li data-option="D"><input type="radio" name="q${q.id}" value="D"><div class="shape-box square"><div class="pos-br" style="font-size:2em;place-self:center;">★</div></div></li>
+            </ul>`;
+        } else {
+             optionsDisplay = Object.entries(q.options).map(([key, value]) => `<li><label><input type="radio" name="q${q.id}" value="${key}"> ${key}. ${value}</label></li>`).join('');
+             optionsDisplay = `<ul class="options-list">${optionsDisplay}</ul>`;
         }
-        return {sequenceHTML, optionsHTML};
+        
+        return `${visualDisplay}${questionHTML}${optionsDisplay}`;
     }
     
     function createQuestionHTML(q) {
@@ -67,20 +79,18 @@ document.addEventListener('DOMContentLoaded', () => {
         questionDiv.className = 'question-container';
         questionDiv.dataset.id = q.id;
         questionDiv.dataset.correct = q.correctAnswer;
+        
+        let questionContent = '';
 
-        let optionsMarkup = '';
         if (q.section === 'Abstract Reasoning') {
-            const visuals = generateAbstractVisualHTML(q.visual_id);
-             questionDiv.innerHTML += `<div class="abstract-container">${visuals.sequenceHTML}</div>`;
-            optionsMarkup = `<ul class="options-list abstract-options">${visuals.optionsHTML}</ul>`;
+             questionContent = generateAbstractVisualHTML(q);
         } else {
-             optionsMarkup = Object.entries(q.options).map(([key, value]) => `<li><label><input type="radio" name="q${q.id}" value="${key}"> ${key}. ${value}</label></li>`).join('');
-             optionsMarkup = `<ul class="options-list">${optionsMarkup}</ul>`;
+             const optionsMarkup = Object.entries(q.options).map(([key, value]) => `<li><label><input type="radio" name="q${q.id}" value="${key}"> ${key}. ${value}</label></li>`).join('');
+             questionContent = `<p class="question-text"><span class="q-number">${q.id}.</span> ${q.questionText}</p><ul class="options-list">${optionsMarkup}</ul>`;
         }
        
-        questionDiv.innerHTML += `
-            <p class="question-text"><span class="q-number">${q.id}.</span> ${q.questionText}</p>
-            ${optionsMarkup}
+        questionDiv.innerHTML = `
+            ${questionContent}
             <div class="answer-reveal">
                 <button class="toggle-answer-btn">Show Answer</button>
                 <div class="explanation"><p><strong>Correct Answer: ${q.correctAnswer}</strong><br>${q.explanation}</p></div>
@@ -100,31 +110,37 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const options = container.querySelector('.options-list');
-            options.addEventListener('click', (e) => {
-                const targetRadio = e.target.closest('li')?.querySelector('input[type="radio"]');
-                if(!targetRadio || options.classList.contains('disabled')) return;
-                
-                options.classList.add('disabled');
-                const selectedOptionLi = targetRadio.closest('li');
-                const correctAnsw = container.dataset.correct;
+            if (options) {
+                options.addEventListener('click', (e) => {
+                    const targetLi = e.target.closest('li');
+                    if (!targetLi || options.classList.contains('disabled')) return;
+                    
+                    const targetRadio = targetLi.querySelector('input[type="radio"]');
+                    if (!targetRadio) return;
+                    
+                    targetRadio.checked = true;
 
-                if(targetRadio.value === correctAnsw) {
-                    selectedOptionLi.classList.add('correct');
-                } else {
-                    selectedOptionLi.classList.add('incorrect');
-                    const correctLi = options.querySelector(`input[value="${correctAnsw}"]`).closest('li');
-                    if(correctLi) correctLi.classList.add('correct');
-                }
-                
-                explanationDiv.style.display = 'block';
-                toggleBtn.textContent = 'Hide Answer';
-            });
+                    options.classList.add('disabled');
+                    const correctAnsw = container.dataset.correct;
+
+                    if(targetRadio.value === correctAnsw) {
+                        targetLi.classList.add('correct');
+                    } else {
+                        targetLi.classList.add('incorrect');
+                        const correctLi = options.querySelector(`li [value="${correctAnsw}"]`) || options.querySelector(`li[data-option="${correctAnsw}"]`);
+                        correctLi?.closest('li').classList.add('correct');
+                    }
+                    
+                    explanationDiv.style.display = 'block';
+                    toggleBtn.textContent = 'Hide Answer';
+                });
+            }
         });
     }
 
     function displaySection(sectionName) {
         welcomeScreen.classList.add('hidden');
-        testInterface.classList.remove('hidden');
+        testView.classList.remove('hidden');
 
         navButtons.forEach(btn => {
             btn.classList.toggle('active', btn.dataset.section === sectionName);
@@ -145,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (q.passage_id && q.passage_id !== lastPassageId) {
                 const passageDiv = document.createElement('div');
                 passageDiv.className = 'passage-box';
-                passageDiv.innerHTML = passageTexts[q.passage_id];
+                passageDiv.innerHTML = passageTexts[q.passage_id] || '';
                 contentArea.appendChild(passageDiv);
                 lastPassageId = q.passage_id;
             }
@@ -160,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         addInteractivity();
+        window.scrollTo({ top: 0, behavior: 'auto' });
     }
     
     function startTimer(durationInMinutes) {
@@ -167,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let time = durationInMinutes * 60;
         
         const update = () => {
+            if (!timerDisplay) return;
             const minutes = Math.floor(time / 60).toString().padStart(2, '0');
             const seconds = (time % 60).toString().padStart(2, '0');
             timerDisplay.textContent = `${minutes}:${seconds}`;
@@ -180,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 time--;
             }
         };
-
         update();
         currentTimer = setInterval(update, 1000);
     }
@@ -189,26 +206,30 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
             const section = e.target.dataset.section;
-            if (confirm(`Are you sure you want to start the ${section} section? The timer will begin.`)) {
+            if (testView.classList.contains('hidden')) {
                 displaySection(section);
+            } else {
+                if (confirm(`Are you sure you want to start a new section? The current section's progress and timer will be reset.`)) {
+                    displaySection(section);
+                }
             }
         });
     });
 
     window.addEventListener('scroll', () => {
-        backToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+        if(backToTopBtn) backToTopBtn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
     });
 
-    backToTopBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    if(backToTopBtn) {
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     fetch('data/questions.json')
         .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+            if (!response.ok) throw new Error('Network response was not ok');
             return response.json();
         })
         .then(data => {
@@ -216,6 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error('Error fetching questions:', error);
-            questionArea.innerHTML = '<p style="color:red; text-align:center;">Failed to load questions. Please check the `data/questions.json` file and make sure the server is running correctly.</p>';
+            const mainContent = document.querySelector('.container');
+            mainContent.innerHTML = '<p style="color:red; text-align:center; font-size:1.2rem; padding: 2rem;"><strong>Error:</strong> Failed to load questions. Please ensure the `data/questions.json` file exists in the correct directory and is accessible.</p>';
         });
 });
